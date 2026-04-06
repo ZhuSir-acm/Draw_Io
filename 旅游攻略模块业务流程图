@@ -1,158 +1,75 @@
 <mxfile host="app.diagrams.net" modified="2024-03-21T00:00:00.000Z" agent="Mozilla/5.0" version="21.0.0" type="device">
-  <diagram name="8大模块详细业务流程图" id="full-flowcharts-complete">
-    <mxGraphModel dx="1422" dy="791" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="3500" math="0" shadow="0">
+  <diagram name="5.1.1 用户注册与登录流程" id="flow-reg-login">
+    <mxGraphModel dx="1422" dy="791" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        
+        <!-- 开始 -->
+        <mxCell id="node_start" value="开始" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="374" y="40" width="80" height="40" as="geometry" />
+        </mxCell>
 
-        <!-- ========================================== -->
-        <!-- 4.2.1 用户管理模块 (注册/登录/管理员) -->
-        <!-- ========================================== -->
-        <mxCell id="t1" value="图4-1 用户管理模块业务流程图" style="text;html=1;align=center;fontStyle=1;fontSize=14;" vertex="1" parent="1"><mxGeometry x="150" y="440" width="200" height="30" as="geometry" /></mxCell>
-        <mxCell id="f1_start" value="开始" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="210" y="20" width="80" height="40" as="geometry" /></mxCell>
-        <mxCell id="f1_choice" value="注册或登录?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="200" y="80" width="100" height="60" as="geometry" /></mxCell>
-        <mxCell id="f1_reg_u" value="用户名唯一性校验" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="320" y="140" width="120" height="60" as="geometry" /></mxCell>
-        <mxCell id="f1_reg_crypt" value="BCrypt加密处理" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="330" y="220" width="100" height="40" as="geometry" /></mxCell>
-        <mxCell id="f1_log_check" value="密码正确性校验" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="80" y="140" width="120" height="60" as="geometry" /></mxCell>
-        <mxCell id="f1_session" value="后端写入Session&lt;br&gt;前端存Cookie" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="200" y="280" width="100" height="50" as="geometry" /></mxCell>
-        <mxCell id="f1_end" value="结束" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="210" y="380" width="80" height="40" as="geometry" /></mxCell>
-        <mxCell id="l1_1" edge="1" parent="1" source="f1_start" target="f1_choice" style="endArrow=classic;" />
-        <mxCell id="l1_2" edge="1" parent="1" source="f1_choice" target="f1_reg_u" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;"><mxGeometry value="注册" relative="1" as="geometry" /></mxCell>
-        <mxCell id="l1_3" edge="1" parent="1" source="f1_choice" target="f1_log_check" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;"><mxGeometry value="登录" relative="1" as="geometry" /></mxCell>
-        <mxCell id="l1_4" edge="1" parent="1" source="f1_reg_u" target="f1_reg_crypt" style="endArrow=classic;"><mxGeometry value="通过" relative="1" as="geometry" /></mxCell>
-        <mxCell id="l1_5" edge="1" parent="1" source="f1_reg_crypt" target="f1_session" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;" />
-        <mxCell id="l1_6" edge="1" parent="1" source="f1_log_check" target="f1_session" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;"><mxGeometry value="成功" relative="1" as="geometry" /></mxCell>
-        <mxCell id="l1_7" edge="1" parent="1" source="f1_session" target="f1_end" style="endArrow=classic;" />
-        <mxCell id="l1_8" edge="1" parent="1" source="f1_reg_u" target="f1_choice" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;entryX=1;entryY=0.5;"><mxGeometry value="重复" relative="1" as="geometry" /></mxCell>
-        <mxCell id="l1_9" edge="1" parent="1" source="f1_log_check" target="f1_choice" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;entryX=0;entryY=0.5;"><mxGeometry value="失败" relative="1" as="geometry" /></mxCell>
+        <!-- 功能选择 -->
+        <mxCell id="node_choice" value="选择操作类型" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="364" y="110" width="100" height="60" as="geometry" />
+        </mxCell>
 
-        <!-- ========================================== -->
-        <!-- 4.2.2 景区信息模块 (展示/维护) -->
-        <!-- ========================================== -->
-        <mxCell id="t2" value="图4-2 景区信息展示与维护业务流程图" style="text;html=1;align=center;fontStyle=1;fontSize=14;" vertex="1" parent="1"><mxGeometry x="650" y="440" width="250" height="30" as="geometry" /></mxCell>
-        <mxCell id="f2_start" value="开始" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="735" y="20" width="80" height="40" as="geometry" /></mxCell>
-        <mxCell id="f2_role" value="角色判定?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="725" y="80" width="100" height="60" as="geometry" /></mxCell>
-        <mxCell id="f2_adm_crud" value="管理员执行&lt;br&gt;新增/修改/删除" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="840" y="150" width="110" height="45" as="geometry" /></mxCell>
-        <mxCell id="f2_db" value="更新MySQL持久化" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="830" y="230" width="130" height="40" as="geometry" /></mxCell>
-        <mxCell id="f2_usr_list" value="普通用户查看&lt;br&gt;列表及详情" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="610" y="150" width="110" height="45" as="geometry" /></mxCell>
-        <mxCell id="f2_search" value="关键字搜索与排序" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="605" y="220" width="120" height="60" as="geometry" /></mxCell>
-        <mxCell id="f2_end" value="结束" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="735" y="380" width="80" height="40" as="geometry" /></mxCell>
-        <mxCell id="l2_1" edge="1" parent="1" source="f2_start" target="f2_role" style="endArrow=classic;" />
-        <mxCell id="l2_2" edge="1" parent="1" source="f2_role" target="f2_adm_crud" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;"><mxGeometry value="管理员" relative="1" as="geometry" /></mxCell>
-        <mxCell id="l2_3" edge="1" parent="1" source="f2_role" target="f2_usr_list" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;"><mxGeometry value="普通用户" relative="1" as="geometry" /></mxCell>
-        <mxCell id="l2_4" edge="1" parent="1" source="f2_adm_crud" target="f2_db" style="endArrow=classic;" />
-        <mxCell id="l2_5" edge="1" parent="1" source="f2_db" target="f2_end" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;" />
-        <mxCell id="l2_6" edge="1" parent="1" source="f2_usr_list" target="f2_search" style="endArrow=classic;" />
-        <mxCell id="l2_7" edge="1" parent="1" source="f2_search" target="f2_end" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;" />
+        <!-- 注册分支 -->
+        <mxCell id="reg_1" value="前端输入注册信息&lt;br&gt;(用户名/密码/手机号)" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="500" y="180" width="130" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="reg_2" value="用户名及手机号&lt;br&gt;唯一性校验" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="500" y="260" width="130" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="reg_3" value="BCrypt加密处理" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="510" y="360" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="reg_4" value="保存至数据库" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;strokeColor=#000000;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="505" y="430" width="120" height="40" as="geometry" />
+        </mxCell>
 
-        <!-- ========================================== -->
-        <!-- 4.2.3 攻略分享与审核模块 -->
-        <!-- ========================================== -->
-        <mxCell id="t3" value="图4-3 攻略发布与审核业务流程图" style="text;html=1;align=center;fontStyle=1;fontSize=14;" vertex="1" parent="1"><mxGeometry x="150" y="960" width="200" height="30" as="geometry" /></mxCell>
-        <mxCell id="f3_start" value="开始" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="210" y="500" width="80" height="40" as="geometry" /></mxCell>
-        <mxCell id="f3_up" value="前端上传图片" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="200" y="560" width="100" height="40" as="geometry" /></mxCell>
-        <mxCell id="f3_save" value="存入数据库&lt;br&gt;(初始化待审核)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="200" y="620" width="100" height="45" as="geometry" /></mxCell>
-        <mxCell id="f3_audit" value="管理员人工审核?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="190" y="700" width="120" height="60" as="geometry" /></mxCell>
-        <mxCell id="f3_pass" value="设为:审核通过" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="340" y="710" width="100" height="40" as="geometry" /></mxCell>
-        <mxCell id="f3_show" value="攻略列表对外公开" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="340" y="780" width="100" height="40" as="geometry" /></mxCell>
-        <mxCell id="f3_fail" value="拒绝或直接删除" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="60" y="710" width="100" height="40" as="geometry" /></mxCell>
-        <mxCell id="f3_end" value="结束" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="210" y="880" width="80" height="40" as="geometry" /></mxCell>
-        <mxCell id="l3_1" edge="1" parent="1" source="f3_start" target="f3_up" style="endArrow=classic;" />
-        <mxCell id="l3_2" edge="1" parent="1" source="f3_up" target="f3_save" style="endArrow=classic;" />
-        <mxCell id="l3_3" edge="1" parent="1" source="f3_save" target="f3_audit" style="endArrow=classic;" />
-        <mxCell id="l3_4" edge="1" parent="1" source="f3_audit" target="f3_pass" style="endArrow=classic;"><mxGeometry value="通过" relative="1" as="geometry" /></mxCell>
-        <mxCell id="l3_5" edge="1" parent="1" source="f3_audit" target="f3_fail" style="endArrow=classic;"><mxGeometry value="拒绝" relative="1" as="geometry" /></mxCell>
-        <mxCell id="l3_6" edge="1" parent="1" source="f3_pass" target="f3_show" style="endArrow=classic;" />
-        <mxCell id="l3_7" edge="1" parent="1" source="f3_show" target="f3_end" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;" />
-        <mxCell id="l3_8" edge="1" parent="1" source="f3_fail" target="f3_end" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;" />
+        <!-- 登录分支 -->
+        <mxCell id="log_1" value="前端输入登录账号&lt;br&gt;调用/api/users/login" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="200" y="180" width="130" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="log_2" value="后端账号密码&lt;br&gt;正确性校验" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="200" y="260" width="130" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="log_3" value="将当前用户写入&lt;br&gt;服务端Session" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="210" y="360" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="log_4" value="返回用户信息&lt;br&gt;(ID/角色/积分等)" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="210" y="430" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="log_5" value="前端存入本地缓存&lt;br&gt;并保存Cookie" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="210" y="500" width="110" height="40" as="geometry" />
+        </mxCell>
 
-        <!-- ========================================== -->
-        <!-- 4.2.4 互动模块 (点赞/评论/收藏) -->
-        <!-- ========================================== -->
-        <mxCell id="t4" value="图4-4 互动模块(点赞评论收藏)业务流程图" style="text;html=1;align=center;fontStyle=1;fontSize=14;" vertex="1" parent="1"><mxGeometry x="650" y="960" width="250" height="30" as="geometry" /></mxCell>
-        <mxCell id="f4_start" value="开始" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="735" y="500" width="80" height="40" as="geometry" /></mxCell>
-        <mxCell id="f4_input" value="用户发起互动请求" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="720" y="560" width="110" height="40" as="geometry" /></mxCell>
-        <mxCell id="f4_type" value="互动类型判定" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="725" y="620" width="100" height="60" as="geometry" /></mxCell>
-        <mxCell id="f4_table" value="操作点赞/评论/收藏表" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="710" y="720" width="130" height="45" as="geometry" /></mxCell>
-        <mxCell id="f4_ui" value="前端动态切换状态" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="720" y="800" width="110" height="40" as="geometry" /></mxCell>
-        <mxCell id="f4_end" value="结束" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="735" y="880" width="80" height="40" as="geometry" /></mxCell>
-        <mxCell id="l4_1" edge="1" parent="1" source="f4_start" target="f4_input" style="endArrow=classic;" />
-        <mxCell id="l4_2" edge="1" parent="1" source="f4_input" target="f4_type" style="endArrow=classic;" />
-        <mxCell id="l4_3" edge="1" parent="1" source="f4_type" target="f4_table" style="endArrow=classic;"><mxGeometry value="保存/删除" relative="1" as="geometry" /></mxCell>
-        <mxCell id="l4_4" edge="1" parent="1" source="f4_table" target="f4_ui" style="endArrow=classic;" />
-        <mxCell id="l4_5" edge="1" parent="1" source="f4_ui" target="f4_end" style="endArrow=classic;" />
+        <!-- 汇总结束 -->
+        <mxCell id="node_end" value="结束" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="374" y="580" width="80" height="40" as="geometry" />
+        </mxCell>
 
-        <!-- ========================================== -->
-        <!-- 4.2.5 个人中心模块 -->
-        <!-- ========================================== -->
-        <mxCell id="t5" value="图4-5 个人中心模块业务流程图" style="text;html=1;align=center;fontStyle=1;fontSize=14;" vertex="1" parent="1"><mxGeometry x="150" y="1480" width="200" height="30" as="geometry" /></mxCell>
-        <mxCell id="f5_start" value="开始" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="210" y="1040" width="80" height="40" as="geometry" /></mxCell>
-        <mxCell id="f5_cache" value="读取本地身份缓存" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="200" y="1100" width="100" height="40" as="geometry" /></mxCell>
-        <mxCell id="f5_role" value="判定身份权限" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="200" y="1160" width="100" height="60" as="geometry" /></mxCell>
-        <mxCell id="f5_adm" value="显示用户管理入口" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="340" y="1220" width="110" height="40" as="geometry" /></mxCell>
-        <mxCell id="f5_base" value="显示发布/收藏/结伴" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="70" y="1220" width="110" height="40" as="geometry" /></mxCell>
-        <mxCell id="f5_end" value="结束" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="210" y="1360" width="80" height="40" as="geometry" /></mxCell>
-        <mxCell id="l5_1" edge="1" parent="1" source="f5_start" target="f5_cache" style="endArrow=classic;" />
-        <mxCell id="l5_2" edge="1" parent="1" source="f5_cache" target="f5_role" style="endArrow=classic;" />
-        <mxCell id="l5_3" edge="1" parent="1" source="f5_role" target="f5_adm" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;"><mxGeometry value="管理员" relative="1" as="geometry" /></mxCell>
-        <mxCell id="l5_4" edge="1" parent="1" source="f5_role" target="f5_base" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;"><mxGeometry value="普通用户" relative="1" as="geometry" /></mxCell>
-        <mxCell id="l5_5" edge="1" parent="1" source="f5_adm" target="f5_end" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;" />
-        <mxCell id="l5_6" edge="1" parent="1" source="f5_base" target="f5_end" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;" />
+        <!-- 连线部分 -->
+        <mxCell id="l1" edge="1" parent="1" source="node_start" target="node_choice" style="endArrow=classic;strokeColor=#000000;" />
+        <mxCell id="l2" edge="1" parent="1" source="node_choice" target="reg_1" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;strokeColor=#000000;"><mxGeometry value="注册" relative="1" as="geometry" /></mxCell>
+        <mxCell id="l3" edge="1" parent="1" source="node_choice" target="log_1" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;strokeColor=#000000;"><mxGeometry value="登录" relative="1" as="geometry" /></mxCell>
+        
+        <!-- 注册线 -->
+        <mxCell id="l4" edge="1" parent="1" source="reg_1" target="reg_2" style="endArrow=classic;strokeColor=#000000;" />
+        <mxCell id="l5" edge="1" parent="1" source="reg_2" target="reg_3" style="endArrow=classic;strokeColor=#000000;"><mxGeometry value="通过" relative="1" as="geometry" /></mxCell>
+        <mxCell id="l6" edge="1" parent="1" source="reg_3" target="reg_4" style="endArrow=classic;strokeColor=#000000;" />
+        <mxCell id="l7" edge="1" parent="1" source="reg_4" target="node_end" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;strokeColor=#000000;" />
+        <mxCell id="l8" edge="1" parent="1" source="reg_2" target="reg_1" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;strokeColor=#000000;entryX=1;entryY=0.5;"><mxGeometry value="重复" relative="1" as="geometry"><mxPoint x="660" y="295" as="sourcePoint" /><mxPoint x="660" y="205" as="targetPoint" /></mxGeometry></mxCell>
 
-        <!-- ========================================== -->
-        <!-- 4.2.6 行程规划模块 (主子表) -->
-        <!-- ========================================== -->
-        <mxCell id="t6" value="图4-6 行程规划业务流程图" style="text;html=1;align=center;fontStyle=1;fontSize=14;" vertex="1" parent="1"><mxGeometry x="650" y="1480" width="200" height="30" as="geometry" /></mxCell>
-        <mxCell id="f6_start" value="开始" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="735" y="1040" width="80" height="40" as="geometry" /></mxCell>
-        <mxCell id="f6_main" value="创建行程主表记录" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="720" y="1100" width="110" height="40" as="geometry" /></mxCell>
-        <mxCell id="f6_pick" value="从景区列表选择景点" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="720" y="1160" width="110" height="40" as="geometry" /></mxCell>
-        <mxCell id="f6_sort" value="后端维护天数与排序" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="715" y="1230" width="120" height="50" as="geometry" /></mxCell>
-        <mxCell id="f6_show" value="按天数展示列表" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="725" y="1310" width="100" height="40" as="geometry" /></mxCell>
-        <mxCell id="f6_end" value="结束" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="735" y="1400" width="80" height="40" as="geometry" /></mxCell>
-        <mxCell id="l6_1" edge="1" parent="1" source="f6_start" target="f6_main" style="endArrow=classic;" />
-        <mxCell id="l6_2" edge="1" parent="1" source="f6_main" target="f6_pick" style="endArrow=classic;" />
-        <mxCell id="l6_3" edge="1" parent="1" source="f6_pick" target="f6_sort" style="endArrow=classic;" />
-        <mxCell id="l6_4" edge="1" parent="1" source="f6_sort" target="f6_show" style="endArrow=classic;" />
-        <mxCell id="l6_5" edge="1" parent="1" source="f6_show" target="f6_end" style="endArrow=classic;" />
-
-        <!-- ========================================== -->
-        <!-- 4.2.7 结伴出游模块 (请求与审批) -->
-        <!-- ========================================== -->
-        <mxCell id="t7" value="图4-7 结伴出游与审批业务流程图" style="text;html=1;align=center;fontStyle=1;fontSize=14;" vertex="1" parent="1"><mxGeometry x="150" y="2050" width="200" height="30" as="geometry" /></mxCell>
-        <mxCell id="f7_start" value="开始" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="210" y="1560" width="80" height="40" as="geometry" /></mxCell>
-        <mxCell id="f7_pub" value="发起者发布请求" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="200" y="1620" width="100" height="40" as="geometry" /></mxCell>
-        <mxCell id="f7_app" value="其他用户提交申请" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="200" y="1680" width="100" height="40" as="geometry" /></mxCell>
-        <mxCell id="f7_audit" value="发起者审批申请?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="190" y="1740" width="120" height="60" as="geometry" /></mxCell>
-        <mxCell id="f7_inc" value="后端更新当前人数" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="340" y="1750" width="110" height="40" as="geometry" /></mxCell>
-        <mxCell id="f7_full" value="达到人数上限?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="345" y="1810" width="100" height="60" as="geometry" /></mxCell>
-        <mxCell id="f7_close" value="修改结伴状态:截止" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="340" y="1900" width="110" height="40" as="geometry" /></mxCell>
-        <mxCell id="f7_end" value="结束" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="210" y="1980" width="80" height="40" as="geometry" /></mxCell>
-        <mxCell id="l7_1" edge="1" parent="1" source="f7_start" target="f7_pub" style="endArrow=classic;" />
-        <mxCell id="l7_2" edge="1" parent="1" source="f7_pub" target="f7_app" style="endArrow=classic;" />
-        <mxCell id="l7_3" edge="1" parent="1" source="f7_app" target="f7_audit" style="endArrow=classic;" />
-        <mxCell id="l7_4" edge="1" parent="1" source="f7_audit" target="f7_inc" style="endArrow=classic;"><mxGeometry value="通过" relative="1" as="geometry" /></mxCell>
-        <mxCell id="l7_5" edge="1" parent="1" source="f7_inc" target="f7_full" style="endArrow=classic;" />
-        <mxCell id="l7_6" edge="1" parent="1" source="f7_full" target="f7_close" style="endArrow=classic;"><mxGeometry value="是" relative="1" as="geometry" /></mxCell>
-        <mxCell id="l7_7" edge="1" parent="1" source="f7_close" target="f7_end" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;" />
-        <mxCell id="l7_8" edge="1" parent="1" source="f7_full" target="f7_end" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;"><mxGeometry value="否" relative="1" as="geometry" /></mxCell>
-        <mxCell id="l7_9" edge="1" parent="1" source="f7_audit" target="f7_end" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;"><mxGeometry value="拒绝" relative="1" as="geometry" /></mxCell>
-
-        <!-- ========================================== -->
-        <!-- 4.2.8 文件上传模块 -->
-        <!-- ========================================== -->
-        <mxCell id="t8" value="图4-8 统一文件上传业务流程图" style="text;html=1;align=center;fontStyle=1;fontSize=14;" vertex="1" parent="1"><mxGeometry x="650" y="2050" width="200" height="30" as="geometry" /></mxCell>
-        <mxCell id="f8_start" value="开始" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="735" y="1560" width="80" height="40" as="geometry" /></mxCell>
-        <mxCell id="f8_req" value="wx.uploadFile发起请求" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="715" y="1620" width="120" height="40" as="geometry" /></mxCell>
-        <mxCell id="f8_val" value="校验类型及大小" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="720" y="1680" width="110" height="60" as="geometry" /></mxCell>
-        <mxCell id="f8_dir" value="按日期目录保存图片" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="720" y="1770" width="110" height="40" as="geometry" /></mxCell>
-        <mxCell id="f8_url" value="返回可访问URL" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="720" y="1840" width="110" height="40" as="geometry" /></mxCell>
-        <mxCell id="f8_end" value="结束" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="735" y="1920" width="80" height="40" as="geometry" /></mxCell>
-        <mxCell id="l8_1" edge="1" parent="1" source="f8_start" target="f8_req" style="endArrow=classic;" />
-        <mxCell id="l8_2" edge="1" parent="1" source="f8_req" target="f8_val" style="endArrow=classic;" />
-        <mxCell id="l8_3" edge="1" parent="1" source="f8_val" target="f8_dir" style="endArrow=classic;"><mxGeometry value="通过" relative="1" as="geometry" /></mxCell>
-        <mxCell id="l8_4" edge="1" parent="1" source="f8_dir" target="f8_url" style="endArrow=classic;" />
-        <mxCell id="l8_5" edge="1" parent="1" source="f8_url" target="f8_end" style="endArrow=classic;" />
-        <mxCell id="l8_6" edge="1" parent="1" source="f8_val" target="f8_end" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;"><mxGeometry value="非法" relative="1" as="geometry" /></mxCell>
+        <!-- 登录线 -->
+        <mxCell id="l9" edge="1" parent="1" source="log_1" target="log_2" style="endArrow=classic;strokeColor=#000000;" />
+        <mxCell id="l10" edge="1" parent="1" source="log_2" target="log_3" style="endArrow=classic;strokeColor=#000000;"><mxGeometry value="成功" relative="1" as="geometry" /></mxCell>
+        <mxCell id="l11" edge="1" parent="1" source="log_3" target="log_4" style="endArrow=classic;strokeColor=#000000;" />
+        <mxCell id="l12" edge="1" parent="1" source="log_4" target="log_5" style="endArrow=classic;strokeColor=#000000;" />
+        <mxCell id="l13" edge="1" parent="1" source="log_5" target="node_end" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;strokeColor=#000000;" />
+        <mxCell id="l14" edge="1" parent="1" source="log_2" target="log_1" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;strokeColor=#000000;entryX=0;entryY=0.5;"><mxGeometry value="失败" relative="1" as="geometry"><mxPoint x="170" y="295" as="sourcePoint" /><mxPoint x="170" y="205" as="targetPoint" /></mxGeometry></mxCell>
 
       </root>
     </mxGraphModel>

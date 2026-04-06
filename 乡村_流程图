@@ -1,19 +1,86 @@
-<mxGraphModel dx="1000" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+<mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
   <root>
     <mxCell id="0" />
     <mxCell id="1" parent="0" />
-    <mxCell id="v1" value="开始" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1"><mxGeometry x="360" y="40" width="100" height="40" as="geometry" /></mxCell>
-    <mxCell id="v2" value="居民发起志愿者申请" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="350" y="110" width="120" height="50" as="geometry" /></mxCell>
-    <mxCell id="v3" value="管理员身份审核认证" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="350" y="190" width="120" height="80" as="geometry" /></mxCell>
-    <mxCell id="v4" value="系统更新为志愿者身份" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eeeeee;" vertex="1" parent="1"><mxGeometry x="350" y="300" width="120" height="50" as="geometry" /></mxCell>
-    <mxCell id="v5" value="报名参与管理员&#xa;发布的志愿活动" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="350" y="380" width="120" height="50" as="geometry" /></mxCell>
-    <mxCell id="v6" value="管理员确认并记录&#xa;服务成果/时长" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="350" y="460" width="120" height="50" as="geometry" /></mxCell>
-    <mxCell id="v7" value="结束" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;" vertex="1" parent="1"><mxGeometry x="370" y="540" width="80" height="40" as="geometry" /></mxCell>
-    <mxCell id="ev1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;" edge="1" parent="1" source="v1" target="v2" />
-    <mxCell id="ev2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;" edge="1" parent="1" source="v2" target="v3" />
-    <mxCell id="ev3" value="通过" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;" edge="1" parent="1" source="v3" target="v4" />
-    <mxCell id="ev4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;" edge="1" parent="1" source="v4" target="v5" />
-    <mxCell id="ev5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;" edge="1" parent="1" source="v5" target="v6" />
-    <mxCell id="ev6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;" edge="1" parent="1" source="v6" target="v7" />
+    
+    <!-- 泳道容器 -->
+    <mxCell id="pool" value="志愿者管理与报名审核业务流程图" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;html=1;fillColor=#eeeeee;strokeColor=#000000;fontStyle=1;rounded=0;shadow=0;" vertex="1" parent="1">
+      <mxGeometry x="40" y="40" width="760" height="880" as="geometry" />
+    </mxCell>
+
+    <!-- 泳道1：居民/志愿者 -->
+    <mxCell id="lane_resident" value="居民 / 志愿者" style="swimlane;startSize=20;horizontal=0;html=1;fillColor=none;strokeColor=#000000;rounded=0;shadow=0;" vertex="1" parent="pool">
+      <mxGeometry y="30" width="760" height="280" as="geometry" />
+    </mxCell>
+    <mxCell id="node_start" value="开始" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="lane_resident">
+      <mxGeometry x="60" y="40" width="80" height="30" as="geometry" />
+    </mxCell>
+    <mxCell id="res_1" value="提交志愿者注册申请" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="lane_resident">
+      <mxGeometry x="40" y="110" width="120" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="res_2" value="浏览并报名志愿活动" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="lane_resident">
+      <mxGeometry x="320" y="110" width="120" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="res_3" value="参与志愿服务" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="lane_resident">
+      <mxGeometry x="480" y="110" width="100" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="res_4" value="查看个人服务记录&#xa;(时长、荣誉等)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="lane_resident">
+      <mxGeometry x="620" y="110" width="120" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="node_end" value="结束" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="lane_resident">
+      <mxGeometry x="640" y="220" width="80" height="30" as="geometry" />
+    </mxCell>
+
+    <!-- 泳道2：管理员 -->
+    <mxCell id="lane_admin" value="平台管理员" style="swimlane;startSize=20;horizontal=0;html=1;fillColor=none;strokeColor=#000000;rounded=0;shadow=0;" vertex="1" parent="pool">
+      <mxGeometry y="310" width="760" height="300" as="geometry" />
+    </mxCell>
+    <mxCell id="adm_1" value="审核志愿者身份申请" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="lane_admin">
+      <mxGeometry x="40" y="40" width="120" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="adm_gate" value="是否认证" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="lane_admin">
+      <mxGeometry x="60" y="120" width="80" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="adm_2" value="创建并发布志愿活动" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="lane_admin">
+      <mxGeometry x="320" y="40" width="120" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="adm_3" value="核准服务时长&#xa;记录服务成果" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="lane_admin">
+      <mxGeometry x="620" y="40" width="120" height="40" as="geometry" />
+    </mxCell>
+
+    <!-- 泳道3：系统 -->
+    <mxCell id="lane_sys" value="系统后台" style="swimlane;startSize=20;horizontal=0;html=1;fillColor=none;strokeColor=#000000;rounded=0;shadow=0;" vertex="1" parent="pool">
+      <mxGeometry y="610" width="760" height="270" as="geometry" />
+    </mxCell>
+    <mxCell id="sys_1" value="更新用户身份为&#xa;“志愿者”状态" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#000000;shadow=0;" vertex="1" parent="lane_sys">
+      <mxGeometry x="180" y="50" width="110" height="50" as="geometry" />
+    </mxCell>
+    <mxCell id="sys_2" value="活动报名名额扣减&#xa;发送报名成功通知" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#000000;shadow=0;" vertex="1" parent="lane_sys">
+      <mxGeometry x="320" y="140" width="120" height="50" as="geometry" />
+    </mxCell>
+    <mxCell id="sys_3" value="持久化存储服务记录&#xa;更新个人积分/档案" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#000000;shadow=0;" vertex="1" parent="lane_sys">
+      <mxGeometry x="620" y="50" width="120" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- 连接线 -->
+    <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=classic;" edge="1" parent="pool" source="node_start" target="res_1" />
+    <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=classic;" edge="1" parent="pool" source="res_1" target="adm_1" />
+    <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=classic;" edge="1" parent="pool" source="adm_1" target="adm_gate" />
+    <mxCell id="e4" value="通过" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=classic;labelBackgroundColor=#ffffff;" edge="1" parent="pool" source="adm_gate" target="sys_1">
+      <mxGeometry x="-0.3" relative="1" as="geometry"><Array as="points"><mxPoint x="235" y="460" /></Array></mxGeometry>
+    </mxCell>
+    <mxCell id="e5" value="驳回" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=classic;labelBackgroundColor=#ffffff;" edge="1" parent="pool" source="adm_gate" target="node_end">
+      <mxGeometry x="-0.8" relative="1" as="geometry"><Array as="points"><mxPoint x="100" y="550" /><mxPoint x="10" y="550" /><mxPoint x="10" y="265" /></Array></mxGeometry>
+    </mxCell>
+    <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=classic;" edge="1" parent="pool" source="sys_1" target="adm_2">
+      <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="235" y="350" /></Array></mxGeometry>
+    </mxCell>
+    <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=classic;" edge="1" parent="pool" source="adm_2" target="res_2" />
+    <mxCell id="e8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=classic;" edge="1" parent="pool" source="res_2" target="sys_2" />
+    <mxCell id="e9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=classic;" edge="1" parent="pool" source="sys_2" target="res_3" />
+    <mxCell id="e10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=classic;" edge="1" parent="pool" source="res_3" target="adm_3" />
+    <mxCell id="e11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=classic;" edge="1" parent="pool" source="adm_3" target="sys_3" />
+    <mxCell id="e12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=classic;" edge="1" parent="pool" source="sys_3" target="res_4" />
+    <mxCell id="e13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=classic;" edge="1" parent="pool" source="res_4" target="node_end" />
   </root>
 </mxGraphModel>

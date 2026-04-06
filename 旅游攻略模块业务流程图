@@ -1,0 +1,120 @@
+<mxfile host="app.diagrams.net" modified="2024-03-21T00:00:00.000Z" agent="Mozilla/5.0" version="21.0.0" type="device">
+  <diagram name="8大模块业务流程图" id="full-flowcharts">
+    <mxGraphModel dx="1422" dy="791" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="2500" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- ========================================== -->
+        <!-- 4.2.1 用户管理模块流程 -->
+        <!-- ========================================== -->
+        <mxCell id="t1" value="图4-1 用户管理模块业务流程" style="text;html=1;align=center;fontStyle=1;fontSize=14;" vertex="1" parent="1"><mxGeometry x="150" y="380" width="200" height="30" as="geometry" /></mxCell>
+        <mxCell id="f1_1" value="用户输入账号密码" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="200" y="40" width="100" height="40" as="geometry" /></mxCell>
+        <mxCell id="f1_2" value="后端BCrypt校验" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="190" y="110" width="120" height="60" as="geometry" /></mxCell>
+        <mxCell id="f1_3" value="写入Session&lt;br&gt;保存Cookie" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="200" y="210" width="100" height="40" as="geometry" /></mxCell>
+        <mxCell id="f1_4" value="管理员后台管理&lt;br&gt;(增删改查)" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;" vertex="1" parent="1"><mxGeometry x="200" y="280" width="100" height="50" as="geometry" /></mxCell>
+        <mxCell id="f1_5" value="登录成功" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="340" y="210" width="80" height="40" as="geometry" /></mxCell>
+        <mxCell id="l1_1" edge="1" parent="1" source="f1_1" target="f1_2" style="endArrow=classic;html=1;" />
+        <mxCell id="l1_2" edge="1" parent="1" source="f1_2" target="f1_3" style="endArrow=classic;html=1;"><mxGeometry value="匹配" relative="1" as="geometry" /></mxCell>
+        <mxCell id="l1_3" edge="1" parent="1" source="f1_3" target="f1_5" style="endArrow=classic;html=1;" />
+        <mxCell id="l1_4" edge="1" parent="1" source="f1_2" target="f1_1" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;html=1;entryX=0;entryY=0.5;"><mxGeometry value="错误" relative="1" as="geometry" /></mxCell>
+        <mxCell id="l1_5" edge="1" parent="1" source="f1_3" target="f1_4" style="endArrow=classic;html=1;" />
+
+        <!-- ========================================== -->
+        <!-- 4.2.2 景区信息模块流程 -->
+        <!-- ========================================== -->
+        <mxCell id="t2" value="图4-2 景区信息展示与维护业务流程" style="text;html=1;align=center;fontStyle=1;fontSize=14;" vertex="1" parent="1"><mxGeometry x="600" y="380" width="250" height="30" as="geometry" /></mxCell>
+        <mxCell id="f2_1" value="管理员维护景区&lt;br&gt;(增/删/改)" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="650" y="40" width="110" height="50" as="geometry" /></mxCell>
+        <mxCell id="f2_2" value="更新MySQL数据库" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="640" y="120" width="130" height="40" as="geometry" /></mxCell>
+        <mxCell id="f2_3" value="用户请求景区列表" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="650" y="190" width="110" height="40" as="geometry" /></mxCell>
+        <mxCell id="f2_4" value="关键词搜索/排序" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="645" y="260" width="120" height="60" as="geometry" /></mxCell>
+        <mxCell id="f2_5" value="展示景区详情" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="810" y="270" width="100" height="40" as="geometry" /></mxCell>
+        <mxCell id="l2_1" edge="1" parent="1" source="f2_1" target="f2_2" style="endArrow=classic;" />
+        <mxCell id="l2_2" edge="1" parent="1" source="f2_2" target="f2_3" style="endArrow=classic;" />
+        <mxCell id="l2_3" edge="1" parent="1" source="f2_3" target="f2_4" style="endArrow=classic;" />
+        <mxCell id="l2_4" edge="1" parent="1" source="f2_4" target="f2_5" style="endArrow=classic;" />
+
+        <!-- ========================================== -->
+        <!-- 4.2.3 攻略分享与审核流程 -->
+        <!-- ========================================== -->
+        <mxCell id="t3" value="图4-3 攻略分享与审核业务流程" style="text;html=1;align=center;fontStyle=1;fontSize=14;" vertex="1" parent="1"><mxGeometry x="150" y="800" width="200" height="30" as="geometry" /></mxCell>
+        <mxCell id="f3_1" value="提交攻略(图文)" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="200" y="440" width="100" height="40" as="geometry" /></mxCell>
+        <mxCell id="f3_2" value="状态设为:待审核" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="200" y="510" width="100" height="40" as="geometry" /></mxCell>
+        <mxCell id="f3_3" value="管理员人工审核" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="190" y="580" width="120" height="60" as="geometry" /></mxCell>
+        <mxCell id="f3_4" value="更新状态为:通过" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="360" y="590" width="100" height="40" as="geometry" /></mxCell>
+        <mxCell id="f3_5" value="前端展示可见" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="360" y="670" width="100" height="40" as="geometry" /></mxCell>
+        <mxCell id="f3_6" value="拒绝或删除" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="60" y="590" width="90" height="40" as="geometry" /></mxCell>
+        <mxCell id="l3_1" edge="1" parent="1" source="f3_1" target="f3_2" style="endArrow=classic;" />
+        <mxCell id="l3_2" edge="1" parent="1" source="f3_2" target="f3_3" style="endArrow=classic;" />
+        <mxCell id="l3_3" edge="1" parent="1" source="f3_3" target="f3_4" style="endArrow=classic;"><mxGeometry value="是" relative="1" as="geometry" /></mxCell>
+        <mxCell id="l3_4" edge="1" parent="1" source="f3_3" target="f3_6" style="endArrow=classic;"><mxGeometry value="否" relative="1" as="geometry" /></mxCell>
+        <mxCell id="l3_5" edge="1" parent="1" source="f3_4" target="f3_5" style="endArrow=classic;" />
+
+        <!-- ========================================== -->
+        <!-- 4.2.4 互动模块流程 -->
+        <!-- ========================================== -->
+        <mxCell id="t4" value="图4-4 评论/点赞/收藏互动流程" style="text;html=1;align=center;fontStyle=1;fontSize=14;" vertex="1" parent="1"><mxGeometry x="600" y="800" width="200" height="30" as="geometry" /></mxCell>
+        <mxCell id="f4_1" value="用户点击交互按钮" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="650" y="440" width="110" height="40" as="geometry" /></mxCell>
+        <mxCell id="f4_2" value="身份及防重复校验" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="645" y="510" width="120" height="60" as="geometry" /></mxCell>
+        <mxCell id="f4_3" value="操作相关业务表&lt;br&gt;(Like/Comment/Fav)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="645" y="600" width="120" height="50" as="geometry" /></mxCell>
+        <mxCell id="f4_4" value="前端状态动态反馈" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="650" y="690" width="110" height="40" as="geometry" /></mxCell>
+        <mxCell id="l4_1" edge="1" parent="1" source="f4_1" target="f4_2" style="endArrow=classic;" />
+        <mxCell id="l4_2" edge="1" parent="1" source="f4_2" target="f4_3" style="endArrow=classic;"><mxGeometry value="有效" relative="1" as="geometry" /></mxCell>
+        <mxCell id="l4_3" edge="1" parent="1" source="f4_3" target="f4_4" style="endArrow=classic;" />
+
+        <!-- ========================================== -->
+        <!-- 4.2.5 个人中心模块流程 -->
+        <!-- ========================================== -->
+        <mxCell id="t5" value="图4-5 个人中心业务路由流程" style="text;html=1;align=center;fontStyle=1;fontSize=14;" vertex="1" parent="1"><mxGeometry x="150" y="1220" width="200" height="30" as="geometry" /></mxCell>
+        <mxCell id="f5_1" value="进入个人中心页面" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="200" y="860" width="110" height="40" as="geometry" /></mxCell>
+        <mxCell id="f5_2" value="从本地缓存读身份" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="200" y="930" width="110" height="40" as="geometry" /></mxCell>
+        <mxCell id="f5_3" value="判断用户角色" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="195" y="1000" width="120" height="60" as="geometry" /></mxCell>
+        <mxCell id="f5_4" value="我的发布/收藏/行程" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="60" y="1100" width="110" height="40" as="geometry" /></mxCell>
+        <mxCell id="f5_5" value="管理端核心入口" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="330" y="1100" width="110" height="40" as="geometry" /></mxCell>
+        <mxCell id="l5_1" edge="1" parent="1" source="f5_1" target="f5_2" style="endArrow=classic;" />
+        <mxCell id="l5_2" edge="1" parent="1" source="f5_2" target="f5_3" style="endArrow=classic;" />
+        <mxCell id="l5_3" edge="1" parent="1" source="f5_3" target="f5_4" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;"><mxGeometry value="普通用户" relative="1" as="geometry" /></mxCell>
+        <mxCell id="l5_4" edge="1" parent="1" source="f5_3" target="f5_5" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;"><mxGeometry value="管理员" relative="1" as="geometry" /></mxCell>
+
+        <!-- ========================================== -->
+        <!-- 4.2.6 行程规划模块流程 -->
+        <!-- ========================================== -->
+        <mxCell id="t6" value="图4-6 行程规划业务逻辑流程" style="text;html=1;align=center;fontStyle=1;fontSize=14;" vertex="1" parent="1"><mxGeometry x="600" y="1220" width="200" height="30" as="geometry" /></mxCell>
+        <mxCell id="f6_1" value="创建行程主记录" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="650" y="860" width="110" height="40" as="geometry" /></mxCell>
+        <mxCell id="f6_2" value="设置日期并选景点" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="650" y="930" width="110" height="40" as="geometry" /></mxCell>
+        <mxCell id="f6_3" value="后端生成顺序号&lt;br&gt;存入行程项子表" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="645" y="1000" width="120" height="50" as="geometry" /></mxCell>
+        <mxCell id="f6_4" value="按天展示详情列表" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="650" y="1080" width="110" height="40" as="geometry" /></mxCell>
+        <mxCell id="l6_1" edge="1" parent="1" source="f6_1" target="f6_2" style="endArrow=classic;" />
+        <mxCell id="l6_2" edge="1" parent="1" source="f6_2" target="f6_3" style="endArrow=classic;" />
+        <mxCell id="l6_3" edge="1" parent="1" source="f6_3" target="f6_4" style="endArrow=classic;" />
+
+        <!-- ========================================== -->
+        <!-- 4.2.7 结伴出游模块流程 -->
+        <!-- ========================================== -->
+        <mxCell id="t7" value="图4-7 结伴申请审批业务流程" style="text;html=1;align=center;fontStyle=1;fontSize=14;" vertex="1" parent="1"><mxGeometry x="150" y="1650" width="200" height="30" as="geometry" /></mxCell>
+        <mxCell id="f7_1" value="发布结伴请求" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="200" y="1280" width="100" height="40" as="geometry" /></mxCell>
+        <mxCell id="f7_2" value="接收成员申请" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="200" y="1350" width="100" height="40" as="geometry" /></mxCell>
+        <mxCell id="f7_3" value="发起者在线审批" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="190" y="1420" width="120" height="60" as="geometry" /></mxCell>
+        <mxCell id="f7_4" value="后端更新当前人数" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="360" y="1430" width="110" height="40" as="geometry" /></mxCell>
+        <mxCell id="f7_5" value="满员? 自动关闭" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="360" y="1510" width="110" height="40" as="geometry" /></mxCell>
+        <mxCell id="l7_1" edge="1" parent="1" source="f7_1" target="f7_2" style="endArrow=classic;" />
+        <mxCell id="l7_2" edge="1" parent="1" source="f7_2" target="f7_3" style="endArrow=classic;" />
+        <mxCell id="l7_3" edge="1" parent="1" source="f7_3" target="f7_4" style="endArrow=classic;"><mxGeometry value="同意" relative="1" as="geometry" /></mxCell>
+        <mxCell id="l7_4" edge="1" parent="1" source="f7_4" target="f7_5" style="endArrow=classic;" />
+
+        <!-- ========================================== -->
+        <!-- 4.2.8 文件上传模块流程 -->
+        <!-- ========================================== -->
+        <mxCell id="t8" value="图4-8 统一文件上传支撑流程" style="text;html=1;align=center;fontStyle=1;fontSize=14;" vertex="1" parent="1"><mxGeometry x="600" y="1650" width="200" height="30" as="geometry" /></mxCell>
+        <mxCell id="f8_1" value="前端wx.uploadFile" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="650" y="1280" width="110" height="40" as="geometry" /></mxCell>
+        <mxCell id="f8_2" value="后端合法性校验" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="645" y="1350" width="120" height="60" as="geometry" /></mxCell>
+        <mxCell id="f8_3" value="重命名并存至磁盘" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="650" y="1440" width="110" height="40" as="geometry" /></mxCell>
+        <mxCell id="f8_4" value="返回映射后的URL" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="650" y="1520" width="110" height="40" as="geometry" /></mxCell>
+        <mxCell id="l8_1" edge="1" parent="1" source="f8_1" target="f8_2" style="endArrow=classic;" />
+        <mxCell id="l8_2" edge="1" parent="1" source="f8_2" target="f8_3" style="endArrow=classic;"><mxGeometry value="合法" relative="1" as="geometry" /></mxCell>
+        <mxCell id="l8_3" edge="1" parent="1" source="f8_3" target="f8_4" style="endArrow=classic;" />
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

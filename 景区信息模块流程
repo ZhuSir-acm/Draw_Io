@@ -1,0 +1,72 @@
+<mxfile host="app.diagrams.net" modified="2024-03-21T00:00:00.000Z" agent="Mozilla/5.0" version="21.0.0" type="device">
+  <diagram name="4.2.2 景区信息模块流程" id="flow-scenic-info">
+    <mxGraphModel dx="1422" dy="791" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- 开始 -->
+        <mxCell id="node_start" value="开始" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="374" y="40" width="80" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- 角色/功能选择 -->
+        <mxCell id="node_choice" value="操作角色判定" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="364" y="110" width="100" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- 普通用户分支 (展示子模块) -->
+        <mxCell id="usr_1" value="前端请求景区列表" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="190" y="180" width="130" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="usr_2" value="关键字搜索/排序?" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="190" y="260" width="130" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="usr_3" value="解析图片字段&lt;br&gt;渲染封面图展示" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="200" y="360" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="usr_4" value="查看景区详情内容&lt;br&gt;(位置/描述/状态)" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="200" y="450" width="110" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- 管理员分支 (维护子模块) -->
+        <mxCell id="adm_1" value="进入景区管理页&lt;br&gt;(新增/修改/删除)" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="500" y="180" width="130" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="adm_2" value="录入实体字段&lt;br&gt;(名称/经纬度/图片等)" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="500" y="270" width="130" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="adm_3" value="后端处理业务逻辑&lt;br&gt;并更新数据库" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;strokeColor=#000000;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="500" y="360" width="130" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="adm_4" value="即时同步展示数据&lt;br&gt;保证时效性" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="510" y="450" width="110" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- 汇总结束 -->
+        <mxCell id="node_end" value="结束" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="374" y="580" width="80" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- 连线部分 -->
+        <mxCell id="l1" edge="1" parent="1" source="node_start" target="node_choice" style="endArrow=classic;strokeColor=#000000;" />
+        <mxCell id="l2" edge="1" parent="1" source="node_choice" target="usr_1" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;strokeColor=#000000;"><mxGeometry value="普通用户" relative="1" as="geometry" /></mxCell>
+        <mxCell id="l3" edge="1" parent="1" source="node_choice" target="adm_1" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;strokeColor=#000000;"><mxGeometry value="管理员" relative="1" as="geometry" /></mxCell>
+        
+        <!-- 用户线 -->
+        <mxCell id="l4" edge="1" parent="1" source="usr_1" target="usr_2" style="endArrow=classic;strokeColor=#000000;" />
+        <mxCell id="l5" edge="1" parent="1" source="usr_2" target="usr_3" style="endArrow=classic;strokeColor=#000000;"><mxGeometry value="执行检索" relative="1" as="geometry" /></mxCell>
+        <mxCell id="l6" edge="1" parent="1" source="usr_3" target="usr_4" style="endArrow=classic;strokeColor=#000000;" />
+        <mxCell id="l7" edge="1" parent="1" source="usr_4" target="node_end" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;strokeColor=#000000;" />
+        <mxCell id="l8" edge="1" parent="1" source="usr_2" target="usr_3" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;strokeColor=#000000;"><mxGeometry value="默认展示" relative="1" as="geometry"><mxPoint x="150" y="295" as="sourcePoint" /><mxPoint x="150" y="385" as="targetPoint" /></mxGeometry></mxCell>
+
+        <!-- 管理员线 -->
+        <mxCell id="l9" edge="1" parent="1" source="adm_1" target="adm_2" style="endArrow=classic;strokeColor=#000000;" />
+        <mxCell id="l10" edge="1" parent="1" source="adm_2" target="adm_3" style="endArrow=classic;strokeColor=#000000;" />
+        <mxCell id="l11" edge="1" parent="1" source="adm_3" target="adm_4" style="endArrow=classic;strokeColor=#000000;" />
+        <mxCell id="l12" edge="1" parent="1" source="adm_4" target="node_end" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;strokeColor=#000000;" />
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

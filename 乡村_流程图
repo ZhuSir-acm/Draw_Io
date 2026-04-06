@@ -1,77 +1,107 @@
-<mxGraphModel dx="1000" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
-  <root>
-    <mxCell id="0" />
-    <mxCell id="1" parent="0" />
-    
-    <!-- 开始 -->
-    <mxCell id="node_start" value="开始" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#ffffff;strokeColor=#000000;shadow=0;fontStyle=1" vertex="1" parent="1">
-      <mxGeometry x="360" y="40" width="100" height="40" as="geometry" />
-    </mxCell>
-
-    <!-- 管理员操作段 -->
-    <mxCell id="admin_1" value="管理员：产业信息收集、&#xa;录入与维护更新" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="1">
-      <mxGeometry x="340" y="120" width="140" height="50" as="geometry" />
-    </mxCell>
-    
-    <mxCell id="admin_2" value="管理员：分类打标签、&#xa;审核并配置展示设置" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="1">
-      <mxGeometry x="340" y="210" width="140" height="50" as="geometry" />
-    </mxCell>
-
-    <!-- 系统/数据库枢纽 -->
-    <mxCell id="sys_db" value="系统数据库：&#xa;产业信息库 &amp; 分类体系" style="shape=datastore;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#000000;shadow=0;" vertex="1" parent="1">
-      <mxGeometry x="340" y="300" width="140" height="70" as="geometry" />
-    </mxCell>
-
-    <!-- 居民操作段 -->
-    <mxCell id="res_1" value="居民/访客：进入前台&#xa;浏览产业信息列表" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="1">
-      <mxGeometry x="340" y="410" width="140" height="50" as="geometry" />
-    </mxCell>
-
-    <!-- 决策路径 -->
-    <mxCell id="decision" value="选择浏览方式" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="1">
-      <mxGeometry x="350" y="500" width="120" height="80" as="geometry" />
-    </mxCell>
-
-    <mxCell id="res_filter" value="按分类标签筛选查询" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="1">
-      <mxGeometry x="240" y="600" width="120" height="40" as="geometry" />
-    </mxCell>
-
-    <mxCell id="res_map" value="按地图地理分布查看" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="1">
-      <mxGeometry x="460" y="600" width="120" height="40" as="geometry" />
-    </mxCell>
-
-    <mxCell id="res_detail" value="查看产业详细信息介绍" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="1">
-      <mxGeometry x="340" y="680" width="140" height="50" as="geometry" />
-    </mxCell>
-
-    <!-- 结束 -->
-    <mxCell id="node_end" value="结束" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#ffffff;strokeColor=#000000;shadow=0;fontStyle=1" vertex="1" parent="1">
-      <mxGeometry x="360" y="770" width="100" height="40" as="geometry" />
-    </mxCell>
-
-    <!-- 连接线 -->
-    <mxCell id="e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=classic;" edge="1" parent="1" source="node_start" target="admin_1" />
-    <mxCell id="e2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=classic;" edge="1" parent="1" source="admin_1" target="admin_2" />
-    <mxCell id="e3" value="更新持久化" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=classic;" edge="1" parent="1" source="admin_2" target="sys_db" />
-    <mxCell id="e4" value="读取数据" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=classic;" edge="1" parent="1" source="sys_db" target="res_1" />
-    <mxCell id="e5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=classic;" edge="1" parent="1" source="res_1" target="decision" />
-    
-    <mxCell id="e6" value="分类筛选" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=classic;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="decision" target="res_filter">
-      <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="300" y="540" /></Array></mxGeometry>
-    </mxCell>
-    
-    <mxCell id="e7" value="地图浏览" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=classic;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="decision" target="res_map">
-      <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="520" y="540" /></Array></mxGeometry>
-    </mxCell>
-
-    <mxCell id="e8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=classic;" edge="1" parent="1" source="res_filter" target="res_detail">
-      <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="300" y="660" /><mxPoint x="410" y="660" /></Array></mxGeometry>
-    </mxCell>
-    
-    <mxCell id="e9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=classic;" edge="1" parent="1" source="res_map" target="res_detail">
-      <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="520" y="660" /><mxPoint x="410" y="660" /></Array></mxGeometry>
-    </mxCell>
-
-    <mxCell id="e10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=classic;" edge="1" parent="1" source="res_detail" target="node_end" />
-  </root>
-</mxGraphModel>
+<mxfile host="app.diagrams.net">
+  <diagram id="O8nB22G5FC8kgaPBZE4J" name="第 1 页">
+    <mxGraphModel dx="148976" dy="98719" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="RSqkwz7NcvkxMqMD6biP-6" edge="1" parent="1" source="node_start" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="RSqkwz7NcvkxMqMD6biP-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="node_start" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#ffffff;strokeColor=#000000;shadow=0;fontStyle=1" value="开始" vertex="1">
+          <mxGeometry height="40" width="100" x="360" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="RSqkwz7NcvkxMqMD6biP-2" edge="1" parent="1" source="admin_1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="admin_2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="admin_1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" value="&lt;font dir=&quot;auto&quot; style=&quot;vertical-align: inherit;&quot;&gt;&lt;font dir=&quot;auto&quot; style=&quot;vertical-align: inherit;&quot;&gt;&lt;font dir=&quot;auto&quot; style=&quot;vertical-align: inherit;&quot;&gt;&lt;font dir=&quot;auto&quot; style=&quot;vertical-align: inherit;&quot;&gt;&lt;font dir=&quot;auto&quot; style=&quot;vertical-align: inherit;&quot;&gt;&lt;font dir=&quot;auto&quot; style=&quot;vertical-align: inherit;&quot;&gt;&lt;font dir=&quot;auto&quot; style=&quot;vertical-align: inherit;&quot;&gt;&lt;font dir=&quot;auto&quot; style=&quot;vertical-align: inherit;&quot;&gt;产业信息收集、&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;br&gt;&lt;font dir=&quot;auto&quot; style=&quot;vertical-align: inherit;&quot;&gt;&lt;font dir=&quot;auto&quot; style=&quot;vertical-align: inherit;&quot;&gt;&lt;font dir=&quot;auto&quot; style=&quot;vertical-align: inherit;&quot;&gt;&lt;font dir=&quot;auto&quot; style=&quot;vertical-align: inherit;&quot;&gt;&lt;font dir=&quot;auto&quot; style=&quot;vertical-align: inherit;&quot;&gt;&lt;font dir=&quot;auto&quot; style=&quot;vertical-align: inherit;&quot;&gt;&lt;font dir=&quot;auto&quot; style=&quot;vertical-align: inherit;&quot;&gt;&lt;font dir=&quot;auto&quot; style=&quot;vertical-align: inherit;&quot;&gt;录入与维护更新&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="140" x="520" y="105" as="geometry" />
+        </mxCell>
+        <mxCell id="RSqkwz7NcvkxMqMD6biP-13" edge="1" parent="1" source="admin_2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="node_end">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="admin_2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" value="&lt;font dir=&quot;auto&quot; style=&quot;vertical-align: inherit;&quot;&gt;&lt;font dir=&quot;auto&quot; style=&quot;vertical-align: inherit;&quot;&gt;分类打标签、&lt;/font&gt;&lt;/font&gt;&lt;br&gt;&lt;font dir=&quot;auto&quot; style=&quot;vertical-align: inherit;&quot;&gt;&lt;font dir=&quot;auto&quot; style=&quot;vertical-align: inherit;&quot;&gt;审核并配置展示设置&lt;/font&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="140" x="520" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="RSqkwz7NcvkxMqMD6biP-11" edge="1" parent="1" source="res_1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="decision" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="res_1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" value="&lt;font dir=&quot;auto&quot; style=&quot;vertical-align: inherit;&quot;&gt;&lt;font dir=&quot;auto&quot; style=&quot;vertical-align: inherit;&quot;&gt;&lt;font dir=&quot;auto&quot; style=&quot;vertical-align: inherit;&quot;&gt;&lt;font dir=&quot;auto&quot; style=&quot;vertical-align: inherit;&quot;&gt;浏览产业信息列表&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="140" x="170" y="105" as="geometry" />
+        </mxCell>
+        <mxCell id="decision" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" value="选择浏览方式" vertex="1">
+          <mxGeometry height="80" width="120" x="290" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="res_filter" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" value="按分类标签筛选查询" vertex="1">
+          <mxGeometry height="40" width="120" x="180" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="res_map" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" value="&lt;font dir=&quot;auto&quot; style=&quot;vertical-align: inherit;&quot;&gt;&lt;font dir=&quot;auto&quot; style=&quot;vertical-align: inherit;&quot;&gt;&lt;font dir=&quot;auto&quot; style=&quot;vertical-align: inherit;&quot;&gt;&lt;font dir=&quot;auto&quot; style=&quot;vertical-align: inherit;&quot;&gt;按地图地理分布查看&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="40" width="120" x="400" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="RSqkwz7NcvkxMqMD6biP-12" edge="1" parent="1" source="res_detail" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="node_end">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="res_detail" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" value="查看产业详细信息介绍" vertex="1">
+          <mxGeometry height="50" width="140" x="280" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="node_end" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#ffffff;strokeColor=#000000;shadow=0;fontStyle=1" value="结束" vertex="1">
+          <mxGeometry height="40" width="100" x="300" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="node_start" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=classic;" target="admin_1" value="" />
+        <mxCell id="e2" edge="1" parent="1" source="admin_1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=classic;" target="admin_2" value="" />
+        <mxCell id="e3" edge="1" parent="1" source="admin_2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=classic;" target="sys_db" value="更新持久化" />
+        <mxCell id="e4" edge="1" parent="1" source="sys_db" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=classic;" target="res_1" value="读取数据" />
+        <mxCell id="e5" edge="1" parent="1" source="res_1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=classic;" target="decision" value="" />
+        <mxCell id="e6" edge="1" parent="1" source="decision" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=classic;labelBackgroundColor=#ffffff;" target="res_filter" value="分类筛选">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="240" y="240" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="decision" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=classic;labelBackgroundColor=#ffffff;" target="res_map" value="地图浏览">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="460" y="240" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="res_filter" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=classic;" target="res_detail" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="240" y="360" />
+              <mxPoint x="350" y="360" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="res_map" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=classic;" target="res_detail" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="460" y="360" />
+              <mxPoint x="350" y="360" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e10" edge="1" parent="1" source="res_detail" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=classic;" target="node_end" value="" />
+        <mxCell id="RSqkwz7NcvkxMqMD6biP-7" edge="1" parent="1" source="RSqkwz7NcvkxMqMD6biP-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="admin_1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RSqkwz7NcvkxMqMD6biP-8" connectable="0" parent="RSqkwz7NcvkxMqMD6biP-7" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;span style=&quot;font-size: 12px; text-wrap-mode: wrap; background-color: rgb(236, 236, 236);&quot;&gt;&lt;font dir=&quot;auto&quot; style=&quot;vertical-align: inherit;&quot;&gt;&lt;font dir=&quot;auto&quot; style=&quot;vertical-align: inherit;&quot;&gt;管理员&lt;/font&gt;&lt;/font&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.38" y="2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RSqkwz7NcvkxMqMD6biP-9" edge="1" parent="1" source="RSqkwz7NcvkxMqMD6biP-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="res_1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RSqkwz7NcvkxMqMD6biP-10" connectable="0" parent="RSqkwz7NcvkxMqMD6biP-9" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;span style=&quot;font-size: 12px; text-wrap-mode: wrap; background-color: rgb(236, 236, 236);&quot;&gt;&lt;font dir=&quot;auto&quot; style=&quot;vertical-align: inherit;&quot;&gt;&lt;font dir=&quot;auto&quot; style=&quot;vertical-align: inherit;&quot;&gt;居民&lt;/font&gt;&lt;/font&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.0171" y="-2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RSqkwz7NcvkxMqMD6biP-4" parent="1" style="rhombus;whiteSpace=wrap;html=1;" value="&lt;font dir=&quot;auto&quot; style=&quot;vertical-align: inherit;&quot;&gt;&lt;font dir=&quot;auto&quot; style=&quot;vertical-align: inherit;&quot;&gt;&lt;font dir=&quot;auto&quot; style=&quot;vertical-align: inherit;&quot;&gt;&lt;font dir=&quot;auto&quot; style=&quot;vertical-align: inherit;&quot;&gt;判断角色&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="110" x="355" y="100" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

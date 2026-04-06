@@ -1,12 +1,61 @@
-<mxfile host="app.diagrams.net">
-  <diagram name="第 1 页" id="wSwHS5DqZkJdBIm6bEcV">
-    <mxGraphModel dx="1414" dy="785" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+<mxfile host="app.diagrams.net" modified="2024-03-21T00:00:00.000Z" agent="Mozilla/5.0" etag="PaperGraph" version="21.0.0" type="device">
+  <diagram name="系统功能结构图" id="tourism-platform-map">
+    <mxGraphModel dx="1422" dy="791" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="GyBm21zVOLeuUx90NFc4-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
-          <mxGeometry height="60" width="120" x="430" y="170" as="geometry" />
+        
+        <!-- 根节点 -->
+        <mxCell id="node_root" value="基于小程序的旅游攻略分享与交流平台" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;fontStyle=1;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="480" y="40" width="300" height="60" as="geometry" />
         </mxCell>
+
+        <!-- 普通游客端 -->
+        <mxCell id="node_user" value="普通游客端功能" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="220" y="160" width="180" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="line_root_user" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="node_root" target="node_user">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- 管理员端 -->
+        <mxCell id="node_admin" value="管理员端功能" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="860" y="160" width="180" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="line_root_admin" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="node_root" target="node_admin">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- 游客功能列表 -->
+        <mxCell id="u1" value="用户注册与登录" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;" vertex="1" parent="1"><mxGeometry x="80" y="260" width="120" height="40" as="geometry" /></mxCell>
+        <mxCell id="u2" value="景区信息浏览" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;" vertex="1" parent="1"><mxGeometry x="80" y="310" width="120" height="40" as="geometry" /></mxCell>
+        <mxCell id="u3" value="旅游攻略浏览" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;" vertex="1" parent="1"><mxGeometry x="80" y="360" width="120" height="40" as="geometry" /></mxCell>
+        <mxCell id="u4" value="旅游攻略发布" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;" vertex="1" parent="1"><mxGeometry x="80" y="410" width="120" height="40" as="geometry" /></mxCell>
+        <mxCell id="u5" value="互动交流功能" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;" vertex="1" parent="1"><mxGeometry x="250" y="260" width="120" height="40" as="geometry" /></mxCell>
+        <mxCell id="u6" value="个人中心功能" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;" vertex="1" parent="1"><mxGeometry x="250" y="310" width="120" height="40" as="geometry" /></mxCell>
+        <mxCell id="u7" value="行程规划功能" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;" vertex="1" parent="1"><mxGeometry x="250" y="360" width="120" height="40" as="geometry" /></mxCell>
+        <mxCell id="u8" value="结伴出游功能" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;" vertex="1" parent="1"><mxGeometry x="250" y="410" width="120" height="40" as="geometry" /></mxCell>
+
+        <!-- 游客端连线 -->
+        <mxCell id="lu1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;endArrow=none;" edge="1" parent="1" source="node_user" target="u1" />
+        <mxCell id="lu2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;endArrow=none;" edge="1" parent="1" source="node_user" target="u2" />
+        <mxCell id="lu3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;endArrow=none;" edge="1" parent="1" source="node_user" target="u3" />
+        <mxCell id="lu4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;endArrow=none;" edge="1" parent="1" source="node_user" target="u4" />
+        <mxCell id="lu5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;endArrow=none;" edge="1" parent="1" source="node_user" target="u5" />
+        <mxCell id="lu6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;endArrow=none;" edge="1" parent="1" source="node_user" target="u6" />
+        <mxCell id="lu7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;endArrow=none;" edge="1" parent="1" source="node_user" target="u7" />
+        <mxCell id="lu8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;endArrow=none;" edge="1" parent="1" source="node_user" target="u8" />
+
+        <!-- 管理员功能列表 -->
+        <mxCell id="a1" value="用户管理功能" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;" vertex="1" parent="1"><mxGeometry x="890" y="260" width="130" height="40" as="geometry" /></mxCell>
+        <mxCell id="a2" value="景区信息管理功能" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;" vertex="1" parent="1"><mxGeometry x="890" y="320" width="130" height="40" as="geometry" /></mxCell>
+        <mxCell id="a3" value="攻略审核与管理" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;" vertex="1" parent="1"><mxGeometry x="890" y="380" width="130" height="40" as="geometry" /></mxCell>
+
+        <!-- 管理员端连线 -->
+        <mxCell id="la1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;endArrow=none;" edge="1" parent="1" source="node_admin" target="a1" />
+        <mxCell id="la2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;endArrow=none;" edge="1" parent="1" source="node_admin" target="a2" />
+        <mxCell id="la3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;endArrow=none;" edge="1" parent="1" source="node_admin" target="a3" />
+
       </root>
     </mxGraphModel>
   </diagram>

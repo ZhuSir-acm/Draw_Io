@@ -1,81 +1,77 @@
-<mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+<mxGraphModel dx="1000" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
   <root>
     <mxCell id="0" />
     <mxCell id="1" parent="0" />
     
-    <!-- 整体容器 -->
-    <mxCell id="main_pool" value="图 4.8 社区网格管理业务流程图" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;html=1;fillColor=#eeeeee;strokeColor=#000000;fontStyle=1;rounded=0;shadow=0;" vertex="1" parent="1">
-      <mxGeometry x="40" y="40" width="760" height="740" as="geometry" />
+    <!-- 开始 -->
+    <mxCell id="node_start" value="开始" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#ffffff;strokeColor=#000000;shadow=0;fontStyle=1" vertex="1" parent="1">
+      <mxGeometry x="360" y="40" width="100" height="40" as="geometry" />
     </mxCell>
 
-    <!-- 1. 管理员：后台基建层 -->
-    <mxCell id="lane_admin" value="管理员 (后台基建)" style="swimlane;startSize=20;horizontal=0;html=1;fillColor=none;strokeColor=#000000;rounded=0;shadow=0;" vertex="1" parent="main_pool">
-      <mxGeometry y="30" width="760" height="230" as="geometry" />
+    <!-- 管理员操作段 -->
+    <mxCell id="admin_1" value="管理员：产业信息收集、&#xa;录入与维护更新" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="1">
+      <mxGeometry x="340" y="120" width="140" height="50" as="geometry" />
     </mxCell>
-    <mxCell id="start_node" value="开始" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="lane_admin">
-      <mxGeometry x="60" y="30" width="80" height="30" as="geometry" />
-    </mxCell>
-    <mxCell id="adm_1" value="划分/调整网格边界&#xa;(空间数字化)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="lane_admin">
-      <mxGeometry x="40" y="90" width="120" height="45" as="geometry" />
-    </mxCell>
-    <mxCell id="adm_2" value="维护网格人口信息&#xa;(数据初始化)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="lane_admin">
-      <mxGeometry x="200" y="90" width="120" height="45" as="geometry" />
-    </mxCell>
-    <mxCell id="adm_3" value="建立“空间-人口”&#xa;多维数据关联" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="lane_admin">
-      <mxGeometry x="360" y="90" width="120" height="45" as="geometry" />
-    </mxCell>
-    <mxCell id="adm_4" value="生成社区治理&#xa;统计分析报表" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="lane_admin">
-      <mxGeometry x="540" y="90" width="120" height="45" as="geometry" />
-    </mxCell>
-
-    <!-- 2. 系统：数据底座层 -->
-    <mxCell id="lane_sys" value="系统后台 (数据底座)" style="swimlane;startSize=20;horizontal=0;html=1;fillColor=none;strokeColor=#000000;rounded=0;shadow=0;" vertex="1" parent="main_pool">
-      <mxGeometry y="260" width="760" height="200" as="geometry" />
-    </mxCell>
-    <mxCell id="db_1" value="社区空间数据库&#xa;(Grid Geometry)" style="shape=datastore;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#000000;shadow=0;" vertex="1" parent="lane_sys">
-      <mxGeometry x="120" y="40" width="120" height="60" as="geometry" />
-    </mxCell>
-    <mxCell id="db_2" value="人口信息数据库&#xa;(Resident Info)" style="shape=datastore;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#000000;shadow=0;" vertex="1" parent="lane_sys">
-      <mxGeometry x="360" y="40" width="120" height="60" as="geometry" />
-    </mxCell>
-    <mxCell id="sys_index" value="统一数据关联索引" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#000000;shadow=0;" vertex="1" parent="lane_sys">
-      <mxGeometry x="240" y="130" width="120" height="40" as="geometry" />
-    </mxCell>
-
-    <!-- 3. 居民：前台应用层 -->
-    <mxCell id="lane_res" value="居民 / 访客 (前台应用)" style="swimlane;startSize=20;horizontal=0;html=1;fillColor=none;strokeColor=#000000;rounded=0;shadow=0;" vertex="1" parent="main_pool">
-      <mxGeometry y="460" width="760" height="250" as="geometry" />
-    </mxCell>
-    <mxCell id="res_1" value="定位/查找所属网格" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="lane_res">
-      <mxGeometry x="120" y="40" width="120" height="40" as="geometry" />
-    </mxCell>
-    <mxCell id="res_2" value="查看网格公示信息" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="lane_res">
-      <mxGeometry x="360" y="40" width="120" height="40" as="geometry" />
-    </mxCell>
-    <mxCell id="res_3" value="了解社区人口概况&#xa;与网格治理画像" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="lane_res">
-      <mxGeometry x="360" y="130" width="120" height="40" as="geometry" />
-    </mxCell>
-    <mxCell id="end_node" value="结束" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="lane_res">
-      <mxGeometry x="640" y="190" width="80" height="30" as="geometry" />
-    </mxCell>
-
-    <!-- 连接线条 -->
-    <!-- 管理员流 -->
-    <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;" edge="1" parent="main_pool" source="start_node" target="adm_1" />
-    <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;" edge="1" parent="main_pool" source="adm_1" target="adm_2" />
-    <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;" edge="1" parent="main_pool" source="adm_2" target="adm_3" />
-    <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;" edge="1" parent="main_pool" source="adm_3" target="adm_4" />
     
-    <!-- 数据持久化流 (Admin -> DB) -->
-    <mxCell id="e5" value="持久化" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;dashed=1;" edge="1" parent="main_pool" source="adm_1" target="db_1" />
-    <mxCell id="e6" value="持久化" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;dashed=1;" edge="1" parent="main_pool" source="adm_2" target="db_2" />
-    <mxCell id="e7" value="建立索引" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;dashed=1;" edge="1" parent="main_pool" source="adm_3" target="sys_index" />
+    <mxCell id="admin_2" value="管理员：分类打标签、&#xa;审核并配置展示设置" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="1">
+      <mxGeometry x="340" y="210" width="140" height="50" as="geometry" />
+    </mxCell>
 
-    <!-- 居民消费流 (DB -> Resident) -->
-    <mxCell id="e8" value="空间检索" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;" edge="1" parent="main_pool" source="db_1" target="res_1" />
-    <mxCell id="e9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;" edge="1" parent="main_pool" source="res_1" target="res_2" />
-    <mxCell id="e10" value="关联查询" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;" edge="1" parent="main_pool" source="db_2" target="res_2" />
-    <mxCell id="e11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;" edge="1" parent="main_pool" source="res_2" target="res_3" />
-    <mxCell id="e12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;" edge="1" parent="main_pool" source="res_3" target="end_node" />
+    <!-- 系统/数据库枢纽 -->
+    <mxCell id="sys_db" value="系统数据库：&#xa;产业信息库 &amp; 分类体系" style="shape=datastore;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#000000;shadow=0;" vertex="1" parent="1">
+      <mxGeometry x="340" y="300" width="140" height="70" as="geometry" />
+    </mxCell>
+
+    <!-- 居民操作段 -->
+    <mxCell id="res_1" value="居民/访客：进入前台&#xa;浏览产业信息列表" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="1">
+      <mxGeometry x="340" y="410" width="140" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- 决策路径 -->
+    <mxCell id="decision" value="选择浏览方式" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="1">
+      <mxGeometry x="350" y="500" width="120" height="80" as="geometry" />
+    </mxCell>
+
+    <mxCell id="res_filter" value="按分类标签筛选查询" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="1">
+      <mxGeometry x="240" y="600" width="120" height="40" as="geometry" />
+    </mxCell>
+
+    <mxCell id="res_map" value="按地图地理分布查看" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="1">
+      <mxGeometry x="460" y="600" width="120" height="40" as="geometry" />
+    </mxCell>
+
+    <mxCell id="res_detail" value="查看产业详细信息介绍" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="1">
+      <mxGeometry x="340" y="680" width="140" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- 结束 -->
+    <mxCell id="node_end" value="结束" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#ffffff;strokeColor=#000000;shadow=0;fontStyle=1" vertex="1" parent="1">
+      <mxGeometry x="360" y="770" width="100" height="40" as="geometry" />
+    </mxCell>
+
+    <!-- 连接线 -->
+    <mxCell id="e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=classic;" edge="1" parent="1" source="node_start" target="admin_1" />
+    <mxCell id="e2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=classic;" edge="1" parent="1" source="admin_1" target="admin_2" />
+    <mxCell id="e3" value="更新持久化" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=classic;" edge="1" parent="1" source="admin_2" target="sys_db" />
+    <mxCell id="e4" value="读取数据" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=classic;" edge="1" parent="1" source="sys_db" target="res_1" />
+    <mxCell id="e5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=classic;" edge="1" parent="1" source="res_1" target="decision" />
+    
+    <mxCell id="e6" value="分类筛选" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=classic;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="decision" target="res_filter">
+      <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="300" y="540" /></Array></mxGeometry>
+    </mxCell>
+    
+    <mxCell id="e7" value="地图浏览" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=classic;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="decision" target="res_map">
+      <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="520" y="540" /></Array></mxGeometry>
+    </mxCell>
+
+    <mxCell id="e8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=classic;" edge="1" parent="1" source="res_filter" target="res_detail">
+      <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="300" y="660" /><mxPoint x="410" y="660" /></Array></mxGeometry>
+    </mxCell>
+    
+    <mxCell id="e9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=classic;" edge="1" parent="1" source="res_map" target="res_detail">
+      <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="520" y="660" /><mxPoint x="410" y="660" /></Array></mxGeometry>
+    </mxCell>
+
+    <mxCell id="e10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=classic;" edge="1" parent="1" source="res_detail" target="node_end" />
   </root>
 </mxGraphModel>

@@ -1,18 +1,21 @@
 <mxfile host="app.diagrams.net" type="device">
-  <diagram id="fig4-8" name="图4.8 用户文件上传时序图">
+  <diagram id="fig4-7" name="图4.7 用户结伴出游时序图">
     <mxGraphModel dx="1000" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="fe" value="前端 (Client)" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;rounded=0;strokeWidth=2;" vertex="1" parent="1"><mxGeometry x="100" y="40" width="100" height="360" as="geometry" /></mxCell>
-        <mxCell id="be" value="后端服务 (Server)" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;rounded=0;strokeWidth=2;" vertex="1" parent="1"><mxGeometry x="300" y="40" width="100" height="360" as="geometry" /></mxCell>
-        <mxCell id="oss" value="文件存储 (OSS/Local)" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;rounded=0;strokeWidth=2;" vertex="1" parent="1"><mxGeometry x="500" y="40" width="100" height="360" as="geometry" /></mxCell>
-        <mxCell id="m1" value="1. wx.uploadFile(tempFilePath)" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" edge="1" parent="1" source="fe" target="be"><mxGeometry relative="1" as="geometry" /></mxCell>
-        <mxCell id="n1" value="校验: 类型、大小&#xa;目录生成: 按日期分录" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;size=12;fontSize=10;" vertex="1" parent="1"><mxGeometry x="360" y="130" width="130" height="50" as="geometry" /></mxCell>
-        <mxCell id="m2" value="2. 流式写入文件" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" edge="1" parent="1" source="be" target="oss"><mxGeometry relative="1" as="geometry" /></mxCell>
-        <mxCell id="m3" value="3. 返回文件可访问路径(URL)" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;" edge="1" parent="1" source="oss" target="be"><mxGeometry relative="1" as="geometry" /></mxCell>
-        <mxCell id="m4" value="4. 返回完整URL地址" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;" edge="1" parent="1" source="be" target="fe"><mxGeometry relative="1" as="geometry" /></mxCell>
-        <mxCell id="n2" value="业务解耦: 其他功能仅引用URL，&#xa;不直接处理文件流。" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;size=12;fontSize=10;" vertex="1" parent="1"><mxGeometry x="110" y="300" width="190" height="40" as="geometry" /></mxCell>
+        <mxCell id="u1" value="发起者" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;rounded=0;strokeWidth=2;" vertex="1" parent="1"><mxGeometry x="40" y="40" width="100" height="520" as="geometry" /></mxCell>
+        <mxCell id="be" value="后端服务" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;rounded=0;strokeWidth=2;" vertex="1" parent="1"><mxGeometry x="360" y="40" width="100" height="520" as="geometry" /></mxCell>
+        <mxCell id="db" value="结伴表 (DB)" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;rounded=0;strokeWidth=2;" vertex="1" parent="1"><mxGeometry x="520" y="40" width="100" height="520" as="geometry" /></mxCell>
+        <mxCell id="u2" value="申请人" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;rounded=0;strokeWidth=2;" vertex="1" parent="1"><mxGeometry x="680" y="40" width="100" height="520" as="geometry" /></mxCell>
+        <mxCell id="m1" value="1. 创建结伴请求(目的地,人数等)" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" edge="1" parent="1" source="u1" target="be"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="m2" value="2. 提交结伴申请(留言)" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" edge="1" parent="1" source="u2" target="be"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="550" y="160" /></Array></mxGeometry></mxCell>
+        <mxCell id="m3" value="3. 同意申请(approve)" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" edge="1" parent="1" source="u1" target="be"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="200" y="230" /></Array></mxGeometry></mxCell>
+        <mxCell id="m4" value="4. 更新申请状态为'同意'" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" edge="1" parent="1" source="be" target="db"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="m5" value="5. 当前人数 +1" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" edge="1" parent="1" source="be" target="db"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="480" y="320" /></Array></mxGeometry></mxCell>
+        <mxCell id="n1" value="检查: 当前人数 == 预期人数?" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;size=12;fontSize=10;" vertex="1" parent="1"><mxGeometry x="410" y="350" width="150" height="40" as="geometry" /></mxCell>
+        <mxCell id="m6" value="6. 修改请求状态为'已满员/结束'" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" edge="1" parent="1" source="be" target="db"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="480" y="430" /></Array></mxGeometry></mxCell>
+        <mxCell id="m7" value="7. 通知双方结果" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;" edge="1" parent="1" source="be" target="u1"><mxGeometry relative="1" as="geometry" /></mxCell>
       </root>
     </mxGraphModel>
   </diagram>

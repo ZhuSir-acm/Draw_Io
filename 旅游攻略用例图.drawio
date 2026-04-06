@@ -1,120 +1,223 @@
-<mxfile host="app.diagrams.net" modified="2024-03-21T00:00:00.000Z" agent="Mozilla/5.0" version="21.0.0" type="device">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0">
   <diagram name="旅游平台用例图全集" id="usecase-all-modules">
-    <mxGraphModel dx="1422" dy="791" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="2000" math="0" shadow="0">
+    <mxGraphModel dx="173775" dy="182541" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="2000" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-
-        <!-- ========================================== -->
-        <!-- 3.4.1 用户注册登录模块 -->
-        <!-- ========================================== -->
-        <mxCell id="box_341" value="用户注册登录模块" style="shape=mxgraph.sysml.package;html=1;whiteSpace=wrap;align=center;verticalAlign=top;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;spacingTop=5;" vertex="1" parent="1">
-          <mxGeometry x="100" y="50" width="300" height="240" as="geometry" />
+        <mxCell id="box_341" parent="1" style="shape=mxgraph.sysml.package;html=1;whiteSpace=wrap;align=center;verticalAlign=top;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;spacingTop=5;labelX=2;" value="&lt;font dir=&quot;auto&quot; style=&quot;vertical-align: inherit;&quot;&gt;&lt;font dir=&quot;auto&quot; style=&quot;vertical-align: inherit;&quot;&gt;&lt;font dir=&quot;auto&quot; style=&quot;vertical-align: inherit;&quot;&gt;&lt;font dir=&quot;auto&quot; style=&quot;vertical-align: inherit;&quot;&gt;用户注册登录模块&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="240" width="300" x="100" y="50" as="geometry" />
         </mxCell>
-        <mxCell id="u_341_1" value="未注册用户" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;strokeColor=#000000;fillColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="20" y="110" width="30" height="60" as="geometry" />
+        <mxCell id="u_341_1" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;strokeColor=#000000;fillColor=#ffffff;" value="未注册用户" vertex="1">
+          <mxGeometry height="60" width="30" x="20" y="110" as="geometry" />
         </mxCell>
-        <mxCell id="u_341_2" value="已注册用户" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;strokeColor=#000000;fillColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="20" y="210" width="30" height="60" as="geometry" />
+        <mxCell id="u_341_2" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;strokeColor=#000000;fillColor=#ffffff;" value="已注册用户" vertex="1">
+          <mxGeometry height="60" width="30" x="440" y="110" as="geometry" />
         </mxCell>
-        <mxCell id="uc_reg" value="账号注册" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1"><mxGeometry x="190" y="90" width="120" height="50" as="geometry" /></mxCell>
-        <mxCell id="uc_log" value="账号登录" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1"><mxGeometry x="190" y="160" width="120" height="50" as="geometry" /></mxCell>
-        <mxCell id="uc_stat" value="维持登录状态" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1"><mxGeometry x="190" y="230" width="120" height="50" as="geometry" /></mxCell>
-        <mxCell id="l_r1" edge="1" parent="1" source="u_341_1" target="uc_reg" style="endArrow=none;html=1;strokeColor=#000000;"><mxGeometry relative="1" as="geometry" /></mxCell>
-        <mxCell id="l_r2" edge="1" parent="1" source="u_341_2" target="uc_log" style="endArrow=none;html=1;strokeColor=#000000;"><mxGeometry relative="1" as="geometry" /></mxCell>
-        <mxCell id="l_r3" edge="1" parent="1" source="uc_log" target="uc_stat" style="endArrow=open;dashed=1;html=1;strokeColor=#000000;endFill=0;"><mxGeometry value="&lt;&lt;include&gt;&gt;" relative="1" as="geometry" /></mxCell>
-
-        <!-- ========================================== -->
-        <!-- 3.4.2 景区信息展示与管理 -->
-        <!-- ========================================== -->
-        <mxCell id="box_342" value="景区信息展示与管理模块" style="shape=mxgraph.sysml.package;html=1;whiteSpace=wrap;align=center;verticalAlign=top;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;spacingTop=5;" vertex="1" parent="1">
-          <mxGeometry x="600" y="50" width="300" height="300" as="geometry" />
+        <mxCell id="uc_reg" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;" value="账号注册" vertex="1">
+          <mxGeometry height="50" width="120" x="190" y="90" as="geometry" />
         </mxCell>
-        <mxCell id="act_tourist" value="普通游客" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;strokeColor=#000000;" vertex="1" parent="1"><mxGeometry x="520" y="100" width="30" height="60" as="geometry" /></mxCell>
-        <mxCell id="act_admin" value="管理员" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;strokeColor=#000000;" vertex="1" parent="1"><mxGeometry x="950" y="200" width="30" height="60" as="geometry" /></mxCell>
-        <mxCell id="uc_list" value="浏览景区列表" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="690" y="80" width="120" height="50" as="geometry" /></mxCell>
-        <mxCell id="uc_detail" value="查看景区详情" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="690" y="140" width="120" height="50" as="geometry" /></mxCell>
-        <mxCell id="uc_mspot" value="维护景区数据(增删改)" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="690" y="220" width="140" height="60" as="geometry" /></mxCell>
-        <mxCell id="l_s1" edge="1" parent="1" source="act_tourist" target="uc_list" style="endArrow=none;strokeColor=#000000;" />
-        <mxCell id="l_s2" edge="1" parent="1" source="act_tourist" target="uc_detail" style="endArrow=none;strokeColor=#000000;" />
-        <mxCell id="l_s3" edge="1" parent="1" source="act_admin" target="uc_mspot" style="endArrow=none;strokeColor=#000000;" />
-
-        <!-- ========================================== -->
-        <!-- 3.4.3 攻略分享与审核 -->
-        <!-- ========================================== -->
-        <mxCell id="box_343" value="攻略分享与审核模块" style="shape=mxgraph.sysml.package;html=1;whiteSpace=wrap;align=center;verticalAlign=top;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;spacingTop=5;" vertex="1" parent="1">
-          <mxGeometry x="100" y="350" width="300" height="300" as="geometry" />
+        <mxCell id="uc_log" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;" value="账号登录" vertex="1">
+          <mxGeometry height="50" width="120" x="190" y="160" as="geometry" />
         </mxCell>
-        <mxCell id="act_u3" value="用户" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1"><mxGeometry x="20" y="420" width="30" height="60" as="geometry" /></mxCell>
-        <mxCell id="act_a3" value="管理员" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1"><mxGeometry x="450" y="520" width="30" height="60" as="geometry" /></mxCell>
-        <mxCell id="uc_pub" value="发布攻略内容" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="190" y="380" width="120" height="50" as="geometry" /></mxCell>
-        <mxCell id="uc_upimg" value="上传封面图片" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="190" y="450" width="120" height="50" as="geometry" /></mxCell>
-        <mxCell id="uc_audit" value="审核攻略(通过/拒绝)" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="190" y="520" width="130" height="50" as="geometry" /></mxCell>
-        <mxCell id="uc_del" value="删除违规攻略" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="190" y="585" width="120" height="50" as="geometry" /></mxCell>
-        <mxCell id="l_c1" edge="1" parent="1" source="act_u3" target="uc_pub" style="endArrow=none;" />
-        <mxCell id="l_c2" edge="1" parent="1" source="uc_pub" target="uc_upimg" style="endArrow=open;dashed=1;html=1;endFill=0;"><mxGeometry value="&lt;&lt;include&gt;&gt;" relative="1" as="geometry" /></mxCell>
-        <mxCell id="l_c3" edge="1" parent="1" source="act_a3" target="uc_audit" style="endArrow=none;" />
-        <mxCell id="l_c4" edge="1" parent="1" source="act_a3" target="uc_del" style="endArrow=none;" />
-
-        <!-- ========================================== -->
-        <!-- 3.4.4 & 3.4.5 互动与个人中心 -->
-        <!-- ========================================== -->
-        <mxCell id="box_3445" value="互动与个人中心模块" style="shape=mxgraph.sysml.package;html=1;whiteSpace=wrap;align=center;verticalAlign=top;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;spacingTop=5;" vertex="1" parent="1">
-          <mxGeometry x="600" y="380" width="300" height="300" as="geometry" />
+        <mxCell id="uc_stat" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;" value="维持登录状态" vertex="1">
+          <mxGeometry height="50" width="120" x="190" y="230" as="geometry" />
         </mxCell>
-        <mxCell id="act_u4" value="用户" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1"><mxGeometry x="520" y="480" width="30" height="60" as="geometry" /></mxCell>
-        <mxCell id="uc_inter" value="点赞/评论/收藏" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="690" y="410" width="120" height="50" as="geometry" /></mxCell>
-        <mxCell id="uc_mypub" value="查看我的发布" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="690" y="480" width="120" height="50" as="geometry" /></mxCell>
-        <mxCell id="uc_myfav" value="管理我的收藏" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="690" y="550" width="120" height="50" as="geometry" /></mxCell>
-        <mxCell id="uc_out" value="退出登录" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="690" y="615" width="120" height="40" as="geometry" /></mxCell>
-        <mxCell id="l_i1" edge="1" parent="1" source="act_u4" target="uc_inter" style="endArrow=none;" />
-        <mxCell id="l_i2" edge="1" parent="1" source="act_u4" target="uc_mypub" style="endArrow=none;" />
-        <mxCell id="l_i3" edge="1" parent="1" source="act_u4" target="uc_myfav" style="endArrow=none;" />
-        <mxCell id="l_i4" edge="1" parent="1" source="act_u4" target="uc_out" style="endArrow=none;" />
-
-        <!-- ========================================== -->
-        <!-- 3.4.6 行程规划模块 -->
-        <!-- ========================================== -->
-        <mxCell id="box_346" value="行程规划模块" style="shape=mxgraph.sysml.package;html=1;whiteSpace=wrap;align=center;verticalAlign=top;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;spacingTop=5;" vertex="1" parent="1">
-          <mxGeometry x="100" y="700" width="300" height="260" as="geometry" />
+        <mxCell id="l_r1" edge="1" parent="1" source="u_341_1" style="endArrow=none;html=1;strokeColor=#000000;" target="uc_reg">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="act_u6" value="用户" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1"><mxGeometry x="20" y="780" width="30" height="60" as="geometry" /></mxCell>
-        <mxCell id="uc_plan_c" value="创建行程计划" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="190" y="730" width="120" height="50" as="geometry" /></mxCell>
-        <mxCell id="uc_plan_a" value="添加景区到行程" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="190" y="800" width="120" height="50" as="geometry" /></mxCell>
-        <mxCell id="uc_plan_e" value="修改/排序行程" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="190" y="870" width="120" height="50" as="geometry" /></mxCell>
-        <mxCell id="l_p1" edge="1" parent="1" source="act_u6" target="uc_plan_c" style="endArrow=none;" />
-        <mxCell id="l_p2" edge="1" parent="1" source="act_u6" target="uc_plan_a" style="endArrow=none;" />
-        <mxCell id="l_p3" edge="1" parent="1" source="act_u6" target="uc_plan_e" style="endArrow=none;" />
-
-        <!-- ========================================== -->
-        <!-- 3.4.7 结伴出游模块 -->
-        <!-- ========================================== -->
-        <mxCell id="box_347" value="结伴出游模块" style="shape=mxgraph.sysml.package;html=1;whiteSpace=wrap;align=center;verticalAlign=top;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;spacingTop=5;" vertex="1" parent="1">
-          <mxGeometry x="600" y="700" width="300" height="260" as="geometry" />
+        <mxCell id="l_r2" edge="1" parent="1" source="u_341_2" style="endArrow=none;html=1;strokeColor=#000000;" target="uc_log">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="act_initiator" value="发起者" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1"><mxGeometry x="520" y="730" width="30" height="60" as="geometry" /></mxCell>
-        <mxCell id="act_applicant" value="申请者" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1"><mxGeometry x="950" y="830" width="30" height="60" as="geometry" /></mxCell>
-        <mxCell id="uc_b_pub" value="发布结伴请求" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="690" y="730" width="120" height="45" as="geometry" /></mxCell>
-        <mxCell id="uc_b_app" value="提交结伴申请" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="690" y="800" width="120" height="45" as="geometry" /></mxCell>
-        <mxCell id="uc_b_aud" value="审核申请记录" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="690" y="870" width="120" height="45" as="geometry" /></mxCell>
-        <mxCell id="l_b1" edge="1" parent="1" source="act_initiator" target="uc_b_pub" style="endArrow=none;" />
-        <mxCell id="l_b2" edge="1" parent="1" source="act_initiator" target="uc_b_aud" style="endArrow=none;" />
-        <mxCell id="l_b3" edge="1" parent="1" source="act_applicant" target="uc_b_app" style="endArrow=none;" />
-
-        <!-- ========================================== -->
-        <!-- 3.4.8 数据管理模块 -->
-        <!-- ========================================== -->
-        <mxCell id="box_348" value="平台运行与数据管理模块" style="shape=mxgraph.sysml.package;html=1;whiteSpace=wrap;align=center;verticalAlign=top;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;spacingTop=5;" vertex="1" parent="1">
-          <mxGeometry x="350" y="1000" width="300" height="200" as="geometry" />
+        <mxCell id="l_r3" edge="1" parent="1" source="uc_log" style="endArrow=open;dashed=1;html=1;strokeColor=#000000;endFill=0;" target="uc_stat">
+          <mxGeometry relative="1" value="&lt;&lt;include&gt;&gt;" as="geometry" />
         </mxCell>
-        <mxCell id="act_a8" value="管理员" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1"><mxGeometry x="270" y="1070" width="30" height="60" as="geometry" /></mxCell>
-        <mxCell id="uc_stat1" value="统计活跃度(点赞/评论)" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="430" y="1030" width="140" height="50" as="geometry" /></mxCell>
-        <mxCell id="uc_stat2" value="分析热门景区/攻略" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="430" y="1090" width="140" height="50" as="geometry" /></mxCell>
-        <mxCell id="uc_stat3" value="管理预留积分/订单" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="430" y="1150" width="140" height="40" as="geometry" /></mxCell>
-        <mxCell id="l_st1" edge="1" parent="1" source="act_a8" target="uc_stat1" style="endArrow=none;" />
-        <mxCell id="l_st2" edge="1" parent="1" source="act_a8" target="uc_stat2" style="endArrow=none;" />
-        <mxCell id="l_st3" edge="1" parent="1" source="act_a8" target="uc_stat3" style="endArrow=none;" />
-
+        <mxCell id="box_342" parent="1" style="shape=mxgraph.sysml.package;html=1;whiteSpace=wrap;align=center;verticalAlign=top;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;spacingTop=5;labelX=1;" value="景区信息展示与管理模块" vertex="1">
+          <mxGeometry height="300" width="300" x="600" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="it4b46dEtXFM3PO9uWdn-3" edge="1" parent="1" source="act_tourist" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=none;endFill=0;" target="uc_detail">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="act_tourist" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;strokeColor=#000000;" value="普通游客" vertex="1">
+          <mxGeometry height="60" width="30" x="530" y="135" as="geometry" />
+        </mxCell>
+        <mxCell id="it4b46dEtXFM3PO9uWdn-2" edge="1" parent="1" source="act_admin" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=none;endFill=0;" target="uc_mspot">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="act_admin" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;strokeColor=#000000;" value="管理员" vertex="1">
+          <mxGeometry height="60" width="30" x="960" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_list" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="浏览景区列表" vertex="1">
+          <mxGeometry height="50" width="120" x="690" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_detail" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="查看景区详情" vertex="1">
+          <mxGeometry height="50" width="120" x="690" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_mspot" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="维护景区数据(增删改)" vertex="1">
+          <mxGeometry height="55" width="120" x="690" y="225" as="geometry" />
+        </mxCell>
+        <mxCell id="l_s1" edge="1" parent="1" source="act_tourist" style="endArrow=none;strokeColor=#000000;" target="uc_list" />
+        <mxCell id="l_s2" edge="1" parent="1" source="act_tourist" style="endArrow=none;strokeColor=#000000;" target="uc_detail" />
+        <mxCell id="l_s3" edge="1" parent="1" source="act_admin" style="endArrow=none;strokeColor=#000000;" target="uc_mspot" />
+        <mxCell id="box_343" parent="1" style="shape=mxgraph.sysml.package;html=1;whiteSpace=wrap;align=center;verticalAlign=top;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;spacingTop=5;labelX=0;" value="攻略分享与审核模块" vertex="1">
+          <mxGeometry height="300" width="300" x="100" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="it4b46dEtXFM3PO9uWdn-8" edge="1" parent="1" source="act_u3" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=none;endFill=0;" target="uc_pub">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="act_u3" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" value="用户" vertex="1">
+          <mxGeometry height="60" width="30" x="20" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="it4b46dEtXFM3PO9uWdn-10" edge="1" parent="1" source="act_a3" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=none;endFill=0;" target="uc_audit">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="it4b46dEtXFM3PO9uWdn-11" edge="1" parent="1" source="act_a3" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=none;endFill=0;" target="uc_del">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="act_a3" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" value="管理员" vertex="1">
+          <mxGeometry height="60" width="30" x="430" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_pub" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="发布攻略内容" vertex="1">
+          <mxGeometry height="50" width="120" x="190" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_upimg" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="上传封面图片" vertex="1">
+          <mxGeometry height="50" width="120" x="190" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_audit" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="审核攻略(通过/拒绝)" vertex="1">
+          <mxGeometry height="50" width="130" x="190" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_del" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="删除违规攻略" vertex="1">
+          <mxGeometry height="50" width="120" x="190" y="585" as="geometry" />
+        </mxCell>
+        <mxCell id="l_c1" edge="1" parent="1" source="act_u3" style="endArrow=none;" target="uc_pub" />
+        <mxCell id="l_c2" edge="1" parent="1" source="uc_pub" style="endArrow=open;dashed=1;html=1;endFill=0;" target="uc_upimg">
+          <mxGeometry relative="1" value="&lt;&lt;include&gt;&gt;" as="geometry" />
+        </mxCell>
+        <mxCell id="l_c3" edge="1" parent="1" source="act_a3" style="endArrow=none;" target="uc_audit" />
+        <mxCell id="l_c4" edge="1" parent="1" source="act_a3" style="endArrow=none;" target="uc_del" />
+        <mxCell id="box_3445" parent="1" style="shape=mxgraph.sysml.package;html=1;whiteSpace=wrap;align=center;verticalAlign=top;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;spacingTop=5;labelX=0;" value="互动与个人中心模块" vertex="1">
+          <mxGeometry height="300" width="300" x="600" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="it4b46dEtXFM3PO9uWdn-4" edge="1" parent="1" source="act_u4" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=none;endFill=0;" target="uc_inter">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="it4b46dEtXFM3PO9uWdn-5" edge="1" parent="1" source="act_u4" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=none;endFill=0;" target="uc_mypub">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="it4b46dEtXFM3PO9uWdn-6" edge="1" parent="1" source="act_u4" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=none;endFill=0;" target="uc_myfav">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="it4b46dEtXFM3PO9uWdn-7" edge="1" parent="1" source="act_u4" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=none;endFill=0;" target="uc_out">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="act_u4" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" value="用户" vertex="1">
+          <mxGeometry height="60" width="30" x="520" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_inter" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="点赞/评论/收藏" vertex="1">
+          <mxGeometry height="50" width="120" x="690" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_mypub" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="查看我的发布" vertex="1">
+          <mxGeometry height="50" width="120" x="690" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_myfav" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="管理我的收藏" vertex="1">
+          <mxGeometry height="50" width="120" x="690" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_out" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="退出登录" vertex="1">
+          <mxGeometry height="40" width="120" x="690" y="615" as="geometry" />
+        </mxCell>
+        <mxCell id="l_i1" edge="1" parent="1" source="act_u4" style="endArrow=none;" target="uc_inter" />
+        <mxCell id="l_i2" edge="1" parent="1" source="act_u4" style="endArrow=none;" target="uc_mypub" />
+        <mxCell id="l_i3" edge="1" parent="1" source="act_u4" style="endArrow=none;" target="uc_myfav" />
+        <mxCell id="l_i4" edge="1" parent="1" source="act_u4" style="endArrow=none;" target="uc_out" />
+        <mxCell id="box_346" parent="1" style="shape=mxgraph.sysml.package;html=1;whiteSpace=wrap;align=center;verticalAlign=top;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;spacingTop=5;labelX=0;" value="行程规划模块" vertex="1">
+          <mxGeometry height="260" width="300" x="100" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="it4b46dEtXFM3PO9uWdn-12" edge="1" parent="1" source="act_u6" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=none;endFill=0;" target="uc_plan_c">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="it4b46dEtXFM3PO9uWdn-13" edge="1" parent="1" source="act_u6" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=none;endFill=0;" target="uc_plan_a">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="it4b46dEtXFM3PO9uWdn-14" edge="1" parent="1" source="act_u6" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=none;endFill=0;" target="uc_plan_e">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="act_u6" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" value="用户" vertex="1">
+          <mxGeometry height="60" width="30" x="20" y="780" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_plan_c" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="创建行程计划" vertex="1">
+          <mxGeometry height="50" width="120" x="190" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_plan_a" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="添加景区到行程" vertex="1">
+          <mxGeometry height="50" width="120" x="190" y="800" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_plan_e" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="修改/排序行程" vertex="1">
+          <mxGeometry height="50" width="120" x="190" y="870" as="geometry" />
+        </mxCell>
+        <mxCell id="l_p1" edge="1" parent="1" source="act_u6" style="endArrow=none;" target="uc_plan_c" />
+        <mxCell id="l_p2" edge="1" parent="1" source="act_u6" style="endArrow=none;" target="uc_plan_a" />
+        <mxCell id="l_p3" edge="1" parent="1" source="act_u6" style="endArrow=none;" target="uc_plan_e" />
+        <mxCell id="box_347" parent="1" style="shape=mxgraph.sysml.package;html=1;whiteSpace=wrap;align=center;verticalAlign=top;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;spacingTop=5;labelX=0;" value="结伴出游模块" vertex="1">
+          <mxGeometry height="260" width="300" x="600" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="it4b46dEtXFM3PO9uWdn-15" edge="1" parent="1" source="act_initiator" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=none;endFill=0;" target="uc_b_pub">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="act_initiator" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" value="发起者" vertex="1">
+          <mxGeometry height="60" width="30" x="520" y="780" as="geometry" />
+        </mxCell>
+        <mxCell id="act_applicant" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" value="申请者" vertex="1">
+          <mxGeometry height="60" width="30" x="960" y="710" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_b_pub" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="发布结伴请求" vertex="1">
+          <mxGeometry height="45" width="120" x="690" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_b_app" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="提交结伴申请" vertex="1">
+          <mxGeometry height="45" width="120" x="690" y="800" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_b_aud" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="审核申请记录" vertex="1">
+          <mxGeometry height="45" width="120" x="690" y="870" as="geometry" />
+        </mxCell>
+        <mxCell id="l_b1" edge="1" parent="1" source="act_initiator" style="endArrow=none;" target="uc_b_pub" />
+        <mxCell id="l_b2" edge="1" parent="1" source="act_initiator" style="endArrow=none;" target="uc_b_aud" />
+        <mxCell id="l_b3" edge="1" parent="1" source="act_applicant" style="endArrow=none;" target="uc_b_app" />
+        <mxCell id="box_348" parent="1" style="shape=mxgraph.sysml.package;html=1;whiteSpace=wrap;align=center;verticalAlign=top;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;spacingTop=5;labelX=5;" value="平台运行与数据管理模块" vertex="1">
+          <mxGeometry height="200" width="300" x="350" y="1000" as="geometry" />
+        </mxCell>
+        <mxCell id="it4b46dEtXFM3PO9uWdn-17" edge="1" parent="1" source="act_a8" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=none;endFill=0;" target="uc_stat1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="it4b46dEtXFM3PO9uWdn-18" edge="1" parent="1" source="act_a8" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=none;endFill=0;" target="uc_stat2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="act_a8" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" value="管理员" vertex="1">
+          <mxGeometry height="60" width="30" x="270" y="1085" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_stat1" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="统计活跃度(点赞/评论)" vertex="1">
+          <mxGeometry height="50" width="140" x="430" y="1030" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_stat2" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="分析热门景区/攻略" vertex="1">
+          <mxGeometry height="50" width="140" x="430" y="1090" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_stat3" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="管理预留积分/订单" vertex="1">
+          <mxGeometry height="40" width="140" x="430" y="1150" as="geometry" />
+        </mxCell>
+        <mxCell id="l_st1" edge="1" parent="1" source="act_a8" style="endArrow=none;" target="uc_stat1" />
+        <mxCell id="l_st2" edge="1" parent="1" source="act_a8" style="endArrow=none;" target="uc_stat2" />
+        <mxCell id="l_st3" edge="1" parent="1" source="act_a8" style="endArrow=none;" target="uc_stat3" />
+        <mxCell id="it4b46dEtXFM3PO9uWdn-1" edge="1" parent="1" source="act_tourist" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.042;entryY=0.64;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=none;endFill=0;" target="uc_list">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="it4b46dEtXFM3PO9uWdn-19" edge="1" parent="1" source="uc_stat3" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.3333333333333333;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=none;endFill=0;" target="act_a8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="it4b46dEtXFM3PO9uWdn-20" edge="1" parent="1" source="uc_b_app" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.3333333333333333;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=none;endFill=0;" target="act_applicant">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="it4b46dEtXFM3PO9uWdn-24" edge="1" parent="1" source="it4b46dEtXFM3PO9uWdn-22" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=none;endFill=0;" target="uc_b_aud">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="it4b46dEtXFM3PO9uWdn-22" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;strokeColor=#000000;" value="管理员" vertex="1">
+          <mxGeometry height="60" width="30" x="960" y="840" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>

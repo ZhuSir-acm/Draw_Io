@@ -1,139 +1,86 @@
-<mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+<mxGraphModel dx="1000" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
   <root>
     <mxCell id="0" />
     <mxCell id="1" parent="0" />
-    <!-- 整体容器 -->
-    <mxCell id="L1" value="信息发布管理系统流程图" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;html=1;fillColor=#eeeeee;strokeColor=#000000;fontStyle=1;fontSize=14;whiteSpace=wrap;rounded=0;shadow=0;" vertex="1" parent="1">
-      <mxGeometry x="40" y="40" width="840" height="720" as="geometry" />
-    </mxCell>
     
-    <!-- 泳道：管理员 -->
-    <mxCell id="L2" value="平台管理员 (Admin)" style="swimlane;startSize=20;horizontal=0;html=1;fillColor=none;strokeColor=#000000;rounded=0;shadow=0;" vertex="1" parent="L1">
-      <mxGeometry y="30" width="840" height="200" as="geometry" />
-    </mxCell>
-    <mxCell id="A1" value="登录后台管理系统" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="L2">
-      <mxGeometry x="60" y="30" width="120" height="40" as="geometry" />
-    </mxCell>
-    <mxCell id="A2" value="选择管理操作" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="L2">
-      <mxGeometry x="250" y="10" width="100" height="80" as="geometry" />
-    </mxCell>
-    <mxCell id="A3" value="发布新信息" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="L2">
-      <mxGeometry x="400" y="10" width="100" height="40" as="geometry" />
-    </mxCell>
-    <mxCell id="A4" value="管理/维护旧信息" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="L2">
-      <mxGeometry x="530" y="10" width="100" height="40" as="geometry" />
-    </mxCell>
-    <mxCell id="A5" value="维护分类体系" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="L2">
-      <mxGeometry x="660" y="10" width="100" height="40" as="geometry" />
-    </mxCell>
-    <mxCell id="A6" value="提交数据变更" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="L2">
-      <mxGeometry x="530" y="130" width="100" height="40" as="geometry" />
+    <!-- 开始节点 -->
+    <mxCell id="node_start" value="开始" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#ffffff;strokeColor=#000000;shadow=0;fontStyle=0" vertex="1" parent="1">
+      <mxGeometry x="340" y="40" width="100" height="40" as="geometry" />
     </mxCell>
 
-    <!-- 泳道：后端服务层 -->
-    <mxCell id="L3" value="后端服务 (Backend)" style="swimlane;startSize=20;horizontal=0;html=1;fillColor=none;strokeColor=#000000;rounded=0;shadow=0;" vertex="1" parent="L1">
-      <mxGeometry y="230" width="840" height="150" as="geometry" />
-    </mxCell>
-    <mxCell id="B1" value="身份验证与权限检查" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="L3">
-      <mxGeometry x="60" y="45" width="120" height="40" as="geometry" />
-    </mxCell>
-    <mxCell id="B2" value="业务逻辑处理&#xa;(CRUD / 分类更新)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="L3">
-      <mxGeometry x="520" y="45" width="120" height="60" as="geometry" />
-    </mxCell>
-    <mxCell id="B3" value="解析筛选条件" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="L3">
-      <mxGeometry x="320" y="45" width="100" height="40" as="geometry" />
+    <!-- 角色判定决策框 -->
+    <mxCell id="node_decision" value="用户角色判定" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="1">
+      <mxGeometry x="330" y="120" width="120" height="80" as="geometry" />
     </mxCell>
 
-    <!-- 泳道：数据库 -->
-    <mxCell id="L4" value="数据库 (Database)" style="swimlane;startSize=20;horizontal=0;html=1;fillColor=#eeeeee;strokeColor=#000000;rounded=0;shadow=0;" vertex="1" parent="L1">
-      <mxGeometry y="380" width="840" height="120" as="geometry" />
+    <!-- 管理员分支 -->
+    <mxCell id="node_admin_1" value="登录后台系统" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="1">
+      <mxGeometry x="180" y="240" width="120" height="50" as="geometry" />
     </mxCell>
-    <mxCell id="D1" value="&lt;b&gt;信息数据库&lt;/b&gt;&#xa;(Info, Categories, Logs)" style="shape=datastore;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="L4">
-      <mxGeometry x="380" y="20" width="120" height="80" as="geometry" />
+    <mxCell id="node_admin_2" value="发布与维护信息&#xa;(增/删/改/分类)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="1">
+      <mxGeometry x="180" y="340" width="120" height="50" as="geometry" />
     </mxCell>
 
-    <!-- 泳道：居民/访客 -->
-    <mxCell id="L5" value="居民/访客 (Resident)" style="swimlane;startSize=20;horizontal=0;html=1;fillColor=none;strokeColor=#000000;rounded=0;shadow=0;" vertex="1" parent="L1">
-      <mxGeometry y="500" width="840" height="220" as="geometry" />
+    <!-- 居民分支 -->
+    <mxCell id="node_user_1" value="进入信息展示页面" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="1">
+      <mxGeometry x="480" y="240" width="120" height="50" as="geometry" />
     </mxCell>
-    <mxCell id="R1" value="进入信息模块" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="L5">
-      <mxGeometry x="60" y="40" width="100" height="40" as="geometry" />
+    <mxCell id="node_user_2" value="浏览、筛选并&#xa;查看详细信息" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="1">
+      <mxGeometry x="480" y="340" width="120" height="50" as="geometry" />
     </mxCell>
-    <mxCell id="R2" value="浏览/筛选信息" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="L5">
-      <mxGeometry x="220" y="40" width="100" height="40" as="geometry" />
-    </mxCell>
-    <mxCell id="R3" value="请求详情" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="L5">
-      <mxGeometry x="390" y="40" width="100" height="40" as="geometry" />
-    </mxCell>
-    <mxCell id="R4" value="查看详细内容" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="L5">
-      <mxGeometry x="390" y="140" width="100" height="40" as="geometry" />
+
+    <!-- 结束节点 -->
+    <mxCell id="node_end" value="结束" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="1">
+      <mxGeometry x="340" y="460" width="100" height="40" as="geometry" />
     </mxCell>
 
     <!-- 连接线 -->
-    <!-- 管理员流 -->
-    <mxCell id="E1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;endArrow=classic;endFill=1;" edge="1" parent="L1" source="A1" target="B1">
-      <mxGeometry relative="1" as="geometry" />
-    </mxCell>
-    <mxCell id="E2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;endArrow=classic;endFill=1;" edge="1" parent="L1" source="B1" target="A2">
-      <mxGeometry relative="1" as="geometry">
-        <Array as="points">
-          <mxPoint x="120" y="320" />
-          <mxPoint x="200" y="320" />
-          <mxPoint x="200" y="80" />
-        </Array>
-      </mxGeometry>
-    </mxCell>
-    <mxCell id="E3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;endArrow=classic;endFill=1;" edge="1" parent="L1" source="A2" target="A3">
-      <mxGeometry relative="1" as="geometry" />
-    </mxCell>
-    <mxCell id="E4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;endArrow=classic;endFill=1;" edge="1" parent="L1" source="A2" target="A4">
-      <mxGeometry relative="1" as="geometry" />
-    </mxCell>
-    <mxCell id="E5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;endArrow=classic;endFill=1;" edge="1" parent="L1" source="A2" target="A5">
-      <mxGeometry relative="1" as="geometry" />
-    </mxCell>
-    <mxCell id="E6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;endArrow=classic;endFill=1;" edge="1" parent="L1" source="A3" target="A6">
-      <mxGeometry relative="1" as="geometry" />
-    </mxCell>
-    <mxCell id="E7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;endArrow=classic;endFill=1;" edge="1" parent="L1" source="A4" target="A6">
-      <mxGeometry relative="1" as="geometry" />
-    </mxCell>
-    <mxCell id="E8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;endArrow=classic;endFill=1;" edge="1" parent="L1" source="A5" target="A6">
-      <mxGeometry relative="1" as="geometry" />
-    </mxCell>
-    <mxCell id="E9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;endArrow=classic;endFill=1;" edge="1" parent="L1" source="A6" target="B2">
-      <mxGeometry relative="1" as="geometry" />
-    </mxCell>
-    <mxCell id="E10" value="更新持久化" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;endArrow=classic;endFill=1;" edge="1" parent="L1" source="B2" target="D1">
+    <mxCell id="edge1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;endArrow=classic;endFill=1;" edge="1" parent="1" source="node_start" target="node_decision">
       <mxGeometry relative="1" as="geometry" />
     </mxCell>
 
-    <!-- 居民流 -->
-    <mxCell id="E11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;endArrow=classic;endFill=1;" edge="1" parent="L1" source="R1" target="R2">
-      <mxGeometry relative="1" as="geometry" />
-    </mxCell>
-    <mxCell id="E12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;endArrow=classic;endFill=1;" edge="1" parent="L1" source="R2" target="B3">
-      <mxGeometry relative="1" as="geometry" />
-    </mxCell>
-    <mxCell id="E13" value="查询" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;endArrow=classic;endFill=1;" edge="1" parent="L1" source="B3" target="D1">
-      <mxGeometry relative="1" as="geometry" />
-    </mxCell>
-    <mxCell id="E14" value="返回列表" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;dashed=1;endArrow=open;endFill=0;" edge="1" parent="L1" source="D1" target="R2">
-      <mxGeometry relative="1" as="geometry">
+    <mxCell id="edge2" value="管理员" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="node_decision" target="node_admin_1">
+      <mxGeometry x="-0.3" y="10" relative="1" as="geometry">
+        <mxPoint as="offset" />
         <Array as="points">
-          <mxPoint x="400" y="560" />
-          <mxPoint x="270" y="560" />
+          <mxPoint x="240" y="160" />
         </Array>
       </mxGeometry>
     </mxCell>
-    <mxCell id="E15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;endArrow=classic;endFill=1;" edge="1" parent="L1" source="R2" target="R3">
+
+    <mxCell id="edge3" value="居民/访客" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="node_decision" target="node_user_1">
+      <mxGeometry x="-0.3" y="-10" relative="1" as="geometry">
+        <mxPoint as="offset" />
+        <Array as="points">
+          <mxPoint x="540" y="160" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <mxCell id="edge4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;endArrow=classic;endFill=1;" edge="1" parent="1" source="node_admin_1" target="node_admin_2">
       <mxGeometry relative="1" as="geometry" />
     </mxCell>
-    <mxCell id="E16" value="主键检索" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;endArrow=classic;endFill=1;" edge="1" parent="L1" source="R3" target="D1">
+
+    <mxCell id="edge5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;endArrow=classic;endFill=1;" edge="1" parent="1" source="node_user_1" target="node_user_2">
       <mxGeometry relative="1" as="geometry" />
     </mxCell>
-    <mxCell id="E17" value="返回明细" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;dashed=1;endArrow=open;endFill=0;" edge="1" parent="L1" source="D1" target="R4">
-      <mxGeometry relative="1" as="geometry" />
+
+    <mxCell id="edge6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;endArrow=classic;endFill=1;" edge="1" parent="1" source="node_admin_2" target="node_end">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="240" y="430" />
+          <mxPoint x="390" y="430" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <mxCell id="edge7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;endArrow=classic;endFill=1;" edge="1" parent="1" source="node_user_2" target="node_end">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="540" y="430" />
+          <mxPoint x="390" y="430" />
+        </Array>
+      </mxGeometry>
     </mxCell>
   </root>
 </mxGraphModel>

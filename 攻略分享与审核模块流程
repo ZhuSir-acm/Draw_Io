@@ -1,87 +1,169 @@
-<mxfile host="app.diagrams.net" modified="2024-03-21T00:00:00.000Z" agent="Mozilla/5.0" version="21.0.0" type="device">
-  <diagram name="4.2.3 攻略分享与审核模块流程" id="flow-strategy-audit">
-    <mxGraphModel dx="1422" dy="791" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+<mxfile host="app.diagrams.net" modified="2023-10-27T00:00:00.000Z" agent="5.0" etag="guide-sharing-flow" version="21.0.0" type="device">
+  <diagram id="guide-flow" name="攻略发布与审核流程">
+    <mxGraphModel dx="1036" dy="614" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <!-- Lifelines -->
+        <mxCell id="user" value="用户" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=2;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="80" y="40" width="100" height="720" as="geometry" />
+        </mxCell>
+        <mxCell id="frontend" value="前端界面" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=2;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="240" y="40" width="100" height="720" as="geometry" />
+        </mxCell>
+        <mxCell id="backend" value="后端服务" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="400" y="40" width="100" height="720" as="geometry" />
+        </mxCell>
+        <mxCell id="db" value="数据库/OSS" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=2;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="560" y="40" width="100" height="720" as="geometry" />
+        </mxCell>
+        <mxCell id="admin" value="管理员" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=2;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="720" y="40" width="100" height="720" as="geometry" />
+        </mxCell>
         
-        <!-- 开始 -->
-        <mxCell id="node_start" value="开始" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="374" y="40" width="80" height="40" as="geometry" />
+        <!-- 1. 填写并上传图片 -->
+        <mxCell id="msg1" value="1. 输入标题/正文/昵称/图片" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" edge="1" parent="1" source="user" target="frontend">
+          <mxGeometry x="0.1" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="130" y="120" as="sourcePoint" />
+            <mxPoint x="290" y="120" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="210" y="120" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg2" value="2. 调用上传接口(图片)" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" edge="1" parent="1" source="frontend" target="backend">
+          <mxGeometry x="0.1" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="290" y="150" as="sourcePoint" />
+            <mxPoint x="450" y="150" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="370" y="150" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg3" value="3. 保存图片并返回URL" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;" edge="1" parent="1" source="db" target="backend">
+          <mxGeometry x="0.1" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="610" y="180" as="sourcePoint" />
+            <mxPoint x="450" y="180" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="530" y="180" />
+            </Array>
+          </mxGeometry>
         </mxCell>
 
-        <!-- 业务分支 -->
-        <mxCell id="node_choice" value="业务操作类型" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="364" y="110" width="100" height="60" as="geometry" />
+        <!-- 2. 保存攻略数据 -->
+        <mxCell id="msg4" value="4. 调用攻略接口(带图片URL)" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" edge="1" parent="1" source="frontend" target="backend">
+          <mxGeometry x="0.1" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="290" y="220" as="sourcePoint" />
+            <mxPoint x="450" y="220" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="370" y="220" />
+            </Array>
+          </mxGeometry>
         </mxCell>
-
-        <!-- 用户发布分支 -->
-        <mxCell id="u_1" value="前端填写攻略信息&lt;br&gt;(标题/正文/昵称)" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="190" y="180" width="130" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="u_2" value="调用上传接口&lt;br&gt;保存图片资源" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="190" y="260" width="130" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="u_3" value="调用攻略接口&lt;br&gt;提交整体数据" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="190" y="340" width="130" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="u_4" value="后端设置默认点赞数&lt;br&gt;初始化状态为:待审核" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="190" y="420" width="130" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="u_5" value="攻略数据持久化&lt;br&gt;存入MySQL" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;strokeColor=#000000;fillColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="190" y="500" width="130" height="50" as="geometry" />
-        </mxCell>
-
-        <!-- 管理员审核分支 -->
-        <mxCell id="a_1" value="查看待审核攻略列表" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="500" y="180" width="130" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="a_2" value="审核操作判定?" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="505" y="260" width="120" height="70" as="geometry" />
-        </mxCell>
-        <mxCell id="a_3" value="更新状态为:通过" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="610" y="350" width="110" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="a_4" value="执行拒绝或删除" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="420" y="350" width="110" height="40" as="geometry" />
-        </mxCell>
-
-        <!-- 展示汇总逻辑 -->
-        <mxCell id="node_list" value="攻略列表页请求&lt;br&gt;(条件:审核通过)" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="359" y="590" width="110" height="70" as="geometry" />
-        </mxCell>
-        <mxCell id="node_show" value="前端渲染有效攻略内容" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="349" y="690" width="130" height="50" as="geometry" />
-        </mxCell>
-
-        <!-- 结束 -->
-        <mxCell id="node_end" value="结束" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="374" y="780" width="80" height="40" as="geometry" />
-        </mxCell>
-
-        <!-- 连线部分 -->
-        <mxCell id="l1" edge="1" parent="1" source="node_start" target="node_choice" style="endArrow=classic;" />
-        <mxCell id="l2" edge="1" parent="1" source="node_choice" target="u_1" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;"><mxGeometry value="用户发布" relative="1" as="geometry" /></mxCell>
-        <mxCell id="l3" edge="1" parent="1" source="node_choice" target="a_1" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;"><mxGeometry value="管理审核" relative="1" as="geometry" /></mxCell>
         
-        <!-- 用户路径连线 -->
-        <mxCell id="l4" edge="1" parent="1" source="u_1" target="u_2" style="endArrow=classic;" />
-        <mxCell id="l5" edge="1" parent="1" source="u_2" target="u_3" style="endArrow=classic;" />
-        <mxCell id="l6" edge="1" parent="1" source="u_3" target="u_4" style="endArrow=classic;" />
-        <mxCell id="l7" edge="1" parent="1" source="u_4" target="u_5" style="endArrow=classic;" />
-        <mxCell id="l8" edge="1" parent="1" source="u_5" target="node_list" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;" />
+        <!-- 后端内部逻辑自关联 -->
+        <mxCell id="msg5" value="5. 设置默认点赞=0 &amp;#10;状态=待审核" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;" edge="1" parent="1" source="backend">
+          <mxGeometry x="0.1111" y="25" relative="1" as="geometry">
+            <mxPoint x="455" y="240" as="sourcePoint" />
+            <mxPoint x="455" y="280" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="485" y="240" />
+              <mxPoint x="485" y="280" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="msg6" value="6. 写入攻略数据表" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" edge="1" parent="1" source="backend" target="db">
+          <mxGeometry x="0.1" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="450" y="310" as="sourcePoint" />
+            <mxPoint x="610" y="310" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="530" y="310" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
 
-        <!-- 管理员路径连线 -->
-        <mxCell id="l9" edge="1" parent="1" source="a_1" target="a_2" style="endArrow=classic;" />
-        <mxCell id="l10" edge="1" parent="1" source="a_2" target="a_3" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;"><mxGeometry value="通过" relative="1" as="geometry" /></mxCell>
-        <mxCell id="l11" edge="1" parent="1" source="a_2" target="a_4" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;"><mxGeometry value="拒绝" relative="1" as="geometry" /></mxCell>
-        <mxCell id="l12" edge="1" parent="1" source="a_3" target="node_list" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;entryX=1;entryY=0.5;" />
-        <mxCell id="l13" edge="1" parent="1" source="a_4" target="node_end" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;entryX=0;entryY=0.5;" />
+        <!-- 3. 管理员审核 -->
+        <mxCell id="separator1" value="管理员审核阶段" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="340" y="350" width="120" height="40" as="geometry" />
+        </mxCell>
 
-        <!-- 展示逻辑连线 -->
-        <mxCell id="l14" edge="1" parent="1" source="node_list" target="node_show" style="endArrow=classic;"><mxGeometry value="是" relative="1" as="geometry" /></mxCell>
-        <mxCell id="l15" edge="1" parent="1" source="node_show" target="node_end" style="endArrow=classic;" />
-        <mxCell id="l16" edge="1" parent="1" source="node_list" target="node_end" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;exitX=0;exitY=0.5;"><mxGeometry value="否" relative="1" as="geometry"><mxPoint x="340" y="625" as="sourcePoint" /><mxPoint x="340" y="800" as="targetPoint" /></mxGeometry></mxCell>
+        <mxCell id="msg7" value="7. 获取待审核攻略列表" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" edge="1" parent="1" source="admin" target="backend">
+          <mxGeometry x="0.1" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="770" y="410" as="sourcePoint" />
+            <mxPoint x="450" y="410" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="610" y="410" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="msg8" value="8. 执行通过/拒绝操作" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" edge="1" parent="1" source="admin" target="backend">
+          <mxGeometry x="0.1" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="770" y="450" as="sourcePoint" />
+            <mxPoint x="450" y="450" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="610" y="450" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg9" value="9. 更新攻略状态" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" edge="1" parent="1" source="backend" target="db">
+          <mxGeometry x="0.1" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="450" y="480" as="sourcePoint" />
+            <mxPoint x="610" y="480" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="530" y="480" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 4. 攻略展示 -->
+        <mxCell id="separator2" value="前端内容展示" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="340" y="520" width="120" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="msg10" value="10. 请求攻略列表" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" edge="1" parent="1" source="user" target="frontend">
+          <mxGeometry x="0.1" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="130" y="580" as="sourcePoint" />
+            <mxPoint x="290" y="580" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="210" y="580" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg11" value="11. 仅请求[审核通过]的数据" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" edge="1" parent="1" source="frontend" target="backend">
+          <mxGeometry x="0.1" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="290" y="620" as="sourcePoint" />
+            <mxPoint x="450" y="620" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="370" y="620" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg12" value="12. 返回高质量内容" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;" edge="1" parent="1" source="backend" target="frontend">
+          <mxGeometry x="0.1" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="450" y="660" as="sourcePoint" />
+            <mxPoint x="290" y="660" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="370" y="660" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
 
       </root>
     </mxGraphModel>

@@ -1,75 +1,81 @@
-<mxGraphModel dx="1000" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+<mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
   <root>
     <mxCell id="0" />
     <mxCell id="1" parent="0" />
     
-    <!-- 开始节点 -->
-    <mxCell id="node_start" value="开始" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#ffffff;strokeColor=#000000;shadow=0;fontStyle=1" vertex="1" parent="1">
-      <mxGeometry x="360" y="40" width="100" height="40" as="geometry" />
+    <!-- 整体容器 -->
+    <mxCell id="main_pool" value="图 4.8 社区网格管理业务流程图" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;html=1;fillColor=#eeeeee;strokeColor=#000000;fontStyle=1;rounded=0;shadow=0;" vertex="1" parent="1">
+      <mxGeometry x="40" y="40" width="760" height="740" as="geometry" />
     </mxCell>
 
-    <!-- 1. 提交申请 (居民) -->
-    <mxCell id="step1" value="居民提交投诉/建议请求" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="1">
-      <mxGeometry x="340" y="120" width="140" height="50" as="geometry" />
+    <!-- 1. 管理员：后台基建层 -->
+    <mxCell id="lane_admin" value="管理员 (后台基建)" style="swimlane;startSize=20;horizontal=0;html=1;fillColor=none;strokeColor=#000000;rounded=0;shadow=0;" vertex="1" parent="main_pool">
+      <mxGeometry y="30" width="760" height="230" as="geometry" />
+    </mxCell>
+    <mxCell id="start_node" value="开始" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="lane_admin">
+      <mxGeometry x="60" y="30" width="80" height="30" as="geometry" />
+    </mxCell>
+    <mxCell id="adm_1" value="划分/调整网格边界&#xa;(空间数字化)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="lane_admin">
+      <mxGeometry x="40" y="90" width="120" height="45" as="geometry" />
+    </mxCell>
+    <mxCell id="adm_2" value="维护网格人口信息&#xa;(数据初始化)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="lane_admin">
+      <mxGeometry x="200" y="90" width="120" height="45" as="geometry" />
+    </mxCell>
+    <mxCell id="adm_3" value="建立“空间-人口”&#xa;多维数据关联" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="lane_admin">
+      <mxGeometry x="360" y="90" width="120" height="45" as="geometry" />
+    </mxCell>
+    <mxCell id="adm_4" value="生成社区治理&#xa;统计分析报表" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="lane_admin">
+      <mxGeometry x="540" y="90" width="120" height="45" as="geometry" />
     </mxCell>
 
-    <!-- 2. 生成凭证 (系统) -->
-    <mxCell id="step2" value="系统生成唯一查询码&#xa;(生成跟踪凭证)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#000000;shadow=0;" vertex="1" parent="1">
-      <mxGeometry x="340" y="210" width="140" height="50" as="geometry" />
+    <!-- 2. 系统：数据底座层 -->
+    <mxCell id="lane_sys" value="系统后台 (数据底座)" style="swimlane;startSize=20;horizontal=0;html=1;fillColor=none;strokeColor=#000000;rounded=0;shadow=0;" vertex="1" parent="main_pool">
+      <mxGeometry y="260" width="760" height="200" as="geometry" />
+    </mxCell>
+    <mxCell id="db_1" value="社区空间数据库&#xa;(Grid Geometry)" style="shape=datastore;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#000000;shadow=0;" vertex="1" parent="lane_sys">
+      <mxGeometry x="120" y="40" width="120" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="db_2" value="人口信息数据库&#xa;(Resident Info)" style="shape=datastore;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#000000;shadow=0;" vertex="1" parent="lane_sys">
+      <mxGeometry x="360" y="40" width="120" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="sys_index" value="统一数据关联索引" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#000000;shadow=0;" vertex="1" parent="lane_sys">
+      <mxGeometry x="240" y="130" width="120" height="40" as="geometry" />
     </mxCell>
 
-    <!-- 3. 受理调查 (管理员) -->
-    <mxCell id="step3" value="管理员查看受理并&#xa;开展内部调查处理" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="1">
-      <mxGeometry x="340" y="300" width="140" height="50" as="geometry" />
+    <!-- 3. 居民：前台应用层 -->
+    <mxCell id="lane_res" value="居民 / 访客 (前台应用)" style="swimlane;startSize=20;horizontal=0;html=1;fillColor=none;strokeColor=#000000;rounded=0;shadow=0;" vertex="1" parent="main_pool">
+      <mxGeometry y="460" width="760" height="250" as="geometry" />
     </mxCell>
-
-    <!-- 4. 更新进度 (管理员/系统) -->
-    <mxCell id="step4" value="管理员更新处理进展&#xa;系统实时同步状态" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#000000;shadow=0;" vertex="1" parent="1">
-      <mxGeometry x="340" y="390" width="140" height="50" as="geometry" />
+    <mxCell id="res_1" value="定位/查找所属网格" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="lane_res">
+      <mxGeometry x="120" y="40" width="120" height="40" as="geometry" />
     </mxCell>
-
-    <!-- 5. 最终回复 (管理员) -->
-    <mxCell id="step5" value="管理员回复处理结果&#xa;居民查看最终反馈" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="1">
-      <mxGeometry x="340" y="480" width="140" height="50" as="geometry" />
+    <mxCell id="res_2" value="查看网格公示信息" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="lane_res">
+      <mxGeometry x="360" y="40" width="120" height="40" as="geometry" />
     </mxCell>
-
-    <!-- 6. 决策判断 (居民) -->
-    <mxCell id="decision" value="问题是否解决?&#xa;(居民满意度评价)" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="1">
-      <mxGeometry x="350" y="570" width="120" height="80" as="geometry" />
+    <mxCell id="res_3" value="了解社区人口概况&#xa;与网格治理画像" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="lane_res">
+      <mxGeometry x="360" y="130" width="120" height="40" as="geometry" />
     </mxCell>
-
-    <!-- 7. 结案归档 (系统) -->
-    <mxCell id="step7" value="案件处理完成&#xa;系统自动结案归档" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#000000;shadow=0;" vertex="1" parent="1">
-      <mxGeometry x="340" y="690" width="140" height="50" as="geometry" />
-    </mxCell>
-
-    <!-- 结束节点 -->
-    <mxCell id="node_end" value="结束" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#ffffff;strokeColor=#000000;shadow=0;fontStyle=1" vertex="1" parent="1">
-      <mxGeometry x="360" y="780" width="100" height="40" as="geometry" />
+    <mxCell id="end_node" value="结束" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#ffffff;strokeColor=#000000;shadow=0;" vertex="1" parent="lane_res">
+      <mxGeometry x="640" y="190" width="80" height="30" as="geometry" />
     </mxCell>
 
     <!-- 连接线条 -->
-    <mxCell id="e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=classic;" edge="1" parent="1" source="node_start" target="step1" />
-    <mxCell id="e2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=classic;" edge="1" parent="1" source="step1" target="step2" />
-    <mxCell id="e3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=classic;" edge="1" parent="1" source="step2" target="step3" />
-    <mxCell id="e4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=classic;" edge="1" parent="1" source="step3" target="step4" />
-    <mxCell id="e5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=classic;" edge="1" parent="1" source="step4" target="step5" />
-    <mxCell id="e6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=classic;" edge="1" parent="1" source="step5" target="decision" />
+    <!-- 管理员流 -->
+    <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;" edge="1" parent="main_pool" source="start_node" target="adm_1" />
+    <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;" edge="1" parent="main_pool" source="adm_1" target="adm_2" />
+    <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;" edge="1" parent="main_pool" source="adm_2" target="adm_3" />
+    <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;" edge="1" parent="main_pool" source="adm_3" target="adm_4" />
     
-    <!-- 满意分支 -->
-    <mxCell id="e7" value="是 (结案)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=classic;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="decision" target="step7" />
-    
-    <!-- 不满意分支 (回溯) -->
-    <mxCell id="e8" value="否 (继续跟进)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=classic;labelBackgroundColor=#ffffff;entryX=0;entryY=0.5;" edge="1" parent="1" source="decision" target="step3">
-      <mxGeometry relative="1" as="geometry">
-        <Array as="points">
-          <mxPoint x="280" y="610" />
-          <mxPoint x="280" y="325" />
-        </Array>
-      </mxGeometry>
-    </mxCell>
+    <!-- 数据持久化流 (Admin -> DB) -->
+    <mxCell id="e5" value="持久化" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;dashed=1;" edge="1" parent="main_pool" source="adm_1" target="db_1" />
+    <mxCell id="e6" value="持久化" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;dashed=1;" edge="1" parent="main_pool" source="adm_2" target="db_2" />
+    <mxCell id="e7" value="建立索引" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;dashed=1;" edge="1" parent="main_pool" source="adm_3" target="sys_index" />
 
-    <mxCell id="e9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=classic;" edge="1" parent="1" source="step7" target="node_end" />
-
+    <!-- 居民消费流 (DB -> Resident) -->
+    <mxCell id="e8" value="空间检索" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;" edge="1" parent="main_pool" source="db_1" target="res_1" />
+    <mxCell id="e9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;" edge="1" parent="main_pool" source="res_1" target="res_2" />
+    <mxCell id="e10" value="关联查询" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;" edge="1" parent="main_pool" source="db_2" target="res_2" />
+    <mxCell id="e11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;" edge="1" parent="main_pool" source="res_2" target="res_3" />
+    <mxCell id="e12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;" edge="1" parent="main_pool" source="res_3" target="end_node" />
   </root>
 </mxGraphModel>

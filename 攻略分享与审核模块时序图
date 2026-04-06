@@ -1,22 +1,114 @@
-<mxfile host="app.diagrams.net" type="device">
-  <diagram id="fig4-5" name="图4.5 用户互动模块时序图">
-    <mxGraphModel dx="1000" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169">
+<mxfile host="app.diagrams.net" modified="2024-03-21T12:00:00.000Z" agent="Professional-Software-Engineer" version="21.0.0" type="device">
+  <diagram id="fig4-4-guide-sharing" name="图4.4 用户攻略分享时序图">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="u" value="用户 (User)" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;rounded=0;strokeWidth=2;" vertex="1" parent="1"><mxGeometry x="50" y="40" width="100" height="400" as="geometry" /></mxCell>
-        <mxCell id="fe" value="前端界面 (FE)" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;rounded=0;strokeWidth=2;" vertex="1" parent="1"><mxGeometry x="210" y="40" width="100" height="400" as="geometry" /></mxCell>
-        <mxCell id="be" value="后端服务 (BE)" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;rounded=0;strokeWidth=2;" vertex="1" parent="1"><mxGeometry x="370" y="40" width="100" height="400" as="geometry" /></mxCell>
-        <mxCell id="db" value="互动表 (DB)" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;rounded=0;strokeWidth=2;" vertex="1" parent="1"><mxGeometry x="530" y="40" width="100" height="400" as="geometry" /></mxCell>
-        <mxCell id="a1" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;strokeColor=#000000;" vertex="1" parent="fe"><mxGeometry x="45" y="80" width="10" height="280" as="geometry" /></mxCell>
-        <mxCell id="a2" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;strokeColor=#000000;" vertex="1" parent="be"><mxGeometry x="45" y="90" width="10" height="260" as="geometry" /></mxCell>
-        <mxCell id="m1" value="1. 执行点赞/评论/收藏操作" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" edge="1" parent="1" source="u" target="a1"><mxGeometry relative="1" as="geometry" /></mxCell>
-        <mxCell id="m2" value="2. 发送互动请求(userId, guideId, type)" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" edge="1" parent="1" source="a1" target="a2"><mxGeometry relative="1" as="geometry" /></mxCell>
-        <mxCell id="n1" value="判断操作类型:&#xa;LIKE / COMMENT / COLLECT" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;size=12;fontSize=10;" vertex="1" parent="1"><mxGeometry x="430" y="140" width="140" height="40" as="geometry" /></mxCell>
-        <mxCell id="m3" value="3. 写入对应表(点赞/评论/收藏表)" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" edge="1" parent="1" source="a2" target="db"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="490" y="210" /></Array></mxGeometry></mxCell>
-        <mxCell id="m4" value="4. 确认写入成功" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;" edge="1" parent="1" source="db" target="a2"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="500" y="240" /></Array></mxGeometry></mxCell>
-        <mxCell id="m5" value="5. 返回操作结果与最新计数值" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;" edge="1" parent="1" source="a2" target="a1"><mxGeometry relative="1" as="geometry" /></mxCell>
-        <mxCell id="m6" value="6. 动态更新前端交互状态" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;" edge="1" parent="1" source="a1" target="u"><mxGeometry relative="1" as="geometry" /></mxCell>
+        
+        <!-- Lifelines (Academic Style) -->
+        <mxCell id="user" value="用户 (User)" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=0;strokeWidth=1.5;fontSize=12;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="90" height="740" as="geometry" />
+        </mxCell>
+        <mxCell id="fe" value="前端应用 (FE)" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=0;strokeWidth=1.5;fontSize=12;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="180" y="40" width="100" height="740" as="geometry" />
+        </mxCell>
+        <mxCell id="be" value="后端服务 (BE)" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=0;strokeWidth=1.5;fontSize=12;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="340" y="40" width="100" height="740" as="geometry" />
+        </mxCell>
+        <mxCell id="db" value="数据库 (DB/OSS)" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=0;strokeWidth=1.5;fontSize=12;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="510" y="40" width="110" height="740" as="geometry" />
+        </mxCell>
+        <mxCell id="admin" value="管理员 (Admin)" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=0;strokeWidth=1.5;fontSize=12;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="670" y="40" width="100" height="740" as="geometry" />
+        </mxCell>
+
+        <!-- Activation Bars -->
+        <mxCell id="a_fe" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;strokeColor=#000000;fillColor=#ffffff;" vertex="1" parent="fe">
+          <mxGeometry x="45" y="80" width="10" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="a_be" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;strokeColor=#000000;fillColor=#ffffff;" vertex="1" parent="be">
+          <mxGeometry x="45" y="90" width="10" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="a_be2" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;strokeColor=#000000;fillColor=#ffffff;" vertex="1" parent="be">
+          <mxGeometry x="45" y="200" width="10" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- Step 1: Upload -->
+        <mxCell id="m1" value="1. 填写攻略内容并上传图片" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;fontSize=11;" edge="1" parent="1" source="user" target="a_fe">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m2" value="2. uploadFile(image)" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;fontSize=11;" edge="1" parent="1" source="a_fe" target="a_be">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m3" value="3. 保存物理文件" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;fontSize=11;" edge="1" parent="1" source="a_be" target="db">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m4" value="返回访问URL" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;fontSize=11;" edge="1" parent="1" source="db" target="a_be">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m5" value="返回URL" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;fontSize=11;" edge="1" parent="1" source="a_be" target="a_fe">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Step 2: Save Guide -->
+        <mxCell id="m6" value="4. saveGuide(data, imgUrl)" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;fontSize=11;" edge="1" parent="1" source="a_fe" target="a_be2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n1" value="逻辑填充:&#xa;- likes = 0&#xa;- status = PENDING" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fontSize=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="410" y="210" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="m7" value="5. 写入攻略实体表" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;fontSize=11;" edge="1" parent="1" source="a_be2" target="db">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Step 3: Audit Phase -->
+        <mxCell id="a_admin" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;strokeColor=#000000;fillColor=#ffffff;" vertex="1" parent="admin">
+          <mxGeometry x="45" y="360" width="10" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="a_be3" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;strokeColor=#000000;fillColor=#ffffff;" vertex="1" parent="be">
+          <mxGeometry x="45" y="370" width="10" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="m8" value="6. 获取待审核攻略列表" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;fontSize=11;" edge="1" parent="1" source="a_admin" target="a_be3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m9" value="7. 查询 status = PENDING" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;fontSize=11;" edge="1" parent="1" source="a_be3" target="db">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m10" value="8. 执行审核操作(通过/拒绝)" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;fontSize=11;" edge="1" parent="1" source="a_admin" target="a_be3">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="550" y="470" /></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="m11" value="9. 更新 status 字段" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;fontSize=11;" edge="1" parent="1" source="a_be3" target="db">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Step 4: Display Phase -->
+        <mxCell id="a_fe2" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;strokeColor=#000000;fillColor=#ffffff;" vertex="1" parent="fe">
+          <mxGeometry x="45" y="580" width="10" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="a_be4" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;strokeColor=#000000;fillColor=#ffffff;" vertex="1" parent="be">
+          <mxGeometry x="45" y="590" width="10" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="m12" value="10. 请求已通过攻略列表" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;fontSize=11;" edge="1" parent="1" source="user" target="a_fe2">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="140" y="610" /></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="m13" value="11. getGuides(status = APPROVED)" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;fontSize=11;" edge="1" parent="1" source="a_fe2" target="a_be4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m14" value="12. 返回高质量攻略数据" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;fontSize=11;" edge="1" parent="1" source="a_be4" target="a_fe2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Fragment Labels -->
+        <mxCell id="txt1" value="[ 攻略发布过程 ]" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="40" y="60" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="txt2" value="[ 攻略审核过程 ]" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="40" y="340" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="txt3" value="[ 攻略展示过程 ]" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="40" y="560" width="100" height="20" as="geometry" />
+        </mxCell>
+
       </root>
     </mxGraphModel>
   </diagram>

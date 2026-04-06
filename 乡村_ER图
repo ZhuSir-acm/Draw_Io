@@ -1,217 +1,181 @@
-<mxGraphModel dx="2000" dy="1200" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
-  <root>
-    <mxCell id="0" />
-    <mxCell id="1" parent="0" />
-
-    <!-- ENTITY: sys_user -->
-    <mxCell id="u_user" value="sys_user (系统用户)" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=1;fontStyle=1;align=center;resizeLast=1;fillColor=#eeeeee;strokeColor=#000000;shadow=0;rounded=0;" vertex="1" parent="1">
-      <mxGeometry x="640" y="440" width="180" height="130" as="geometry" />
-    </mxCell>
-    <mxCell id="u_user_row1" value="PK | id (bigint)" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" vertex="1" parent="u_user">
-      <mxGeometry y="30" width="180" height="20" as="geometry" />
-    </mxCell>
-    <mxCell id="u_user_row2" value="nickname (varchar)" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" vertex="1" parent="u_user">
-      <mxGeometry y="50" width="180" height="20" as="geometry" />
-    </mxCell>
-    <mxCell id="u_user_row3" value="phone (varchar)" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" vertex="1" parent="u_user">
-      <mxGeometry y="70" width="180" height="20" as="geometry" />
-    </mxCell>
-    <mxCell id="u_user_row4" value="status (int)" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" vertex="1" parent="u_user">
-      <mxGeometry y="90" width="180" height="20" as="geometry" />
-    </mxCell>
-
-    <!-- ENTITY: sys_volunteer -->
-    <mxCell id="u_vol" value="sys_volunteer (志愿者)" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=1;fontStyle=1;align=center;resizeLast=1;fillColor=#eeeeee;strokeColor=#000000;shadow=0;rounded=0;" vertex="1" parent="1">
-      <mxGeometry x="960" y="440" width="180" height="110" as="geometry" />
-    </mxCell>
-    <mxCell id="u_vol_row1" value="PK | id (bigint)" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" vertex="1" parent="u_vol">
-      <mxGeometry y="30" width="180" height="20" as="geometry" />
-    </mxCell>
-    <mxCell id="u_vol_row2" value="FK | user_id (bigint)" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" vertex="1" parent="u_vol">
-      <mxGeometry y="50" width="180" height="20" as="geometry" />
-    </mxCell>
-    <mxCell id="u_vol_row3" value="total_hours (int)" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" vertex="1" parent="u_vol">
-      <mxGeometry y="70" width="180" height="20" as="geometry" />
-    </mxCell>
-
-    <!-- ENTITY: sys_volunteer_record -->
-    <mxCell id="u_vol_rec" value="sys_volunteer_record" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=1;fontStyle=1;align=center;resizeLast=1;fillColor=#eeeeee;strokeColor=#000000;shadow=0;rounded=0;" vertex="1" parent="1">
-      <mxGeometry x="1240" y="440" width="180" height="110" as="geometry" />
-    </mxCell>
-    <mxCell id="u_vol_rec_row1" value="PK | id (bigint)" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" vertex="1" parent="u_vol_rec">
-      <mxGeometry y="30" width="180" height="20" as="geometry" />
-    </mxCell>
-    <mxCell id="u_vol_rec_row2" value="FK | volunteer_id (bigint)" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" vertex="1" parent="u_vol_rec">
-      <mxGeometry y="50" width="180" height="20" as="geometry" />
-    </mxCell>
-    <mxCell id="u_vol_rec_row3" value="FK | activity_id (bigint)" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" vertex="1" parent="u_vol_rec">
-      <mxGeometry y="70" width="180" height="20" as="geometry" />
-    </mxCell>
-
-    <!-- ENTITY: sys_volunteer_activity -->
-    <mxCell id="u_vol_act" value="sys_volunteer_activity" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=1;fontStyle=1;align=center;resizeLast=1;fillColor=#eeeeee;strokeColor=#000000;shadow=0;rounded=0;" vertex="1" parent="1">
-      <mxGeometry x="1240" y="620" width="180" height="90" as="geometry" />
-    </mxCell>
-    <mxCell id="u_vol_act_row1" value="PK | id (bigint)" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" vertex="1" parent="u_vol_act">
-      <mxGeometry y="30" width="180" height="20" as="geometry" />
-    </mxCell>
-    <mxCell id="u_vol_act_row2" value="title (varchar)" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" vertex="1" parent="u_vol_act">
-      <mxGeometry y="50" width="180" height="20" as="geometry" />
-    </mxCell>
-
-    <!-- ENTITY: sys_booking -->
-    <mxCell id="u_book" value="sys_booking (预约)" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=1;fontStyle=1;align=center;resizeLast=1;fillColor=#eeeeee;strokeColor=#000000;shadow=0;rounded=0;" vertex="1" parent="1">
-      <mxGeometry x="640" y="680" width="180" height="130" as="geometry" />
-    </mxCell>
-    <mxCell id="u_book_row1" value="PK | id (bigint)" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" vertex="1" parent="u_book">
-      <mxGeometry y="30" width="180" height="20" as="geometry" />
-    </mxCell>
-    <mxCell id="u_book_row2" value="FK | user_id (bigint)" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" vertex="1" parent="u_book">
-      <mxGeometry y="50" width="180" height="20" as="geometry" />
-    </mxCell>
-    <mxCell id="u_book_row3" value="FK | service_item_id (bigint)" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" vertex="1" parent="u_book">
-      <mxGeometry y="70" width="180" height="20" as="geometry" />
-    </mxCell>
-    <mxCell id="u_book_row4" value="status (varchar)" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" vertex="1" parent="u_book">
-      <mxGeometry y="90" width="180" height="20" as="geometry" />
-    </mxCell>
-
-    <!-- ENTITY: sys_service_item -->
-    <mxCell id="u_item" value="sys_service_item" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=1;fontStyle=1;align=center;resizeLast=1;fillColor=#eeeeee;strokeColor=#000000;shadow=0;rounded=0;" vertex="1" parent="1">
-      <mxGeometry x="920" y="680" width="180" height="90" as="geometry" />
-    </mxCell>
-    <mxCell id="u_item_row1" value="PK | id (bigint)" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" vertex="1" parent="u_item">
-      <mxGeometry y="30" width="180" height="20" as="geometry" />
-    </mxCell>
-    <mxCell id="u_item_row2" value="name (varchar)" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" vertex="1" parent="u_item">
-      <mxGeometry y="50" width="180" height="20" as="geometry" />
-    </mxCell>
-
-    <!-- ENTITY: sys_evaluation -->
-    <mxCell id="u_eval" value="sys_evaluation (评价)" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=1;fontStyle=1;align=center;resizeLast=1;fillColor=#eeeeee;strokeColor=#000000;shadow=0;rounded=0;" vertex="1" parent="1">
-      <mxGeometry x="360" y="680" width="180" height="90" as="geometry" />
-    </mxCell>
-    <mxCell id="u_eval_row1" value="PK | id (bigint)" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" vertex="1" parent="u_eval">
-      <mxGeometry y="30" width="180" height="20" as="geometry" />
-    </mxCell>
-    <mxCell id="u_eval_row2" value="FK | booking_id (bigint)" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" vertex="1" parent="u_eval">
-      <mxGeometry y="50" width="180" height="20" as="geometry" />
-    </mxCell>
-
-    <!-- ENTITY: sys_complaint -->
-    <mxCell id="u_comp" value="sys_complaint (投诉)" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=1;fontStyle=1;align=center;resizeLast=1;fillColor=#eeeeee;strokeColor=#000000;shadow=0;rounded=0;" vertex="1" parent="1">
-      <mxGeometry x="360" y="440" width="180" height="110" as="geometry" />
-    </mxCell>
-    <mxCell id="u_comp_row1" value="PK | id (bigint)" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" vertex="1" parent="u_comp">
-      <mxGeometry y="30" width="180" height="20" as="geometry" />
-    </mxCell>
-    <mxCell id="u_comp_row2" value="FK | user_id (bigint)" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" vertex="1" parent="u_comp">
-      <mxGeometry y="50" width="180" height="20" as="geometry" />
-    </mxCell>
-    <mxCell id="u_comp_row3" value="type (投诉/建议)" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" vertex="1" parent="u_comp">
-      <mxGeometry y="70" width="180" height="20" as="geometry" />
-    </mxCell>
-
-    <!-- ENTITY: sys_community_grid -->
-    <mxCell id="u_grid" value="sys_community_grid" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=1;fontStyle=1;align=center;resizeLast=1;fillColor=#eeeeee;strokeColor=#000000;shadow=0;rounded=0;" vertex="1" parent="1">
-      <mxGeometry x="640" y="100" width="180" height="90" as="geometry" />
-    </mxCell>
-    <mxCell id="u_grid_row1" value="PK | id (bigint)" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" vertex="1" parent="u_grid">
-      <mxGeometry y="30" width="180" height="20" as="geometry" />
-    </mxCell>
-    <mxCell id="u_grid_row2" value="name (网格名称)" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" vertex="1" parent="u_grid">
-      <mxGeometry y="50" width="180" height="20" as="geometry" />
-    </mxCell>
-
-    <!-- ENTITY: sys_resident_info -->
-    <mxCell id="u_resi" value="sys_resident_info" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=1;fontStyle=1;align=center;resizeLast=1;fillColor=#eeeeee;strokeColor=#000000;shadow=0;rounded=0;" vertex="1" parent="1">
-      <mxGeometry x="640" y="240" width="180" height="110" as="geometry" />
-    </mxCell>
-    <mxCell id="u_resi_row1" value="PK | id (bigint)" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" vertex="1" parent="u_resi">
-      <mxGeometry y="30" width="180" height="20" as="geometry" />
-    </mxCell>
-    <mxCell id="u_resi_row2" value="FK | grid_id (bigint)" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" vertex="1" parent="u_resi">
-      <mxGeometry y="50" width="180" height="20" as="geometry" />
-    </mxCell>
-    <mxCell id="u_resi_row3" value="name (姓名)" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" vertex="1" parent="u_resi">
-      <mxGeometry y="70" width="180" height="20" as="geometry" />
-    </mxCell>
-
-    <!-- ENTITY: sys_role -->
-    <mxCell id="u_role" value="sys_role (角色)" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=1;fontStyle=1;align=center;resizeLast=1;fillColor=#eeeeee;strokeColor=#000000;shadow=0;rounded=0;" vertex="1" parent="1">
-      <mxGeometry x="960" y="240" width="180" height="90" as="geometry" />
-    </mxCell>
-    <mxCell id="u_role_row1" value="PK | id (bigint)" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" vertex="1" parent="u_role">
-      <mxGeometry y="30" width="180" height="20" as="geometry" />
-    </mxCell>
-    <mxCell id="u_role_row2" value="name (角色名)" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" vertex="1" parent="u_role">
-      <mxGeometry y="50" width="180" height="20" as="geometry" />
-    </mxCell>
-
-    <!-- ENTITY: sys_user_role -->
-    <mxCell id="u_ur" value="sys_user_role" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=1;fontStyle=1;align=center;resizeLast=1;fillColor=#eeeeee;strokeColor=#000000;shadow=0;rounded=0;" vertex="1" parent="1">
-      <mxGeometry x="960" y="30" width="180" height="90" as="geometry" />
-    </mxCell>
-    <mxCell id="u_ur_row1" value="PK,FK | user_id (bigint)" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" vertex="1" parent="u_ur">
-      <mxGeometry y="30" width="180" height="20" as="geometry" />
-    </mxCell>
-    <mxCell id="u_ur_row2" value="PK,FK | role_id (bigint)" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" vertex="1" parent="u_ur">
-      <mxGeometry y="50" width="180" height="20" as="geometry" />
-    </mxCell>
-
-    <!-- RELATIONSHIPS -->
-    <!-- User to Role (M:N via user_role) -->
-    <mxCell id="rel1" style="edgeStyle=orthogonalEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERone;strokeColor=#000000;rounded=0;" edge="1" parent="1" source="u_user" target="u_ur">
-      <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="880" y="500"/><mxPoint x="880" y="75"/></Array></mxGeometry>
-    </mxCell>
-    <mxCell id="rel2" style="edgeStyle=orthogonalEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERone;strokeColor=#000000;rounded=0;" edge="1" parent="1" source="u_role" target="u_ur">
-      <mxGeometry relative="1" as="geometry" />
-    </mxCell>
-
-    <!-- User to Volunteer (1:1) -->
-    <mxCell id="rel3" style="edgeStyle=orthogonalEdgeStyle;fontSize=12;html=1;endArrow=ERone;startArrow=ERone;strokeColor=#000000;rounded=0;" edge="1" parent="1" source="u_user" target="u_vol">
-      <mxGeometry relative="1" as="geometry" />
-    </mxCell>
-
-    <!-- Volunteer to Record (1:N) -->
-    <mxCell id="rel4" style="edgeStyle=orthogonalEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERone;strokeColor=#000000;rounded=0;" edge="1" parent="1" source="u_vol" target="u_vol_rec">
-      <mxGeometry relative="1" as="geometry" />
-    </mxCell>
-
-    <!-- Activity to Record (1:N) -->
-    <mxCell id="rel5" style="edgeStyle=orthogonalEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERone;strokeColor=#000000;rounded=0;" edge="1" parent="1" source="u_vol_act" target="u_vol_rec">
-      <mxGeometry relative="1" as="geometry" />
-    </mxCell>
-
-    <!-- User to Booking (1:N) -->
-    <mxCell id="rel6" style="edgeStyle=orthogonalEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERone;strokeColor=#000000;rounded=0;" edge="1" parent="1" source="u_user" target="u_book">
-      <mxGeometry relative="1" as="geometry" />
-    </mxCell>
-
-    <!-- Item to Booking (1:N) -->
-    <mxCell id="rel7" style="edgeStyle=orthogonalEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERone;strokeColor=#000000;rounded=0;" edge="1" parent="1" source="u_item" target="u_book">
-      <mxGeometry relative="1" as="geometry" />
-    </mxCell>
-
-    <!-- Booking to Evaluation (1:1) -->
-    <mxCell id="rel8" style="edgeStyle=orthogonalEdgeStyle;fontSize=12;html=1;endArrow=ERone;startArrow=ERone;strokeColor=#000000;rounded=0;" edge="1" parent="1" source="u_book" target="u_eval">
-      <mxGeometry relative="1" as="geometry" />
-    </mxCell>
-
-    <!-- User to Complaint (1:N) -->
-    <mxCell id="rel9" style="edgeStyle=orthogonalEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERone;strokeColor=#000000;rounded=0;" edge="1" parent="1" source="u_user" target="u_comp">
-      <mxGeometry relative="1" as="geometry" />
-    </mxCell>
-
-    <!-- Grid to Resident (1:N) -->
-    <mxCell id="rel10" style="edgeStyle=orthogonalEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERone;strokeColor=#000000;rounded=0;" edge="1" parent="1" source="u_grid" target="u_resi">
-      <mxGeometry relative="1" as="geometry" />
-    </mxCell>
-
-    <!-- Resident to User (1:1 optional logically) -->
-    <mxCell id="rel11" style="edgeStyle=orthogonalEdgeStyle;fontSize=12;html=1;endArrow=ERone;startArrow=ERone;strokeColor=#000000;rounded=0;dashed=1;" edge="1" parent="1" source="u_resi" target="u_user">
-      <mxGeometry relative="1" as="geometry" />
-    </mxCell>
-
-  </root>
-</mxGraphModel>
+<mxfile host="app.diagrams.net">
+  <diagram id="P8qkTnKIpa_drof8Y408" name="第 1 页">
+    <mxGraphModel dx="1230" dy="683" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="u_user" parent="1" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=1;fontStyle=1;align=center;resizeLast=1;fillColor=#eeeeee;strokeColor=#000000;shadow=0;rounded=0;" value="sys_user (系统用户)" vertex="1">
+          <mxGeometry height="130" width="180" x="640" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="u_user_row1" parent="u_user" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" value="PK | id (bigint)" vertex="1">
+          <mxGeometry height="20" width="180" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="u_user_row2" parent="u_user" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" value="nickname (varchar)" vertex="1">
+          <mxGeometry height="20" width="180" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="u_user_row3" parent="u_user" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" value="phone (varchar)" vertex="1">
+          <mxGeometry height="20" width="180" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="u_user_row4" parent="u_user" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" value="status (int)" vertex="1">
+          <mxGeometry height="20" width="180" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="u_vol" parent="1" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=1;fontStyle=1;align=center;resizeLast=1;fillColor=#eeeeee;strokeColor=#000000;shadow=0;rounded=0;" value="sys_volunteer (志愿者)" vertex="1">
+          <mxGeometry height="110" width="180" x="950" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="u_vol_row1" parent="u_vol" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" value="PK | id (bigint)" vertex="1">
+          <mxGeometry height="20" width="180" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="u_vol_row2" parent="u_vol" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" value="FK | user_id (bigint)" vertex="1">
+          <mxGeometry height="20" width="180" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="u_vol_row3" parent="u_vol" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" value="total_hours (int)" vertex="1">
+          <mxGeometry height="20" width="180" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="u_vol_rec" parent="1" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=1;fontStyle=1;align=center;resizeLast=1;fillColor=#eeeeee;strokeColor=#000000;shadow=0;rounded=0;" value="sys_volunteer_record" vertex="1">
+          <mxGeometry height="110" width="180" x="1230" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="u_vol_rec_row1" parent="u_vol_rec" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" value="PK | id (bigint)" vertex="1">
+          <mxGeometry height="20" width="180" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="u_vol_rec_row2" parent="u_vol_rec" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" value="FK | volunteer_id (bigint)" vertex="1">
+          <mxGeometry height="20" width="180" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="u_vol_rec_row3" parent="u_vol_rec" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" value="FK | activity_id (bigint)" vertex="1">
+          <mxGeometry height="20" width="180" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="u_vol_act" parent="1" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=1;fontStyle=1;align=center;resizeLast=1;fillColor=#eeeeee;strokeColor=#000000;shadow=0;rounded=0;" value="sys_volunteer_activity" vertex="1">
+          <mxGeometry height="90" width="180" x="1230" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="u_vol_act_row1" parent="u_vol_act" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" value="PK | id (bigint)" vertex="1">
+          <mxGeometry height="20" width="180" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="u_vol_act_row2" parent="u_vol_act" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" value="title (varchar)" vertex="1">
+          <mxGeometry height="20" width="180" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="u_book" parent="1" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=1;fontStyle=1;align=center;resizeLast=1;fillColor=#eeeeee;strokeColor=#000000;shadow=0;rounded=0;" value="sys_booking (预约)" vertex="1">
+          <mxGeometry height="130" width="180" x="640" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="u_book_row1" parent="u_book" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" value="PK | id (bigint)" vertex="1">
+          <mxGeometry height="20" width="180" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="u_book_row2" parent="u_book" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" value="FK | user_id (bigint)" vertex="1">
+          <mxGeometry height="20" width="180" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="u_book_row3" parent="u_book" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" value="FK | service_item_id (bigint)" vertex="1">
+          <mxGeometry height="20" width="180" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="u_book_row4" parent="u_book" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" value="status (varchar)" vertex="1">
+          <mxGeometry height="20" width="180" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="u_item" parent="1" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=1;fontStyle=1;align=center;resizeLast=1;fillColor=#eeeeee;strokeColor=#000000;shadow=0;rounded=0;" value="sys_service_item" vertex="1">
+          <mxGeometry height="90" width="180" x="910" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="u_item_row1" parent="u_item" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" value="PK | id (bigint)" vertex="1">
+          <mxGeometry height="20" width="180" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="u_item_row2" parent="u_item" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" value="name (varchar)" vertex="1">
+          <mxGeometry height="20" width="180" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="u_eval" parent="1" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=1;fontStyle=1;align=center;resizeLast=1;fillColor=#eeeeee;strokeColor=#000000;shadow=0;rounded=0;" value="sys_evaluation (评价)" vertex="1">
+          <mxGeometry height="90" width="180" x="400" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="u_eval_row1" parent="u_eval" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" value="PK | id (bigint)" vertex="1">
+          <mxGeometry height="20" width="180" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="u_eval_row2" parent="u_eval" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" value="FK | booking_id (bigint)" vertex="1">
+          <mxGeometry height="20" width="180" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="u_comp" parent="1" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=1;fontStyle=1;align=center;resizeLast=1;fillColor=#eeeeee;strokeColor=#000000;shadow=0;rounded=0;" value="sys_complaint (投诉)" vertex="1">
+          <mxGeometry height="110" width="180" x="400" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="u_comp_row1" parent="u_comp" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" value="PK | id (bigint)" vertex="1">
+          <mxGeometry height="20" width="180" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="u_comp_row2" parent="u_comp" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" value="FK | user_id (bigint)" vertex="1">
+          <mxGeometry height="20" width="180" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="u_comp_row3" parent="u_comp" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" value="type (投诉/建议)" vertex="1">
+          <mxGeometry height="20" width="180" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="u_grid" parent="1" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=1;fontStyle=1;align=center;resizeLast=1;fillColor=#eeeeee;strokeColor=#000000;shadow=0;rounded=0;" value="sys_community_grid" vertex="1">
+          <mxGeometry height="90" width="180" x="640" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="u_grid_row1" parent="u_grid" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" value="PK | id (bigint)" vertex="1">
+          <mxGeometry height="20" width="180" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="u_grid_row2" parent="u_grid" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" value="name (网格名称)" vertex="1">
+          <mxGeometry height="20" width="180" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="u_resi" parent="1" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=1;fontStyle=1;align=center;resizeLast=1;fillColor=#eeeeee;strokeColor=#000000;shadow=0;rounded=0;" value="sys_resident_info" vertex="1">
+          <mxGeometry height="110" width="180" x="640" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="u_resi_row1" parent="u_resi" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" value="PK | id (bigint)" vertex="1">
+          <mxGeometry height="20" width="180" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="u_resi_row2" parent="u_resi" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" value="FK | grid_id (bigint)" vertex="1">
+          <mxGeometry height="20" width="180" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="u_resi_row3" parent="u_resi" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" value="name (姓名)" vertex="1">
+          <mxGeometry height="20" width="180" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="u_role" parent="1" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=1;fontStyle=1;align=center;resizeLast=1;fillColor=#eeeeee;strokeColor=#000000;shadow=0;rounded=0;" value="sys_role (角色)" vertex="1">
+          <mxGeometry height="90" width="180" x="960" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="u_role_row1" parent="u_role" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" value="PK | id (bigint)" vertex="1">
+          <mxGeometry height="20" width="180" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="u_role_row2" parent="u_role" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" value="name (角色名)" vertex="1">
+          <mxGeometry height="20" width="180" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="u_ur" parent="1" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=1;fontStyle=1;align=center;resizeLast=1;fillColor=#eeeeee;strokeColor=#000000;shadow=0;rounded=0;" value="sys_user_role" vertex="1">
+          <mxGeometry height="90" width="180" x="960" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="u_ur_row1" parent="u_ur" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" value="PK,FK | user_id (bigint)" vertex="1">
+          <mxGeometry height="20" width="180" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="u_ur_row2" parent="u_ur" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" value="PK,FK | role_id (bigint)" vertex="1">
+          <mxGeometry height="20" width="180" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="rel1" edge="1" parent="1" source="u_user" style="edgeStyle=orthogonalEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERone;strokeColor=#000000;rounded=0;" target="u_ur">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="880" y="500" />
+              <mxPoint x="880" y="110" />
+              <mxPoint x="1050" y="110" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel2" edge="1" parent="1" source="u_role" style="edgeStyle=orthogonalEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERone;strokeColor=#000000;rounded=0;" target="u_ur">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel3" edge="1" parent="1" source="u_user" style="edgeStyle=orthogonalEdgeStyle;fontSize=12;html=1;endArrow=ERone;startArrow=ERone;strokeColor=#000000;rounded=0;" target="u_vol">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel4" edge="1" parent="1" source="u_vol" style="edgeStyle=orthogonalEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERone;strokeColor=#000000;rounded=0;" target="u_vol_rec">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel5" edge="1" parent="1" source="u_vol_act" style="edgeStyle=orthogonalEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERone;strokeColor=#000000;rounded=0;" target="u_vol_rec">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel6" edge="1" parent="1" source="u_user" style="edgeStyle=orthogonalEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERone;strokeColor=#000000;rounded=0;" target="u_book">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel7" edge="1" parent="1" source="u_item" style="edgeStyle=orthogonalEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERone;strokeColor=#000000;rounded=0;" target="u_book">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel8" edge="1" parent="1" source="u_book" style="edgeStyle=orthogonalEdgeStyle;fontSize=12;html=1;endArrow=ERone;startArrow=ERone;strokeColor=#000000;rounded=0;" target="u_eval">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel9" edge="1" parent="1" source="u_user" style="edgeStyle=orthogonalEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERone;strokeColor=#000000;rounded=0;" target="u_comp">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel10" edge="1" parent="1" source="u_grid" style="edgeStyle=orthogonalEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERone;strokeColor=#000000;rounded=0;" target="u_resi">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel11" edge="1" parent="1" source="u_resi" style="edgeStyle=orthogonalEdgeStyle;fontSize=12;html=1;endArrow=ERone;startArrow=ERone;strokeColor=#000000;rounded=0;dashed=1;" target="u_user">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

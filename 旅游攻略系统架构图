@@ -1,0 +1,72 @@
+<mxfile host="app.diagrams.net" modified="2024-03-21T00:00:00.000Z" agent="Mozilla/5.0" version="21.0.0" type="device">
+  <diagram name="系统架构图" id="architecture-diagram">
+    <mxGraphModel dx="1422" dy="791" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- 1. 前端表现层 (微信小程序) -->
+        <mxCell id="group_frontend" value="前端表现层 (微信小程序原生框架)" style="swimlane;whiteSpace=wrap;html=1;startSize=23;strokeColor=#000000;fillColor=#ffffff;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="120" y="40" width="560" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="fe_ui" value="页面展示与交互&lt;br&gt;(景区/攻略/行程/结伴)" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;" vertex="1" parent="group_frontend">
+          <mxGeometry x="20" y="40" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="fe_request" value="数据请求模块&lt;br&gt;(wx.request / wx.uploadFile)" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;" vertex="1" parent="group_frontend">
+          <mxGeometry x="200" y="40" width="170" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="fe_cache" value="本地缓存管理&lt;br&gt;(UserInfo / Cookie)" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;" vertex="1" parent="group_frontend">
+          <mxGeometry x="390" y="40" width="150" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="fe_desc" value="职责：负责页面渲染、用户输入采集、发起异步请求及维持登录状态" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="group_frontend">
+          <mxGeometry x="80" y="110" width="400" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- 通讯箭头：前端 -> 后端 -->
+        <mxCell id="link_fe_be" value="HTTP (RESTful API / JSON)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;endArrow=classic;startArrow=classic;startFill=1;" edge="1" parent="1" source="group_frontend" target="group_backend">
+          <mxGeometry x="0.1" y="20" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 2. 后端服务层 (Spring Boot) -->
+        <mxCell id="group_backend" value="后端服务层 (Spring Boot 业务框架)" style="swimlane;whiteSpace=wrap;html=1;startSize=23;strokeColor=#000000;fillColor=#ffffff;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="120" y="280" width="560" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="be_controller" value="Controller 层 (接口路由与请求接收)" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;" vertex="1" parent="group_backend">
+          <mxGeometry x="130" y="40" width="300" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="be_service" value="Service 层 (核心业务逻辑处理：审核/规划/审批/交互)" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;" vertex="1" parent="group_backend">
+          <mxGeometry x="130" y="100" width="300" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="be_repo" value="Repository 层 (持久化操作 / 数据访问)" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;" vertex="1" parent="group_backend">
+          <mxGeometry x="130" y="160" width="300" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="be_domain" value="Domain 层 (实体类 POJO / 属性映射)" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;" vertex="1" parent="group_backend">
+          <mxGeometry x="130" y="220" width="300" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- 后端侧边：静态资源管理 -->
+        <mxCell id="be_static" value="静态资源映射&lt;br&gt;(本地上传目录)" style="shape=folder;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;" vertex="1" parent="group_backend">
+          <mxGeometry x="460" y="100" width="80" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- 通讯箭头：后端 -> 数据库 -->
+        <mxCell id="link_be_db" value="JDBC / SQL" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;endArrow=classic;startArrow=classic;startFill=1;" edge="1" parent="1" source="group_backend" target="group_db">
+          <mxGeometry x="0.1" y="15" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 3. 数据持久层 (MySQL) -->
+        <mxCell id="group_db" value="数据持久层 (MySQL 数据库)" style="swimlane;whiteSpace=wrap;html=1;startSize=23;strokeColor=#000000;fillColor=#ffffff;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="120" y="640" width="560" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="db_tables" value="用户表 | 景区表 | 攻略表 | 评论点赞表 | 行程表 | 结伴表" style="shape=datastore;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;" vertex="1" parent="group_db">
+          <mxGeometry x="100" y="40" width="360" height="60" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,85 @@
+<mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+    
+    <!-- 实体层 1: 用户 -->
+    <mxCell id="ent_user" value="居民 / 用户" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#eeeeee;fontStyle=1;shadow=0;" vertex="1" parent="1">
+      <mxGeometry x="510" y="40" width="120" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- 关系层: 用户发起的操作 (1:n) -->
+    <mxCell id="rel_u1" value="浏览" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;shadow=0;" vertex="1" parent="1">
+      <mxGeometry x="250" y="140" width="100" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="rel_u2" value="提交" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;shadow=0;" vertex="1" parent="1">
+      <mxGeometry x="420" y="140" width="100" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="rel_u3" value="预约" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;shadow=0;" vertex="1" parent="1">
+      <mxGeometry x="620" y="140" width="100" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="rel_u4" value="注册/参与" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;shadow=0;" vertex="1" parent="1">
+      <mxGeometry x="790" y="140" width="100" height="60" as="geometry" />
+    </mxCell>
+
+    <!-- 业务实体层 (精简后的 4 个核心业务块) -->
+    <mxCell id="ent_info" value="系统资源信息&#xa;(公告/网格/产业)" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;shadow=0;" vertex="1" parent="1">
+      <mxGeometry x="235" y="270" width="130" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="ent_comp" value="投诉与建议" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;shadow=0;" vertex="1" parent="1">
+      <mxGeometry x="405" y="270" width="130" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="ent_book" value="在线预约服务" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;shadow=0;" vertex="1" parent="1">
+      <mxGeometry x="605" y="270" width="130" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="ent_vol" value="志愿服务系统" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;shadow=0;" vertex="1" parent="1">
+      <mxGeometry x="775" y="270" width="130" height="60" as="geometry" />
+    </mxCell>
+
+    <!-- 管理关系层 (m:n) -->
+    <mxCell id="rel_m1" value="维护/发布" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;shadow=0;" vertex="1" parent="1">
+      <mxGeometry x="250" y="400" width="100" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="rel_m2" value="调查/回复" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;shadow=0;" vertex="1" parent="1">
+      <mxGeometry x="420" y="400" width="100" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="rel_m3" value="管理审核" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;shadow=0;" vertex="1" parent="1">
+      <mxGeometry x="710" y="400" width="100" height="60" as="geometry" />
+    </mxCell>
+
+    <!-- 实体层 2: 管理员 -->
+    <mxCell id="ent_admin" value="管 理 员" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#eeeeee;fontStyle=1;shadow=0;" vertex="1" parent="1">
+      <mxGeometry x="510" y="520" width="120" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- 关联连线: 用户端 (1:n) -->
+    <mxCell id="e1" value="1" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="ent_user" target="rel_u2">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e2" value="1" style="endArrow=none;html=1;rounded=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="ent_user" target="rel_u1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e3" value="1" style="endArrow=none;html=1;rounded=0;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="ent_user" target="rel_u3">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e4" value="1" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="ent_user" target="rel_u4">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <mxCell id="e5" value="n" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="rel_u1" target="ent_info" />
+    <mxCell id="e6" value="n" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="rel_u2" target="ent_comp" />
+    <mxCell id="e7" value="n" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="rel_u3" target="ent_book" />
+    <mxCell id="e8" value="n" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="rel_u4" target="ent_vol" />
+
+    <!-- 关联连线: 管理员端 (m:n) -->
+    <mxCell id="e9" value="m" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="ent_admin" target="rel_m2" />
+    <mxCell id="e10" value="m" style="endArrow=none;html=1;rounded=0;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="ent_admin" target="rel_m1" />
+    <mxCell id="e11" value="m" style="endArrow=none;html=1;rounded=0;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="ent_admin" target="rel_m3" />
+
+    <mxCell id="e12" value="n" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="rel_m1" target="ent_info" />
+    <mxCell id="e13" value="n" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="rel_m2" target="ent_comp" />
+    <mxCell id="e14" value="n" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="rel_m3" target="ent_book" />
+    <mxCell id="e15" value="n" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="rel_m3" target="ent_vol" />
+
+  </root>
+</mxGraphModel>

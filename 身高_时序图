@@ -1,62 +1,43 @@
 <mxfile host="app.diagrams.net" modified="2026-04-09T00:00:00.000Z" agent="Draw.io" version="24.0.0" type="device">
   <diagram name="校准流程时序图" id="calibration-seq">
-    <mxGraphModel dx="1300" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1300" pageHeight="850" math="0" shadow="0">
+    <mxGraphModel dx="1200" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="900" math="0" shadow="0">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
         
         <!-- 标题 -->
         <mxCell id="title" value="校准流程时序图" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="500" y="20" width="200" height="30" as="geometry"/>
+          <mxGeometry x="450" y="20" width="200" height="30" as="geometry"/>
         </mxCell>
         
-        <!-- ========== 生命线（头部） ========== -->
+        <!-- ========== 生命线（按时间顺序从上到下） ========== -->
         
-        <!-- 用户（Actor） -->
-        <mxCell id="actor_user" value="用户" style="shape=umlLifeline;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontSize=13;fontStyle=1;align=center;verticalAlign=top;spacingTop=35;" vertex="1" parent="1">
-          <mxGeometry x="40" y="70" width="80" height="650" as="geometry"/>
-        </mxCell>
-        <!-- 火柴人 -->
-        <mxCell id="user_head" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;" vertex="1" parent="1">
-          <mxGeometry x="68" y="78" width="18" height="18" as="geometry"/>
-        </mxCell>
-        <mxCell id="user_body" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;" vertex="1" parent="1">
-          <mxGeometry x="76" y="96" width="3" height="22" as="geometry"/>
-        </mxCell>
-        <mxCell id="user_arm_l" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;" vertex="1" parent="1">
-          <mxGeometry x="62" y="102" width="18" height="3" as="geometry"/>
-        </mxCell>
-        <mxCell id="user_arm_r" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;" vertex="1" parent="1">
-          <mxGeometry x="76" y="102" width="18" height="3" as="geometry"/>
-        </mxCell>
-        <mxCell id="user_leg_l" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;" vertex="1" parent="1">
-          <mxGeometry x="66" y="116" width="16" height="3" as="geometry"/>
-        </mxCell>
-        <mxCell id="user_leg_r" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;" vertex="1" parent="1">
-          <mxGeometry x="78" y="116" width="16" height="3" as="geometry"/>
+        <!-- 用户 -->
+        <mxCell id="actor_user" value="用户" style="shape=umlLifeline;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontSize=12;fontStyle=1;align=center;verticalAlign=top;spacingTop=35;" vertex="1" parent="1">
+          <mxGeometry x="40" y="70" width="80" height="700" as="geometry"/>
         </mxCell>
         
         <!-- 前端页面 -->
-        <mxCell id="lifeline_frontend" value="前端页面" style="shape=umlLifeline;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontSize=13;fontStyle=1;align=center;verticalAlign=top;spacingTop=35;" vertex="1" parent="1">
-          <mxGeometry x="240" y="70" width="80" height="650" as="geometry"/>
+        <mxCell id="lifeline_frontend" value="前端页面" style="shape=umlLifeline;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontSize=12;fontStyle=1;align=center;verticalAlign=top;spacingTop=35;" vertex="1" parent="1">
+          <mxGeometry x="240" y="70" width="80" height="700" as="geometry"/>
         </mxCell>
         
         <!-- Flask后端 -->
-        <mxCell id="lifeline_backend" value="Flask后端" style="shape=umlLifeline;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontSize=13;fontStyle=1;align=center;verticalAlign=top;spacingTop=35;" vertex="1" parent="1">
-          <mxGeometry x="440" y="70" width="80" height="650" as="geometry"/>
+        <mxCell id="lifeline_backend" value="Flask后端" style="shape=umlLifeline;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontSize=12;fontStyle=1;align=center;verticalAlign=top;spacingTop=35;" vertex="1" parent="1">
+          <mxGeometry x="440" y="70" width="80" height="700" as="geometry"/>
         </mxCell>
         
         <!-- 测量引擎 -->
-        <mxCell id="lifeline_engine" value="测量引擎" style="shape=umlLifeline;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontSize=13;fontStyle=1;align=center;verticalAlign=top;spacingTop=35;" vertex="1" parent="1">
-          <mxGeometry x="640" y="70" width="80" height="650" as="geometry"/>
+        <mxCell id="lifeline_engine" value="测量引擎" style="shape=umlLifeline;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontSize=12;fontStyle=1;align=center;verticalAlign=top;spacingTop=35;" vertex="1" parent="1">
+          <mxGeometry x="640" y="70" width="80" height="700" as="geometry"/>
         </mxCell>
         
         <!-- 姿态识别模块 -->
-        <mxCell id="lifeline_pose" value="姿态识别模块" style="shape=umlLifeline;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontSize=13;fontStyle=1;align=center;verticalAlign=top;spacingTop=35;" vertex="1" parent="1">
-          <mxGeometry x="840" y="70" width="100" height="650" as="geometry"/>
+        <mxCell id="lifeline_pose" value="姿态识别模块" style="shape=umlLifeline;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontSize=12;fontStyle=1;align=center;verticalAlign=top;spacingTop=35;" vertex="1" parent="1">
+          <mxGeometry x="840" y="70" width="100" height="700" as="geometry"/>
         </mxCell>
         
-        <!-- ========== 消息 ========== -->
+        <!-- ========== 消息（按时间顺序） ========== -->
         
         <!-- 1. 用户 -> 前端：输入真实身高 -->
         <mxCell id="msg1" value="输入真实身高" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=open;endFill=0;fontSize=12;" edge="1" parent="1" source="actor_user" target="lifeline_frontend">
@@ -65,48 +46,39 @@
             <mxPoint x="240" y="150" as="targetPoint"/>
           </mxGeometry>
         </mxCell>
-        <!-- 激活块：前端 -->
-        <mxCell id="act_frontend_1" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E8E8E8;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="275" y="150" width="10" height="40" as="geometry"/>
-        </mxCell>
         
         <!-- 2. 用户 -> 前端：点击开始校准 -->
         <mxCell id="msg2" value="点击开始校准" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=open;endFill=0;fontSize=12;" edge="1" parent="1" source="actor_user" target="lifeline_frontend">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="120" y="220" as="sourcePoint"/>
-            <mxPoint x="240" y="220" as="targetPoint"/>
+            <mxPoint x="120" y="210" as="sourcePoint"/>
+            <mxPoint x="240" y="210" as="targetPoint"/>
           </mxGeometry>
         </mxCell>
         
         <!-- 3. 前端 -> 后端：发送校准请求 -->
         <mxCell id="msg3" value="发送校准请求" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=open;endFill=0;fontSize=12;" edge="1" parent="1" source="lifeline_frontend" target="lifeline_backend">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="320" y="255" as="sourcePoint"/>
-            <mxPoint x="440" y="255" as="targetPoint"/>
+            <mxPoint x="320" y="250" as="sourcePoint"/>
+            <mxPoint x="440" y="250" as="targetPoint"/>
           </mxGeometry>
-        </mxCell>
-        
-        <!-- 激活块：前端 -->
-        <mxCell id="act_frontend_2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E8E8E8;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="275" y="220" width="10" height="50" as="geometry"/>
         </mxCell>
         
         <!-- 激活块：后端 -->
         <mxCell id="act_backend" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E8E8E8;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="475" y="255" width="10" height="100" as="geometry"/>
+          <mxGeometry x="475" y="250" width="10" height="80" as="geometry"/>
         </mxCell>
         
         <!-- 4. 后端 -> 引擎：调用校准接口 -->
         <mxCell id="msg4" value="调用校准接口" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=open;endFill=0;fontSize=12;" edge="1" parent="1" source="lifeline_backend" target="lifeline_engine">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="520" y="290" as="sourcePoint"/>
-            <mxPoint x="640" y="290" as="targetPoint"/>
+            <mxPoint x="520" y="285" as="sourcePoint"/>
+            <mxPoint x="640" y="285" as="targetPoint"/>
           </mxGeometry>
         </mxCell>
         
         <!-- 激活块：引擎 -->
         <mxCell id="act_engine" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E8E8E8;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="675" y="290" width="10" height="160" as="geometry"/>
+          <mxGeometry x="675" y="285" width="10" height="200" as="geometry"/>
         </mxCell>
         
         <!-- 5. 引擎 -> 引擎：进入校准模式 -->
@@ -119,75 +91,75 @@
         
         <!-- ========== 循环框 ========== -->
         <mxCell id="loop_frame" value="loop  [连续帧采样，直至稳定]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontSize=11;align=left;verticalAlign=top;spacingTop=6;spacingLeft=8;dashed=1;" vertex="1" parent="1">
-          <mxGeometry x="600" y="350" width="300" height="90" as="geometry"/>
+          <mxGeometry x="600" y="355" width="350" height="95" as="geometry"/>
         </mxCell>
         
         <!-- 6. 引擎 -> 姿态识别：逐帧调用 -->
         <mxCell id="msg6" value="逐帧调用" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=open;endFill=0;fontSize=11;" edge="1" parent="1" source="lifeline_engine" target="lifeline_pose">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="680" y="380" as="sourcePoint"/>
-            <mxPoint x="840" y="380" as="targetPoint"/>
+            <mxPoint x="680" y="385" as="sourcePoint"/>
+            <mxPoint x="840" y="385" as="targetPoint"/>
           </mxGeometry>
         </mxCell>
         
         <!-- 激活块：姿态识别 -->
         <mxCell id="act_pose" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E8E8E8;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="880" y="380" width="10" height="35" as="geometry"/>
+          <mxGeometry x="880" y="385" width="10" height="35" as="geometry"/>
         </mxCell>
         
         <!-- 7. 姿态识别 -> 引擎：关键点结果 -->
         <mxCell id="msg7" value="关键点结果" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;dashed=1;endArrow=open;endFill=0;fontSize=11;" edge="1" parent="1" source="lifeline_pose" target="lifeline_engine">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="840" y="410" as="sourcePoint"/>
-            <mxPoint x="725" y="410" as="targetPoint"/>
+            <mxPoint x="840" y="415" as="sourcePoint"/>
+            <mxPoint x="725" y="415" as="targetPoint"/>
           </mxGeometry>
         </mxCell>
         
         <!-- 8. 引擎 -> 引擎：计算像素高度 -->
         <mxCell id="msg8" value="计算像素高度" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=open;endFill=0;fontSize=11;fontStyle=2;" edge="1" parent="1" source="lifeline_engine" target="lifeline_engine">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="680" y="435" as="sourcePoint"/>
-            <mxPoint x="725" y="435" as="targetPoint"/>
+            <mxPoint x="680" y="440" as="sourcePoint"/>
+            <mxPoint x="725" y="440" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- 9. 引擎 -> 引擎：判断是否稳定 -->
+        <mxCell id="msg9" value="判断是否稳定" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=open;endFill=0;fontSize=11;fontStyle=2;" edge="1" parent="1" source="lifeline_engine" target="lifeline_engine">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="680" y="475" as="sourcePoint"/>
+            <mxPoint x="725" y="475" as="targetPoint"/>
           </mxGeometry>
         </mxCell>
         
         <!-- 循环框结束 -->
         
-        <!-- 9. 引擎 -> 引擎：判断是否稳定 -->
-        <mxCell id="msg9" value="判断是否稳定" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=open;endFill=0;fontSize=11;fontStyle=2;" edge="1" parent="1" source="lifeline_engine" target="lifeline_engine">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="680" y="465" as="sourcePoint"/>
-            <mxPoint x="725" y="465" as="targetPoint"/>
-          </mxGeometry>
-        </mxCell>
-        
         <!-- 10. 引擎 -> 后端：返回校准结果 -->
         <mxCell id="msg10" value="返回校准结果" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;dashed=1;endArrow=open;endFill=0;fontSize=12;" edge="1" parent="1" source="lifeline_engine" target="lifeline_backend">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="640" y="500" as="sourcePoint"/>
-            <mxPoint x="520" y="500" as="targetPoint"/>
+            <mxPoint x="640" y="520" as="sourcePoint"/>
+            <mxPoint x="520" y="520" as="targetPoint"/>
           </mxGeometry>
         </mxCell>
         
         <!-- 11. 后端 -> 前端：返回校准状态 -->
         <mxCell id="msg11" value="返回校准状态" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;dashed=1;endArrow=open;endFill=0;fontSize=12;" edge="1" parent="1" source="lifeline_backend" target="lifeline_frontend">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="440" y="535" as="sourcePoint"/>
-            <mxPoint x="320" y="535" as="targetPoint"/>
+            <mxPoint x="440" y="555" as="sourcePoint"/>
+            <mxPoint x="320" y="555" as="targetPoint"/>
           </mxGeometry>
         </mxCell>
         
         <!-- 12. 前端 -> 用户：查看提示信息 -->
         <mxCell id="msg12" value="查看提示信息" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;dashed=1;endArrow=open;endFill=0;fontSize=12;" edge="1" parent="1" source="lifeline_frontend" target="actor_user">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="240" y="570" as="sourcePoint"/>
-            <mxPoint x="120" y="570" as="targetPoint"/>
+            <mxPoint x="240" y="590" as="sourcePoint"/>
+            <mxPoint x="120" y="590" as="targetPoint"/>
           </mxGeometry>
         </mxCell>
         
-        <!-- ========== Note ========== -->
-        <mxCell id="note" value="&lt;b&gt;说明：&lt;/b&gt;系统持续采样人体像素高度，只有当连续帧满足稳定条件后，&lt;br&gt;才将中位像素高度换算为当前场景的像素厘米比例（px/cm）。&lt;br&gt;这样可以避免用户刚进入画面或身体晃动时直接完成标定。" style="shape=note;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#000000;strokeWidth=1;fontSize=10;align=left;spacingLeft=8;" vertex="1" parent="1">
-          <mxGeometry x="40" y="640" width="540" height="55" as="geometry"/>
+        <!-- ========== 说明 ========== -->
+        <mxCell id="note" value="&lt;b&gt;说明：&lt;/b&gt;系统持续采样人体像素高度，只有当连续帧满足稳定条件后，&lt;br&gt;才将中位像素高度换算为当前场景的像素厘米比例（px/cm）。" style="shape=note;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#000000;strokeWidth=1;fontSize=10;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="40" y="660" width="520" height="45" as="geometry"/>
         </mxCell>
         
       </root>

@@ -1,1 +1,219 @@
-
+<mxfile host="app.diagrams.net" modified="2026-04-09T00:00:00.000Z" agent="Draw.io" version="24.0.0" type="device">
+  <diagram name="系统用例图" id="use-case-diagram">
+    <mxGraphModel dx="1200" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        
+        <!-- 系统边界框（系统名） -->
+        <mxCell id="system_boundary" value="智能身高动态测量系统" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=14;fontStyle=1;align=center;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="300" y="100" width="700" height="600" as="geometry"/>
+        </mxCell>
+        
+        <!-- 参与者：用户（火柴人） -->
+        <!-- 火柴人头 -->
+        <mxCell id="user_head" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="100" y="200" width="30" height="30" as="geometry"/>
+        </mxCell>
+        <!-- 火柴人身体 -->
+        <mxCell id="user_body" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="113" y="230" width="4" height="50" as="geometry"/>
+        </mxCell>
+        <!-- 火柴人左臂 -->
+        <mxCell id="user_arm_left" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;rotation=-30;" vertex="1" parent="1">
+          <mxGeometry x="93" y="240" width="30" height="4" as="geometry"/>
+        </mxCell>
+        <!-- 火柴人右臂 -->
+        <mxCell id="user_arm_right" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;rotation=30;" vertex="1" parent="1">
+          <mxGeometry x="97" y="240" width="30" height="4" as="geometry"/>
+        </mxCell>
+        <!-- 火柴人左腿 -->
+        <mxCell id="user_leg_left" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;rotation=20;" vertex="1" parent="1">
+          <mxGeometry x="100" y="275" width="25" height="4" as="geometry"/>
+        </mxCell>
+        <!-- 火柴人右腿 -->
+        <mxCell id="user_leg_right" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;rotation=-20;" vertex="1" parent="1">
+          <mxGeometry x="105" y="275" width="25" height="4" as="geometry"/>
+        </mxCell>
+        <!-- 参与者名称 -->
+        <mxCell id="user_name" value="使用者" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="90" y="290" width="50" height="20" as="geometry"/>
+        </mxCell>
+        
+        <!-- ========== 用例（椭圆） ========== -->
+        
+        <!-- UC1: 打开系统页面 -->
+        <mxCell id="uc1" value="打开系统页面" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontSize=12;align=center;" vertex="1" parent="1">
+          <mxGeometry x="420" y="140" width="140" height="50" as="geometry"/>
+        </mxCell>
+        
+        <!-- UC2: 输入真实身高 -->
+        <mxCell id="uc2" value="输入真实身高" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontSize=12;align=center;" vertex="1" parent="1">
+          <mxGeometry x="620" y="140" width="140" height="50" as="geometry"/>
+        </mxCell>
+        
+        <!-- UC3: 开始校准 -->
+        <mxCell id="uc3" value="开始校准" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontSize=12;align=center;" vertex="1" parent="1">
+          <mxGeometry x="820" y="140" width="120" height="50" as="geometry"/>
+        </mxCell>
+        
+        <!-- UC4: 开始测量 -->
+        <mxCell id="uc4" value="开始测量" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontSize=12;align=center;" vertex="1" parent="1">
+          <mxGeometry x="480" y="250" width="120" height="50" as="geometry"/>
+        </mxCell>
+        
+        <!-- UC5: 查看实时画面 -->
+        <mxCell id="uc5" value="查看实时画面" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontSize=12;align=center;" vertex="1" parent="1">
+          <mxGeometry x="680" y="250" width="140" height="50" as="geometry"/>
+        </mxCell>
+        
+        <!-- UC6: 查看状态提示 -->
+        <mxCell id="uc6" value="查看状态提示" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontSize=12;align=center;" vertex="1" parent="1">
+          <mxGeometry x="480" y="370" width="140" height="50" as="geometry"/>
+        </mxCell>
+        
+        <!-- UC7: 获取最终身高 -->
+        <mxCell id="uc7" value="获取最终身高" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontSize=12;align=center;" vertex="1" parent="1">
+          <mxGeometry x="680" y="370" width="140" height="50" as="geometry"/>
+        </mxCell>
+        
+        <!-- UC8: 听取语音播报 -->
+        <mxCell id="uc8" value="听取语音播报" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontSize=12;align=center;" vertex="1" parent="1">
+          <mxGeometry x="480" y="490" width="140" height="50" as="geometry"/>
+        </mxCell>
+        
+        <!-- UC9: 再次测量 -->
+        <mxCell id="uc9" value="再次测量" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontSize=12;align=center;" vertex="1" parent="1">
+          <mxGeometry x="680" y="490" width="120" height="50" as="geometry"/>
+        </mxCell>
+        
+        <!-- UC10: 系统自动状态切换（扩展/包含关系，用Note标注） -->
+        <mxCell id="uc10_note" value="«include»&#xa;自动状态切换&#xa;(校准→测量)" style="shape=note;whiteSpace=wrap;html=1;fillColor=#F0F0F0;strokeColor=#000000;strokeWidth=1;fontSize=10;align=center;spacingTop=5;" vertex="1" parent="1">
+          <mxGeometry x="860" y="360" width="100" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- ========== 关联关系（参与者 → 用例） ========== -->
+        
+        <!-- 用户 → 打开系统页面 -->
+        <mxCell id="assoc1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=open;endFill=0;" edge="1" parent="1" source="user_body" target="uc1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="115" y="165"/>
+              <mxPoint x="350" y="165"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- 用户 → 输入真实身高 -->
+        <mxCell id="assoc2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=open;endFill=0;" edge="1" parent="1" source="user_body" target="uc2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="115" y="165"/>
+              <mxPoint x="550" y="165"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- 用户 → 开始校准 -->
+        <mxCell id="assoc3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=open;endFill=0;" edge="1" parent="1" source="user_body" target="uc3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="115" y="165"/>
+              <mxPoint x="880" y="165"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- 用户 → 开始测量 -->
+        <mxCell id="assoc4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=open;endFill=0;" edge="1" parent="1" source="user_body" target="uc4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="115" y="275"/>
+              <mxPoint x="540" y="275"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- 用户 ← 查看实时画面（双向，但用例图用单向线表示关联） -->
+        <mxCell id="assoc5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=open;endFill=0;" edge="1" parent="1" source="user_body" target="uc5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="115" y="275"/>
+              <mxPoint x="750" y="275"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- 用户 ← 查看状态提示 -->
+        <mxCell id="assoc6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=open;endFill=0;" edge="1" parent="1" source="user_body" target="uc6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="115" y="395"/>
+              <mxPoint x="550" y="395"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- 用户 ← 获取最终身高 -->
+        <mxCell id="assoc7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=open;endFill=0;" edge="1" parent="1" source="user_body" target="uc7">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="115" y="395"/>
+              <mxPoint x="750" y="395"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- 用户 ← 听取语音播报 -->
+        <mxCell id="assoc8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=open;endFill=0;" edge="1" parent="1" source="user_body" target="uc8">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="115" y="515"/>
+              <mxPoint x="550" y="515"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- 用户 → 再次测量 -->
+        <mxCell id="assoc9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=open;endFill=0;" edge="1" parent="1" source="user_body" target="uc9">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="115" y="515"/>
+              <mxPoint x="740" y="515"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- ========== 用例之间的包含关系（虚线箭头） ========== -->
+        
+        <!-- 开始校准 包含 自动状态切换 -->
+        <mxCell id="include1" value="«include»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;dashed=1;endArrow=open;endFill=0;fontSize=10;fontStyle=2;" edge="1" parent="1" source="uc3" target="uc10_note">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <!-- 开始测量 包含 自动状态切换 -->
+        <mxCell id="include2" value="«include»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;dashed=1;endArrow=open;endFill=0;fontSize=10;fontStyle=2;" edge="1" parent="1" source="uc4" target="uc10_note">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="540" y="320"/>
+              <mxPoint x="910" y="320"/>
+              <mxPoint x="910" y="360"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- 扩展关系：再次测量 扩展 开始测量 -->
+        <mxCell id="extend1" value="«extend»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;dashed=1;endArrow=open;endFill=0;fontSize=10;fontStyle=2;" edge="1" parent="1" source="uc9" target="uc4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="740" y="540"/>
+              <mxPoint x="540" y="540"/>
+              <mxPoint x="540" y="300"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

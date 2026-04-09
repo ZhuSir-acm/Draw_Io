@@ -1,235 +1,164 @@
-<mxfile host="app.diagrams.net" modified="2026-04-09T00:00:00.000Z" agent="学术论文绘图助手" version="21.0.0" type="device">
-  <diagram name="系统功能图-智能身高动态测量系统" id="system-func-diagram">
-    <mxGraphModel dx="1200" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0" background="#FFFFFF">
+<mxfile host="app.diagrams.net" modified="2026-04-09T00:00:00.000Z" agent="Draw.io" version="24.0.0" type="device">
+  <diagram name="系统功能图" id="system-function-diagram">
+    <mxGraphModel dx="1200" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
       <root>
-        <mxCell id="0" />
-        <mxCell id="1" parent="0" />
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
         
-        <!-- 根节点：系统名称 -->
-        <mxCell id="root" value="&lt;b&gt;智能身高动态测量系统&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#000000;strokeWidth=2;fontSize=14;fontStyle=1;shadow=0;gradientColor=none;" vertex="1" parent="1">
-          <mxGeometry x="290" y="40" width="220" height="50" as="geometry" />
+        <!-- 根节点：智能身高动态测量系统 -->
+        <mxCell id="root" value="智能身高动态测量系统" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E0E0E0;strokeColor=#000000;strokeWidth=2;fontSize=16;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="600" y="30" width="280" height="50" as="geometry"/>
         </mxCell>
-
-        <!-- 连接线：根节点到一级模块（由于是结构图，使用标准直线） -->
-        <!-- 连接 1 -->
-        <mxCell id="edge1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;endArrow=none;exitX=0.5;exitY=1;entryX=0.5;entryY=0;shadow=0;" edge="1" parent="1" source="root" target="mod1">
-          <mxGeometry relative="1" as="geometry" />
+        
+        <!-- 一级分支线 -->
+        <mxCell id="line1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;" edge="1" parent="1" source="root" target="container1">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <!-- 连接 2 -->
-        <mxCell id="edge2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;endArrow=none;exitX=0.5;exitY=1;entryX=0.5;entryY=0;shadow=0;" edge="1" parent="1" source="root" target="mod2">
-          <mxGeometry relative="1" as="geometry" />
+        
+        <!-- 一级节点容器（水平排列6个模块） -->
+        <!-- 模块1：视频采集与显示 -->
+        <mxCell id="mod1" value="视频采集与显示" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E0E0E0;strokeColor=#000000;strokeWidth=1.5;fontSize=13;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="80" y="130" width="200" height="40" as="geometry"/>
         </mxCell>
-        <!-- 连接 3 -->
-        <mxCell id="edge3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;endArrow=none;exitX=0.5;exitY=1;entryX=0.5;entryY=0;shadow=0;" edge="1" parent="1" source="root" target="mod3">
-          <mxGeometry relative="1" as="geometry" />
+        
+        <mxCell id="mod1_1" value="打开本地摄像头或网络摄像头" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=11;align=center;" vertex="1" parent="1">
+          <mxGeometry x="80" y="190" width="200" height="30" as="geometry"/>
         </mxCell>
-        <!-- 连接 4 -->
-        <mxCell id="edge4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;endArrow=none;exitX=0.5;exitY=1;entryX=0.5;entryY=0;shadow=0;" edge="1" parent="1" source="root" target="mod4">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="mod1_2" value="实时读取视频帧" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=11;align=center;" vertex="1" parent="1">
+          <mxGeometry x="80" y="230" width="200" height="30" as="geometry"/>
         </mxCell>
-        <!-- 连接 5 -->
-        <mxCell id="edge5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;endArrow=none;exitX=0.5;exitY=1;entryX=0.5;entryY=0;shadow=0;" edge="1" parent="1" source="root" target="mod5">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="mod1_3" value="在网页中显示实时画面" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=11;align=center;" vertex="1" parent="1">
+          <mxGeometry x="80" y="270" width="200" height="30" as="geometry"/>
         </mxCell>
-        <!-- 连接 6 -->
-        <mxCell id="edge6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;endArrow=none;exitX=0.5;exitY=1;entryX=0.5;entryY=0;shadow=0;" edge="1" parent="1" source="root" target="mod6">
-          <mxGeometry relative="1" as="geometry" />
+        
+        <!-- 连线 模块1 -->
+        <mxCell value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1" source="mod1" target="mod1_1"/>
+        <mxCell value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1" source="mod1_1" target="mod1_2"/>
+        <mxCell value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1" source="mod1_2" target="mod1_3"/>
+        
+        <!-- 模块2：身高校准 -->
+        <mxCell id="mod2" value="身高校准" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E0E0E0;strokeColor=#000000;strokeWidth=1.5;fontSize=13;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="320" y="130" width="200" height="40" as="geometry"/>
         </mxCell>
-
-        <!-- 一级模块 1: 视频采集与显示 -->
-        <mxCell id="mod1" value="&lt;b&gt;视频采集与显示&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontSize=12;fontStyle=1;shadow=0;" vertex="1" parent="1">
-          <mxGeometry x="40" y="130" width="140" height="40" as="geometry" />
+        
+        <mxCell id="mod2_1" value="输入真实身高" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=11;align=center;" vertex="1" parent="1">
+          <mxGeometry x="320" y="190" width="200" height="30" as="geometry"/>
         </mxCell>
-        <!-- 子项 1 -->
-        <mxCell id="mod1_1" value="打开本地/网络摄像头" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1;fontSize=11;shadow=0;" vertex="1" parent="1">
-          <mxGeometry x="40" y="180" width="140" height="30" as="geometry" />
+        <mxCell id="mod2_2" value="采集稳定人体像素高度" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=11;align=center;" vertex="1" parent="1">
+          <mxGeometry x="320" y="230" width="200" height="30" as="geometry"/>
         </mxCell>
-        <mxCell id="edge1_1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;endArrow=none;exitX=0.5;exitY=1;entryX=0.5;entryY=0;shadow=0;" edge="1" parent="1" source="mod1" target="mod1_1">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="mod2_3" value="计算像素厘米比例（px/cm）" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=11;align=center;" vertex="1" parent="1">
+          <mxGeometry x="320" y="270" width="200" height="30" as="geometry"/>
         </mxCell>
-        <!-- 子项 2 -->
-        <mxCell id="mod1_2" value="实时读取视频帧" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1;fontSize=11;shadow=0;" vertex="1" parent="1">
-          <mxGeometry x="40" y="215" width="140" height="30" as="geometry" />
+        
+        <mxCell value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1" source="mod2" target="mod2_1"/>
+        <mxCell value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1" source="mod2_1" target="mod2_2"/>
+        <mxCell value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1" source="mod2_2" target="mod2_3"/>
+        
+        <!-- 模块3：人体检测与判定 -->
+        <mxCell id="mod3" value="人体检测与判定" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E0E0E0;strokeColor=#000000;strokeWidth=1.5;fontSize=13;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="560" y="130" width="200" height="40" as="geometry"/>
         </mxCell>
-        <mxCell id="edge1_2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;endArrow=none;exitX=0.5;exitY=1;entryX=0.5;entryY=0;shadow=0;" edge="1" parent="1" source="mod1_1" target="mod1_2">
-          <mxGeometry relative="1" as="geometry" />
+        
+        <mxCell id="mod3_1" value="姿态关键点识别" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=11;align=center;" vertex="1" parent="1">
+          <mxGeometry x="560" y="190" width="200" height="30" as="geometry"/>
         </mxCell>
-        <!-- 子项 3 -->
-        <mxCell id="mod1_3" value="网页显示实时画面" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1;fontSize=11;shadow=0;" vertex="1" parent="1">
-          <mxGeometry x="40" y="250" width="140" height="30" as="geometry" />
+        <mxCell id="mod3_2" value="全身入镜判断" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=11;align=center;" vertex="1" parent="1">
+          <mxGeometry x="560" y="230" width="200" height="30" as="geometry"/>
         </mxCell>
-        <mxCell id="edge1_3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;endArrow=none;exitX=0.5;exitY=1;entryX=0.5;entryY=0;shadow=0;" edge="1" parent="1" source="mod1_2" target="mod1_3">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="mod3_3" value="人体边界框生成" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=11;align=center;" vertex="1" parent="1">
+          <mxGeometry x="560" y="270" width="200" height="30" as="geometry"/>
         </mxCell>
-
-        <!-- 一级模块 2: 身高校准 -->
-        <mxCell id="mod2" value="&lt;b&gt;身高校准&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontSize=12;fontStyle=1;shadow=0;" vertex="1" parent="1">
-          <mxGeometry x="210" y="130" width="140" height="40" as="geometry" />
+        
+        <mxCell value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1" source="mod3" target="mod3_1"/>
+        <mxCell value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1" source="mod3_1" target="mod3_2"/>
+        <mxCell value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1" source="mod3_2" target="mod3_3"/>
+        
+        <!-- 模块4：动态身高测量 -->
+        <mxCell id="mod4" value="动态身高测量" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E0E0E0;strokeColor=#000000;strokeWidth=1.5;fontSize=13;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="800" y="130" width="200" height="40" as="geometry"/>
         </mxCell>
-        <!-- 子项 1 -->
-        <mxCell id="mod2_1" value="输入真实身高" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1;fontSize=11;shadow=0;" vertex="1" parent="1">
-          <mxGeometry x="210" y="180" width="140" height="30" as="geometry" />
+        
+        <mxCell id="mod4_1" value="头部与足部定位" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=11;align=center;" vertex="1" parent="1">
+          <mxGeometry x="800" y="190" width="200" height="30" as="geometry"/>
         </mxCell>
-        <mxCell id="edge2_1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;endArrow=none;exitX=0.5;exitY=1;entryX=0.5;entryY=0;shadow=0;" edge="1" parent="1" source="mod2" target="mod2_1">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="mod4_2" value="像素高度计算" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=11;align=center;" vertex="1" parent="1">
+          <mxGeometry x="800" y="230" width="200" height="30" as="geometry"/>
         </mxCell>
-        <!-- 子项 2 -->
-        <mxCell id="mod2_2" value="采集人体像素高度" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1;fontSize=11;shadow=0;" vertex="1" parent="1">
-          <mxGeometry x="210" y="215" width="140" height="30" as="geometry" />
+        <mxCell id="mod4_3" value="厘米换算" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=11;align=center;" vertex="1" parent="1">
+          <mxGeometry x="800" y="270" width="200" height="30" as="geometry"/>
         </mxCell>
-        <mxCell id="edge2_2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;endArrow=none;exitX=0.5;exitY=1;entryX=0.5;entryY=0;shadow=0;" edge="1" parent="1" source="mod2_1" target="mod2_2">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="mod4_4" value="多帧滤波与稳定判定" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=11;align=center;" vertex="1" parent="1">
+          <mxGeometry x="800" y="310" width="200" height="30" as="geometry"/>
         </mxCell>
-        <!-- 子项 3 -->
-        <mxCell id="mod2_3" value="计算像素厘米比例" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1;fontSize=11;shadow=0;" vertex="1" parent="1">
-          <mxGeometry x="210" y="250" width="140" height="30" as="geometry" />
+        
+        <mxCell value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1" source="mod4" target="mod4_1"/>
+        <mxCell value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1" source="mod4_1" target="mod4_2"/>
+        <mxCell value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1" source="mod4_2" target="mod4_3"/>
+        <mxCell value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1" source="mod4_3" target="mod4_4"/>
+        
+        <!-- 模块5：结果输出 -->
+        <mxCell id="mod5" value="结果输出" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E0E0E0;strokeColor=#000000;strokeWidth=1.5;fontSize=13;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="130" width="200" height="40" as="geometry"/>
         </mxCell>
-        <mxCell id="edge2_3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;endArrow=none;exitX=0.5;exitY=1;entryX=0.5;entryY=0;shadow=0;" edge="1" parent="1" source="mod2_2" target="mod2_3">
-          <mxGeometry relative="1" as="geometry" />
+        
+        <mxCell id="mod5_1" value="冻结测量画面" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=11;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="190" width="200" height="30" as="geometry"/>
         </mxCell>
-
-        <!-- 一级模块 3: 人体检测与判定 -->
-        <mxCell id="mod3" value="&lt;b&gt;人体检测与判定&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontSize=12;fontStyle=1;shadow=0;" vertex="1" parent="1">
-          <mxGeometry x="380" y="130" width="140" height="40" as="geometry" />
+        <mxCell id="mod5_2" value="显示最终身高" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=11;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="230" width="200" height="30" as="geometry"/>
         </mxCell>
-        <!-- 子项 1 -->
-        <mxCell id="mod3_1" value="姿态关键点识别" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1;fontSize=11;shadow=0;" vertex="1" parent="1">
-          <mxGeometry x="380" y="180" width="140" height="30" as="geometry" />
+        <mxCell id="mod5_3" value="语音播报结果" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=11;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="270" width="200" height="30" as="geometry"/>
         </mxCell>
-        <mxCell id="edge3_1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;endArrow=none;exitX=0.5;exitY=1;entryX=0.5;entryY=0;shadow=0;" edge="1" parent="1" source="mod3" target="mod3_1">
-          <mxGeometry relative="1" as="geometry" />
+        
+        <mxCell value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1" source="mod5" target="mod5_1"/>
+        <mxCell value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1" source="mod5_1" target="mod5_2"/>
+        <mxCell value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1" source="mod5_2" target="mod5_3"/>
+        
+        <!-- 模块6：状态交互 -->
+        <mxCell id="mod6" value="状态交互" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E0E0E0;strokeColor=#000000;strokeWidth=1.5;fontSize=13;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1280" y="130" width="200" height="40" as="geometry"/>
         </mxCell>
-        <!-- 子项 2 -->
-        <mxCell id="mod3_2" value="全身入镜判断" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1;fontSize=11;shadow=0;" vertex="1" parent="1">
-          <mxGeometry x="380" y="215" width="140" height="30" as="geometry" />
+        
+        <mxCell id="mod6_1" value="显示当前模式" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=11;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1280" y="190" width="200" height="30" as="geometry"/>
         </mxCell>
-        <mxCell id="edge3_2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;endArrow=none;exitX=0.5;exitY=1;entryX=0.5;entryY=0;shadow=0;" edge="1" parent="1" source="mod3_1" target="mod3_2">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="mod6_2" value="显示校准状态" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=11;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1280" y="230" width="200" height="30" as="geometry"/>
         </mxCell>
-        <!-- 子项 3 -->
-        <mxCell id="mod3_3" value="人体边界框生成" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1;fontSize=11;shadow=0;" vertex="1" parent="1">
-          <mxGeometry x="380" y="250" width="140" height="30" as="geometry" />
+        <mxCell id="mod6_3" value="显示测量状态" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=11;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1280" y="270" width="200" height="30" as="geometry"/>
         </mxCell>
-        <mxCell id="edge3_3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;endArrow=none;exitX=0.5;exitY=1;entryX=0.5;entryY=0;shadow=0;" edge="1" parent="1" source="mod3_2" target="mod3_3">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="mod6_4" value="支持重复测量" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=11;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1280" y="310" width="200" height="30" as="geometry"/>
         </mxCell>
-
-        <!-- 一级模块 4: 动态身高测量 -->
-        <mxCell id="mod4" value="&lt;b&gt;动态身高测量&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontSize=12;fontStyle=1;shadow=0;" vertex="1" parent="1">
-          <mxGeometry x="550" y="130" width="140" height="40" as="geometry" />
+        
+        <mxCell value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1" source="mod6" target="mod6_1"/>
+        <mxCell value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1" source="mod6_1" target="mod6_2"/>
+        <mxCell value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1" source="mod6_2" target="mod6_3"/>
+        <mxCell value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1" source="mod6_3" target="mod6_4"/>
+        
+        <!-- 根节点到各一级模块的连线 -->
+        <mxCell id="line_mod1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;" edge="1" parent="1" source="root" target="mod1">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <!-- 子项 1 -->
-        <mxCell id="mod4_1" value="头部与足部定位" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1;fontSize=11;shadow=0;" vertex="1" parent="1">
-          <mxGeometry x="550" y="180" width="140" height="30" as="geometry" />
+        <mxCell id="line_mod2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;" edge="1" parent="1" source="root" target="mod2">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="edge4_1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;endArrow=none;exitX=0.5;exitY=1;entryX=0.5;entryY=0;shadow=0;" edge="1" parent="1" source="mod4" target="mod4_1">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="line_mod3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;" edge="1" parent="1" source="root" target="mod3">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <!-- 子项 2 -->
-        <mxCell id="mod4_2" value="像素高度计算" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1;fontSize=11;shadow=0;" vertex="1" parent="1">
-          <mxGeometry x="550" y="215" width="140" height="30" as="geometry" />
+        <mxCell id="line_mod4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;" edge="1" parent="1" source="root" target="mod4">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="edge4_2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;endArrow=none;exitX=0.5;exitY=1;entryX=0.5;entryY=0;shadow=0;" edge="1" parent="1" source="mod4_1" target="mod4_2">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="line_mod5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;" edge="1" parent="1" source="root" target="mod5">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <!-- 子项 3 -->
-        <mxCell id="mod4_3" value="厘米换算" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1;fontSize=11;shadow=0;" vertex="1" parent="1">
-          <mxGeometry x="550" y="250" width="140" height="30" as="geometry" />
+        <mxCell id="line_mod6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;" edge="1" parent="1" source="root" target="mod6">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="edge4_3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;endArrow=none;exitX=0.5;exitY=1;entryX=0.5;entryY=0;shadow=0;" edge="1" parent="1" source="mod4_2" target="mod4_3">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <!-- 子项 4 -->
-        <mxCell id="mod4_4" value="多帧滤波与稳定判定" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1;fontSize=11;shadow=0;" vertex="1" parent="1">
-          <mxGeometry x="550" y="285" width="140" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="edge4_4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;endArrow=none;exitX=0.5;exitY=1;entryX=0.5;entryY=0;shadow=0;" edge="1" parent="1" source="mod4_3" target="mod4_4">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-
-        <!-- 一级模块 5: 结果输出 -->
-        <mxCell id="mod5" value="&lt;b&gt;结果输出&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontSize=12;fontStyle=1;shadow=0;" vertex="1" parent="1">
-          <mxGeometry x="380" y="360" width="140" height="40" as="geometry" />
-        </mxCell>
-        <!-- 连接线修改：由于 mod5 在下方，需要重新连接路径。使用正交线 -->
-        <mxCell id="edge5_mod" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;endArrow=none;exitX=0.5;exitY=1;entryX=0.5;entryY=0;shadow=0;" edge="1" parent="1" source="mod4_4" target="mod5">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="620" y="330" />
-              <mxPoint x="450" y="330" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <!-- 子项 1 -->
-        <mxCell id="mod5_1" value="冻结测量画面" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1;fontSize=11;shadow=0;" vertex="1" parent="1">
-          <mxGeometry x="380" y="410" width="140" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="edge5_1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;endArrow=none;exitX=0.5;exitY=1;entryX=0.5;entryY=0;shadow=0;" edge="1" parent="1" source="mod5" target="mod5_1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <!-- 子项 2 -->
-        <mxCell id="mod5_2" value="显示最终身高" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1;fontSize=11;shadow=0;" vertex="1" parent="1">
-          <mxGeometry x="380" y="445" width="140" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="edge5_2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;endArrow=none;exitX=0.5;exitY=1;entryX=0.5;entryY=0;shadow=0;" edge="1" parent="1" source="mod5_1" target="mod5_2">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <!-- 子项 3 -->
-        <mxCell id="mod5_3" value="语音播报结果" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1;fontSize=11;shadow=0;" vertex="1" parent="1">
-          <mxGeometry x="380" y="480" width="140" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="edge5_3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;endArrow=none;exitX=0.5;exitY=1;entryX=0.5;entryY=0;shadow=0;" edge="1" parent="1" source="mod5_2" target="mod5_3">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-
-        <!-- 一级模块 6: 状态交互 -->
-        <mxCell id="mod6" value="&lt;b&gt;状态交互&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontSize=12;fontStyle=1;shadow=0;" vertex="1" parent="1">
-          <mxGeometry x="550" y="360" width="140" height="40" as="geometry" />
-        </mxCell>
-        <!-- 子项 1 -->
-        <mxCell id="mod6_1" value="显示当前模式" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1;fontSize=11;shadow=0;" vertex="1" parent="1">
-          <mxGeometry x="550" y="410" width="140" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="edge6_1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;endArrow=none;exitX=0.5;exitY=1;entryX=0.5;entryY=0;shadow=0;" edge="1" parent="1" source="mod6" target="mod6_1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <!-- 子项 2 -->
-        <mxCell id="mod6_2" value="显示校准状态" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1;fontSize=11;shadow=0;" vertex="1" parent="1">
-          <mxGeometry x="550" y="445" width="140" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="edge6_2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;endArrow=none;exitX=0.5;exitY=1;entryX=0.5;entryY=0;shadow=0;" edge="1" parent="1" source="mod6_1" target="mod6_2">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <!-- 子项 3 -->
-        <mxCell id="mod6_3" value="显示测量状态" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1;fontSize=11;shadow=0;" vertex="1" parent="1">
-          <mxGeometry x="550" y="480" width="140" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="edge6_3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;endArrow=none;exitX=0.5;exitY=1;entryX=0.5;entryY=0;shadow=0;" edge="1" parent="1" source="mod6_2" target="mod6_3">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <!-- 子项 4 -->
-        <mxCell id="mod6_4" value="支持重复测量" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1;fontSize=11;shadow=0;" vertex="1" parent="1">
-          <mxGeometry x="550" y="515" width="140" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="edge6_4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;endArrow=none;exitX=0.5;exitY=1;entryX=0.5;entryY=0;shadow=0;" edge="1" parent="1" source="mod6_3" target="mod6_4">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-
-        <!-- 交互回环：支持重复测量 -> 视频采集与显示（体现闭环逻辑） -->
-        <mxCell id="loop_edge" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;dashed=1;endArrow=classic;exitX=0;exitY=0.5;entryX=0;entryY=0.5;shadow=0;" edge="1" parent="1" source="mod6_4" target="mod1">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="20" y="530" />
-              <mxPoint x="20" y="150" />
-            </Array>
-          </mxGeometry>
-          <mxCell id="loop_label" value="&lt;i&gt;重新开始&lt;/i&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontColor=#000000;fontStyle=2;" vertex="1" connectable="0" parent="loop_edge">
-            <mxGeometry x="-0.2" y="1" relative="1" as="geometry">
-              <mxPoint x="-9" y="-9" as="offset" />
-            </mxGeometry>
-          </mxCell>
-        </mxCell>
-
+        
       </root>
     </mxGraphModel>
   </diagram>

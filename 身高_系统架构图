@@ -1,131 +1,105 @@
-<mxfile host="app.diagrams.net" modified="2026-04-09T00:00:00.000Z" agent="Draw.io" version="24.0.0" type="device">
+<mxfile host="app.diagrams.net" agent="Draw.io">
   <diagram name="系统技术架构图" id="tech-architecture-diagram">
-    <mxGraphModel dx="1200" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="900" math="0" shadow="0">
+    <mxGraphModel dx="1378" dy="654" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="900" math="0" shadow="0">
       <root>
-        <mxCell id="0"/>
-        <mxCell id="1" parent="0"/>
-        
-        <!-- ========== 第1层：用户浏览器界面 ========== -->
-        <mxCell id="layer1_box" value="用户浏览器界面" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E0E0E0;strokeColor=#000000;strokeWidth=2;fontSize=14;fontStyle=1;align=center;verticalAlign=top;spacingTop=8;" vertex="1" parent="1">
-          <mxGeometry x="100" y="40" width="900" height="150" as="geometry"/>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="layer1_box" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=14;fontStyle=1;align=center;verticalAlign=top;spacingTop=8;" value="用户浏览器界面" vertex="1">
+          <mxGeometry height="120" width="830" x="130" y="40" as="geometry" />
         </mxCell>
-        
-        <mxCell id="layer1_subtitle" value="HTML + CSS + JavaScript" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=2;" vertex="1" parent="1">
-          <mxGeometry x="400" y="65" width="300" height="20" as="geometry"/>
+        <mxCell id="layer1_subtitle" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=2;" value="HTML + CSS + JavaScript" vertex="1">
+          <mxGeometry height="20" width="300" x="380" y="70" as="geometry" />
         </mxCell>
-        
-        <!-- 第1层子功能 -->
-        <mxCell id="l1_f1" value="实时视频显示" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontSize=12;align=center;" vertex="1" parent="1">
-          <mxGeometry x="150" y="100" width="160" height="40" as="geometry"/>
+        <mxCell id="l1_f1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontSize=12;align=center;" value="实时视频显示" vertex="1">
+          <mxGeometry height="40" width="160" x="150" y="100" as="geometry" />
         </mxCell>
-        <mxCell id="l1_f2" value="输入真实身高" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontSize=12;align=center;" vertex="1" parent="1">
-          <mxGeometry x="350" y="100" width="160" height="40" as="geometry"/>
+        <mxCell id="l1_f2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontSize=12;align=center;" value="输入真实身高" vertex="1">
+          <mxGeometry height="40" width="160" x="350" y="100" as="geometry" />
         </mxCell>
-        <mxCell id="l1_f3" value="开始校准 / 开始测量" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontSize=12;align=center;" vertex="1" parent="1">
-          <mxGeometry x="550" y="100" width="180" height="40" as="geometry"/>
+        <mxCell id="l1_f3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontSize=12;align=center;" value="开始校准 / 开始测量" vertex="1">
+          <mxGeometry height="40" width="180" x="550" y="100" as="geometry" />
         </mxCell>
-        <mxCell id="l1_f4" value="状态信息显示" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontSize=12;align=center;" vertex="1" parent="1">
-          <mxGeometry x="770" y="100" width="160" height="40" as="geometry"/>
+        <mxCell id="l1_f4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontSize=12;align=center;" value="状态信息显示" vertex="1">
+          <mxGeometry height="40" width="160" x="770" y="100" as="geometry" />
         </mxCell>
-        
-        <!-- ========== 层间连接箭头（第1层 → 第2层） ========== -->
-        <mxCell id="arrow1_2" value="HTTP / JSON / MJPEG" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=0;fontSize=11;fontStyle=2;align=center;" edge="1" parent="1" source="layer1_box" target="layer2_box">
+        <mxCell id="arrow1_2" edge="1" parent="1" source="layer1_box" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=0;fontSize=11;fontStyle=2;align=center;" target="layer2_box" value="HTTP / JSON / MJPEG">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="550" y="190" as="sourcePoint"/>
-            <mxPoint x="550" y="215" as="targetPoint"/>
+            <mxPoint x="550" y="190" as="sourcePoint" />
+            <mxPoint x="550" y="215" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        
-        <!-- ========== 第2层：Flask 后端服务层 ========== -->
-        <mxCell id="layer2_box" value="Flask 后端服务层" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E0E0E0;strokeColor=#000000;strokeWidth=2;fontSize=14;fontStyle=1;align=center;verticalAlign=top;spacingTop=8;" vertex="1" parent="1">
-          <mxGeometry x="100" y="220" width="900" height="140" as="geometry"/>
+        <mxCell id="layer2_box" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=14;fontStyle=1;align=center;verticalAlign=top;spacingTop=8;" value="Flask 后端服务层" vertex="1">
+          <mxGeometry height="100" width="830" x="130" y="200" as="geometry" />
         </mxCell>
-        
-        <!-- 第2层子功能（水平排列） -->
-        <mxCell id="l2_f1" value="页面路由" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontSize=12;align=center;" vertex="1" parent="1">
-          <mxGeometry x="140" y="275" width="140" height="45" as="geometry"/>
+        <mxCell id="l2_f1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontSize=12;align=center;" value="页面路由" vertex="1">
+          <mxGeometry height="45" width="140" x="150" y="242.5" as="geometry" />
         </mxCell>
-        <mxCell id="l2_f2" value="状态接口" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontSize=12;align=center;" vertex="1" parent="1">
-          <mxGeometry x="310" y="275" width="140" height="45" as="geometry"/>
+        <mxCell id="l2_f2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontSize=12;align=center;" value="状态接口" vertex="1">
+          <mxGeometry height="45" width="140" x="315" y="242.5" as="geometry" />
         </mxCell>
-        <mxCell id="l2_f3" value="校准接口" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontSize=12;align=center;" vertex="1" parent="1">
-          <mxGeometry x="480" y="275" width="140" height="45" as="geometry"/>
+        <mxCell id="l2_f3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontSize=12;align=center;" value="校准接口" vertex="1">
+          <mxGeometry height="45" width="140" x="480" y="242.5" as="geometry" />
         </mxCell>
-        <mxCell id="l2_f4" value="测量接口" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontSize=12;align=center;" vertex="1" parent="1">
-          <mxGeometry x="650" y="275" width="140" height="45" as="geometry"/>
+        <mxCell id="l2_f4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontSize=12;align=center;" value="测量接口" vertex="1">
+          <mxGeometry height="45" width="140" x="640" y="242.5" as="geometry" />
         </mxCell>
-        <mxCell id="l2_f5" value="视频流接口" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontSize=12;align=center;" vertex="1" parent="1">
-          <mxGeometry x="820" y="275" width="140" height="45" as="geometry"/>
+        <mxCell id="l2_f5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontSize=12;align=center;" value="视频流接口" vertex="1">
+          <mxGeometry height="45" width="140" x="800" y="242.5" as="geometry" />
         </mxCell>
-        
-        <!-- ========== 层间连接箭头（第2层 → 第3层） ========== -->
-        <mxCell id="arrow2_3" value="调用" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=0;fontSize=11;fontStyle=2;align=center;" edge="1" parent="1" source="layer2_box" target="layer3_box">
+        <mxCell id="arrow2_3" edge="1" parent="1" source="layer2_box" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=0;fontSize=11;fontStyle=2;align=center;" target="layer3_box" value="调用">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="550" y="360" as="sourcePoint"/>
-            <mxPoint x="550" y="385" as="targetPoint"/>
+            <mxPoint x="550" y="360" as="sourcePoint" />
+            <mxPoint x="550" y="385" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        
-        <!-- ========== 第3层：核心业务处理层 ========== -->
-        <mxCell id="layer3_box" value="核心业务处理层" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E0E0E0;strokeColor=#000000;strokeWidth=2;fontSize=14;fontStyle=1;align=center;verticalAlign=top;spacingTop=8;" vertex="1" parent="1">
-          <mxGeometry x="100" y="390" width="900" height="170" as="geometry"/>
+        <mxCell id="layer3_box" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=14;fontStyle=1;align=center;verticalAlign=top;spacingTop=8;" value="核心业务处理层" vertex="1">
+          <mxGeometry height="110" width="830" x="130" y="340" as="geometry" />
         </mxCell>
-        
-        <!-- 第3层子功能（水平排列5个模块） -->
-        <mxCell id="l3_f1" value="摄像头采集模块&#xa;CameraStream" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontSize=11;align=center;" vertex="1" parent="1">
-          <mxGeometry x="130" y="450" width="150" height="55" as="geometry"/>
+        <mxCell id="l3_f1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontSize=11;align=center;" value="摄像头采集模块&#xa;CameraStream" vertex="1">
+          <mxGeometry height="55" width="150" x="150" y="380" as="geometry" />
         </mxCell>
-        <mxCell id="l3_f2" value="姿态识别模块&#xa;PoseEstimator" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontSize=11;align=center;" vertex="1" parent="1">
-          <mxGeometry x="310" y="450" width="150" height="55" as="geometry"/>
+        <mxCell id="l3_f2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontSize=11;align=center;" value="姿态识别模块&#xa;PoseEstimator" vertex="1">
+          <mxGeometry height="55" width="150" x="315" y="380" as="geometry" />
         </mxCell>
-        <mxCell id="l3_f3" value="身高测量引擎&#xa;HeightMeasurementEngine" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontSize=11;align=center;" vertex="1" parent="1">
-          <mxGeometry x="490" y="450" width="170" height="55" as="geometry"/>
+        <mxCell id="l3_f3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontSize=11;align=center;" value="身高测量引擎&#xa;HeightMeasurementEngine" vertex="1">
+          <mxGeometry height="55" width="170" x="490" y="380" as="geometry" />
         </mxCell>
-        <mxCell id="l3_f4" value="语音播报模块&#xa;SpeechEngine" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontSize=11;align=center;" vertex="1" parent="1">
-          <mxGeometry x="690" y="450" width="150" height="55" as="geometry"/>
+        <mxCell id="l3_f4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontSize=11;align=center;" value="语音播报模块&#xa;SpeechEngine" vertex="1">
+          <mxGeometry height="55" width="150" x="675" y="380" as="geometry" />
         </mxCell>
-        <mxCell id="l3_f5" value="中文渲染模块&#xa;TextRender" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontSize=11;align=center;" vertex="1" parent="1">
-          <mxGeometry x="870" y="450" width="100" height="55" as="geometry"/>
+        <mxCell id="l3_f5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontSize=11;align=center;" value="中文渲染模块&#xa;TextRender" vertex="1">
+          <mxGeometry height="55" width="100" x="840" y="380" as="geometry" />
         </mxCell>
-        
-        <!-- ========== 层间连接箭头（第3层 → 第4层） ========== -->
-        <mxCell id="arrow3_4" value="依赖" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=0;fontSize=11;fontStyle=2;align=center;" edge="1" parent="1" source="layer3_box" target="layer4_box">
+        <mxCell id="arrow3_4" edge="1" parent="1" source="layer3_box" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=0;fontSize=11;fontStyle=2;align=center;" target="layer4_box" value="依赖">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="550" y="560" as="sourcePoint"/>
-            <mxPoint x="550" y="585" as="targetPoint"/>
+            <mxPoint x="550" y="560" as="sourcePoint" />
+            <mxPoint x="550" y="585" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        
-        <!-- ========== 第4层：基础资源层 ========== -->
-        <mxCell id="layer4_box" value="基础资源层" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E0E0E0;strokeColor=#000000;strokeWidth=2;fontSize=14;fontStyle=1;align=center;verticalAlign=top;spacingTop=8;" vertex="1" parent="1">
-          <mxGeometry x="100" y="590" width="900" height="130" as="geometry"/>
+        <mxCell id="layer4_box" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=14;fontStyle=1;align=center;verticalAlign=top;spacingTop=8;" value="基础资源层" vertex="1">
+          <mxGeometry height="90" width="835" x="127.5" y="490" as="geometry" />
         </mxCell>
-        
-        <!-- 第4层子功能 -->
-        <mxCell id="l4_f1" value="本地摄像头 / 手机摄像头" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontSize=12;align=center;" vertex="1" parent="1">
-          <mxGeometry x="140" y="650" width="200" height="45" as="geometry"/>
+        <mxCell id="l4_f1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontSize=12;align=center;" value="本地摄像头 / 手机摄像头" vertex="1">
+          <mxGeometry height="45" width="200" x="180" y="530" as="geometry" />
         </mxCell>
-        <mxCell id="l4_f2" value="MediaPipe Pose 模型文件" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontSize=12;align=center;" vertex="1" parent="1">
-          <mxGeometry x="380" y="650" width="200" height="45" as="geometry"/>
+        <mxCell id="l4_f2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontSize=12;align=center;" value="MediaPipe Pose 模型文件" vertex="1">
+          <mxGeometry height="45" width="200" x="440" y="530" as="geometry" />
         </mxCell>
-        <mxCell id="l4_f3" value="Python 运行环境与第三方库" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontSize=12;align=center;" vertex="1" parent="1">
-          <mxGeometry x="620" y="650" width="260" height="45" as="geometry"/>
+        <mxCell id="l4_f3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontSize=12;align=center;" value="Python 运行环境与第三方库" vertex="1">
+          <mxGeometry height="45" width="260" x="675" y="530" as="geometry" />
         </mxCell>
-        
-        <!-- ========== 左侧层级标签 ========== -->
-        <mxCell id="layer1_tag" value="展示层" style="text;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#F5F5F5;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="20" y="90" width="60" height="30" as="geometry"/>
+        <mxCell id="layer1_tag" parent="1" style="text;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#F5F5F5;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1;" value="展示层" vertex="1">
+          <mxGeometry height="30" width="60" x="60" y="90" as="geometry" />
         </mxCell>
-        <mxCell id="layer2_tag" value="服务层" style="text;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#F5F5F5;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="20" y="270" width="60" height="30" as="geometry"/>
+        <mxCell id="layer2_tag" parent="1" style="text;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#F5F5F5;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1;" value="服务层" vertex="1">
+          <mxGeometry height="30" width="60" x="60" y="242.5" as="geometry" />
         </mxCell>
-        <mxCell id="layer3_tag" value="业务层" style="text;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#F5F5F5;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="20" y="460" width="60" height="30" as="geometry"/>
+        <mxCell id="layer3_tag" parent="1" style="text;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#F5F5F5;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1;" value="业务层" vertex="1">
+          <mxGeometry height="30" width="60" x="60" y="370" as="geometry" />
         </mxCell>
-        <mxCell id="layer4_tag" value="资源层" style="text;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#F5F5F5;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="20" y="640" width="60" height="30" as="geometry"/>
+        <mxCell id="layer4_tag" parent="1" style="text;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#F5F5F5;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1;" value="资源层" vertex="1">
+          <mxGeometry height="30" width="60" x="60" y="520" as="geometry" />
         </mxCell>
-        
       </root>
     </mxGraphModel>
   </diagram>
